@@ -110,10 +110,10 @@ def insert_article(conn, article_data):
         id, acode, scode, title, titlecolor, subtitle, filename,
         author, source, outlink, date, ico, pics,
         content, tags, enclosure, keywords, description,
-        sorting, status, islink, istop, isrecommend, isheadline,
+        sorting, status, istop, isrecommend, isheadline,
         visits, likes, oppose, create_user, update_user,
         create_time, update_time, gtype, gid, gnote, picstitle
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     """
     
     values = (
@@ -137,7 +137,6 @@ def insert_article(conn, article_data):
         article_data['description'], # description
         sorting,              # sorting
         '1',                  # status - 正常
-        '0',                  # islink
         '0',                  # istop
         '0',                  # isrecommend
         '0',                  # isheadline
