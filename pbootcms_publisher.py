@@ -18,7 +18,8 @@ ARTICLES_DIR = "/opt/amos/content/articles"
 PUBLISHED_LOG = "/opt/amos/published_log.json"
 
 # PbootCMS 内容分类 scode - 使用"科技期刊"
-SCODE = "7"  # 科技期刊
+SCODE = "7"
+SUBSCODE = ""
 
 def get_db_connection():
     """获取数据库连接"""
@@ -33,7 +34,7 @@ def parse_markdown_file(filepath):
     
     # 提取标题 (假设第一行是标题，或包含 # 标题)
     title = ""
-    lines = content.split('\n')
+    body = content
     
     # 查找 YAML frontmatter 中的 title
     if content.startswith('---'):
@@ -47,13 +48,6 @@ def parse_markdown_file(filepath):
                 title = title_match.group(1).strip()
             # 去掉 frontmatter，获取正文
             body = parts[2].strip()
-        else:
-            body = content
-    else:
-        body = content
-        # 尝试从第一行获取标题
-        if lines and lines[0].startswith('# '):
-            title = lines[0][2:].strip()
     
     # 如果没有提取到标题，使用文件名
     if not title:
@@ -107,19 +101,20 @@ def insert_article(conn, article_data):
     
     sql = """
     INSERT INTO ay_content (
-        id, acode, scode, title, titlecolor, subtitle, filename,
+        id, acode, scode, subscode, title, titlecolor, subtitle, filename,
         author, source, outlink, date, ico, pics,
         content, tags, enclosure, keywords, description,
         sorting, status, istop, isrecommend, isheadline,
         visits, likes, oppose, create_user, update_user,
         create_time, update_time, gtype, gid, gnote, picstitle
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     """
     
     values = (
         article_id,           # id
         acode,                # acode
         SCODE,                # scode - 科技期刊
+        SUBSCODE,             # subscode
         article_data['title'], # title
         '',                   # titlecolor
         '',                   # subtitle
