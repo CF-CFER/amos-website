@@ -1,0 +1,47 @@
+---
+const navItems = [
+  { label: 'Home', href: '/' },
+  { label: 'Products', href: '/products.html' },
+  { label: 'About', href: '/about.html' },
+  { label: 'Contact', href: '/contact.html' }
+];
+const current = Astro.url.pathname;
+---
+<header style="background: var(--primary); color: white; position: sticky; top: 0; z-index: 100;">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 64px;">
+    <a href="/" style="font-weight: 800; font-size: 1.25rem; color: white;">
+      Amos Composites
+    </a>
+    <nav>
+      <ul style="display: flex; gap: 32px;">
+        {navItems.map(item => (
+          <li>
+            <a 
+              href={item.href} 
+              style={`font-weight: 500; font-size: 0.95rem; transition: opacity 0.2s; ${current === item.href ? 'border-bottom: 2px solid white; padding-bottom: 2px;' : ''}`}
+              onmouseover="this.style.opacity='0.8'" 
+              onmouseout="this.style.opacity='1'"
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+    <a 
+      href="/contact.html" 
+      style="background: var(--accent); color: white; padding: 8px 20px; border-radius: 6px; font-weight: 600; font-size: 0.9rem; transition: background 0.2s;"
+      onmouseover="this.style.background='#9b2c2c'" 
+      onmouseout="this.style.background='var(--accent)'"
+    >
+      Get Quote
+    </a>
+  </div>
+</header>
+<style>
+  @media (max-width: 768px) {
+    header nav ul { gap: 16px !important; }
+    header nav ul li a { font-size: 0.85rem !important; }
+    header > div > a:last-child { padding: 6px 14px !important; font-size: 0.8rem !important; }
+  }
+</style>

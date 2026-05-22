@@ -1,0 +1,143 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Carbon Fiber Filament", "url": "https://amoscomposites.cn/products.html#filament" },
+    { "@type": "ListItem", "position": 2, "name": "Chopped Carbon Fiber", "url": "https://amoscomposites.cn/products.html#chopped" },
+    { "@type": "ListItem", "position": 3, "name": "Carbon Fiber Powder", "url": "https://amoscomposites.cn/products.html#powder" },
+    { "@type": "ListItem", "position": 4, "name": "Carbon Fiber Fabric", "url": "https://amoscomposites.cn/products.html#fabric" },
+    { "@type": "ListItem", "position": 5, "name": "Nickel-Plated Carbon Fiber", "url": "https://amoscomposites.cn/products.html#nickel" }
+  ]
+};
+---
+
+<Layout
+  title="Carbon Fiber Products | Amos Composites"
+  description="Browse our complete range: carbon fiber filament, chopped fiber, powder, fabric, and nickel-plated fiber. Plastic modification solutions for PA, PP, PEEK, PEI, ABS, and more."
+  keywords="carbon fiber products, chopped carbon fiber, carbon fiber powder, carbon fiber fabric, PAN carbon fiber, pitch carbon fiber, nickel plated carbon fiber, plastic modified carbon fiber"
+  canonical="/products.html"
+  schema={schema}
+>
+  <Header />
+
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 80px 24px 60px; text-align: center;">
+    <h1 style="font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin-bottom: 12px;">Our Products</h1>
+    <p style="color: #e2e8f0; max-width: 700px; margin: 0 auto; font-size: 1.1rem;">Comprehensive carbon fiber materials for composite manufacturing and plastic reinforcement.</p>
+  </section>
+
+  <!-- Carbon Fiber Filament -->
+  <section id="filament" style="padding: 64px 24px; max-width: 1200px; margin: 0 auto;">
+    <div style="display: grid; grid-template-columns: 1fr; gap: 40px;">
+      <div>
+        <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--primary); margin-bottom: 16px;">Carbon Fiber Filament</h2>
+        <p style="color: var(--text-light); line-height: 1.7; margin-bottom: 20px;">
+          Continuous carbon fiber filament available in PAN-based and pitch-based variants. Standard specifications include 1K, 3K, 6K, 12K, 24K tow sizes with tensile strength up to 7.0 GPa.
+        </p>
+        <ul style="display: flex; flex-direction: column; gap: 8px; color: var(--text-light); font-size: 0.95rem;">
+          <li>✓ PAN-based: T300, T700, T800 grade equivalent</li>
+          <li>✓ Pitch-based: high modulus up to 900 GPa</li>
+          <li>✓ Compatible with epoxy, vinyl ester, phenolic resins</li>
+          <li>✓ Surface treatment: sizing for thermoset / thermoplastic</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chopped Carbon Fiber -->
+  <section id="chopped" style="background: var(--bg-alt); padding: 64px 24px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--primary); margin-bottom: 16px;">Chopped Carbon Fiber</h2>
+      <p style="color: var(--text-light); line-height: 1.7; margin-bottom: 24px; max-width: 800px;">
+        Precision-cut short fibers optimized for plastic modification and injection molding. Available in agglomerated and bundle (flock) forms for improved dispersion in polymer matrices.
+      </p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+        <div style="background: white; padding: 24px; border-radius: 8px; border: 1px solid var(--border);">
+          <h4 style="font-weight: 700; color: var(--primary); margin-bottom: 8px;">PA Modified</h4>
+          <p style="color: var(--text-light); font-size: 0.9rem;">Nylon 6, PA66, PA12 reinforcement. Improved stiffness and heat resistance.</p>
+        </div>
+        <div style="background: white; padding: 24px; border-radius: 8px; border: 1px solid var(--border);">
+          <h4 style="font-weight: 700; color: var(--primary); margin-bottom: 8px;">PP Modified</h4>
+          <p style="color: var(--text-light); font-size: 0.9rem;">Polypropylene composite for automotive and appliance housings.</p>
+        </div>
+        <div style="background: white; padding: 24px; border-radius: 8px; border: 1px solid var(--border);">
+          <h4 style="font-weight: 700; color: var(--primary); margin-bottom: 8px;">PEEK / PEI</h4>
+          <p style="color: var(--text-light); font-size: 0.9rem;">High-performance thermoplastic for aerospace and medical applications.</p>
+        </div>
+        <div style="background: white; padding: 24px; border-radius: 8px; border: 1px solid var(--border);">
+          <h4 style="font-weight: 700; color: var(--primary); margin-bottom: 8px;">ABS / PPS / PU</h4>
+          <p style="color: var(--text-light); font-size: 0.9rem;">Engineering plastic reinforcement for electronics and industrial parts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Carbon Fiber Powder -->
+  <section id="powder" style="padding: 64px 24px; max-width: 1200px; margin: 0 auto;">
+    <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--primary); margin-bottom: 16px;">Carbon Fiber Powder</h2>
+    <p style="color: var(--text-light); line-height: 1.7; margin-bottom: 20px; max-width: 800px;">
+      Milled carbon fiber powder for conductive fillers, EMI shielding compounds, and friction materials. Mesh sizes from 50 to 300 mesh with adjustable aspect ratio.
+    </p>
+    <ul style="display: flex; flex-direction: column; gap: 8px; color: var(--text-light); font-size: 0.95rem;">
+      <li>✓ Milled from PAN or pitch-based precursor</li>
+      <li>✓ Particle sizes: 50 mesh ~ 300 mesh</li>
+      <li>✓ Applications: conductive plastics, brake pads, coatings</li>
+      <li>✓ Bulk density and conductivity customizable</li>
+    </ul>
+  </section>
+
+  <!-- Carbon Fiber Fabric -->
+  <section id="fabric" style="background: var(--bg-alt); padding: 64px 24px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--primary); margin-bottom: 16px;">Carbon Fiber Fabric</h2>
+      <p style="color: var(--text-light); line-height: 1.7; margin-bottom: 24px; max-width: 800px;">
+        Woven carbon fiber fabrics in plain, twill 2/2, and satin weaves for hand layup, vacuum infusion, RTM, and prepreg manufacturing.
+      </p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+        <div style="background: white; padding: 20px; border-radius: 8px; text-align: center; border: 1px solid var(--border);">
+          <strong style="color: var(--primary); display: block; margin-bottom: 6px;">Plain Weave</strong>
+          <span style="color: var(--text-light); font-size: 0.85rem;">Balanced strength, easy draping</span>
+        </div>
+        <div style="background: white; padding: 20px; border-radius: 8px; text-align: center; border: 1px solid var(--border);">
+          <strong style="color: var(--primary); display: block; margin-bottom: 6px;">Twill 2/2</strong>
+          <span style="color: var(--text-light); font-size: 0.85rem;">Better conformability, premium look</span>
+        </div>
+        <div style="background: white; padding: 20px; border-radius: 8px; text-align: center; border: 1px solid var(--border);">
+          <strong style="color: var(--primary); display: block; margin-bottom: 6px;">Satin Weave</strong>
+          <span style="color: var(--text-light); font-size: 0.85rem;">High conformability, aerospace grade</span>
+        </div>
+        <div style="background: white; padding: 20px; border-radius: 8px; text-align: center; border: 1px solid var(--border);">
+          <strong style="color: var(--primary); display: block; margin-bottom: 6px;">Unidirectional</strong>
+          <span style="color: var(--text-light); font-size: 0.85rem;">Maximum directional strength</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nickel-Plated -->
+  <section id="nickel" style="padding: 64px 24px; max-width: 1200px; margin: 0 auto;">
+    <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--primary); margin-bottom: 16px;">Nickel-Plated Carbon Fiber</h2>
+    <p style="color: var(--text-light); line-height: 1.7; margin-bottom: 20px; max-width: 800px;">
+      Electroless nickel-plated carbon fiber for electromagnetic interference (EMI) shielding and electrostatic discharge (ESD) applications. Available as filament or powder.
+    </p>
+    <ul style="display: flex; flex-direction: column; gap: 8px; color: var(--text-light); font-size: 0.95rem;">
+      <li>✓ Nickel coating thickness: 0.2 - 2.0 μm</li>
+      <li>✓ Surface resistivity: < 0.1 Ω/sq</li>
+      <li>✓ Applications: military, aerospace, 5G equipment</li>
+      <li>✓ RoHS compliant plating process</li>
+    </ul>
+  </section>
+
+  <!-- CTA -->
+  <section style="background: var(--primary); color: white; padding: 48px 24px; text-align: center;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 12px;">Need a Custom Specification?</h2>
+    <p style="color: #e2e8f0; margin-bottom: 24px;">We adjust fiber length, sizing, bundle size, and surface treatment to match your resin system.</p>
+    <a href="/contact.html" style="background: var(--accent); color: white; padding: 14px 36px; border-radius: 8px; font-weight: 700; display: inline-block;">Request Custom Quote</a>
+  </section>
+
+  <Footer />
+</Layout>

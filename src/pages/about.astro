@@ -1,0 +1,112 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About Amos Composites",
+  "url": "https://amoscomposites.cn/about.html",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Amos Composites Technology (Shenzhen) Co., Ltd.",
+    "description": "ISO 9001 certified carbon fiber materials manufacturer founded in 2015.",
+    "foundingDate": "2015",
+    "numberOfEmployees": "18",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Shenzhen",
+      "addressCountry": "CN"
+    }
+  }
+};
+---
+
+<Layout
+  title="About Us | Amos Composites Technology"
+  description="Founded in 2015, Amos Composites is an ISO 9001 certified manufacturer of carbon fiber filament, chopped fiber, powder, and fabric. 18 team members serving global B2B clients."
+  keywords="carbon fiber manufacturer China, carbon fiber factory Shenzhen, ISO 9001 carbon fiber, carbon fiber supplier, Amos Composites"
+  canonical="/about.html"
+  schema={schema}
+>
+  <Header />
+
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 80px 24px 60px; text-align: center;">
+    <h1 style="font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin-bottom: 12px;">About Amos Composites</h1>
+    <p style="color: #e2e8f0; max-width: 700px; margin: 0 auto; font-size: 1.1rem;">A decade of dedication to carbon fiber excellence.</p>
+  </section>
+
+  <section style="padding: 64px 24px; max-width: 900px; margin: 0 auto;">
+    <h2 style="font-size: 1.6rem; font-weight: 800; color: var(--primary); margin-bottom: 20px;">Company Profile</h2>
+    <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 16px;">
+      <strong>Amos Composites Technology (Shenzhen) Co., Ltd.</strong> was founded in 2015 with a mission to deliver high-quality, cost-effective carbon fiber materials to manufacturers worldwide. Based in Shenzhen, China's innovation hub, we have grown into a trusted supplier for clients across automotive, aerospace, electronics, and industrial sectors.
+    </p>
+    <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 16px;">
+      Our product portfolio covers the full spectrum of carbon fiber intermediate materials: continuous filament, precision-chopped fiber, milled powder, woven fabric, and specialty nickel-plated variants. Every batch undergoes rigorous quality control aligned with ISO 9001 standards, supported by third-party MSDS, ROHS 2.0, and REACH documentation.
+    </p>
+    <p style="color: var(--text-light); line-height: 1.8;">
+      We maintain close partnerships with leading carbon fiber brands including Toray, Toho, Mitsubishi, Zoltek, Zhongfu Shenying, Guoxing, Tangu, Guangwei, Tuozhan, and Gangke. This network ensures we source premium precursors while offering competitive factory-direct pricing.
+    </p>
+  </section>
+
+  <section style="background: var(--bg-alt); padding: 64px 24px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-size: 1.6rem; font-weight: 800; color: var(--primary); margin-bottom: 32px; text-align: center;">Our Team & Capabilities</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px;">
+        <div style="background: white; padding: 28px; border-radius: 8px; text-align: center; border: 1px solid var(--border);">
+          <p style="font-size: 2.5rem; font-weight: 800; color: var(--primary);">18</p>
+          <p style="color: var(--text-light); font-size: 0.9rem;">Total Employees</p>
+        </div>
+        <div style="background: white; padding: 28px; border-radius: 8px; text-align: center; border: 1px solid var(--border);">
+          <p style="font-size: 2.5rem; font-weight: 800; color: var(--primary);">4</p>
+          <p style="color: var(--text-light); font-size: 0.9rem;">Technical Engineers</p>
+        </div>
+        <div style="background: white; padding: 28px; border-radius: 8px; text-align: center; border: 1px solid var(--border);">
+          <p style="font-size: 2.5rem; font-weight: 800; color: var(--primary);">2</p>
+          <p style="color: var(--text-light); font-size: 0.9rem;">QC Inspectors</p>
+        </div>
+        <div style="background: white; padding: 28px; border-radius: 8px; text-align: center; border: 1px solid var(--border);">
+          <p style="font-size: 2.5rem; font-weight: 800; color: var(--primary);">4</p>
+          <p style="color: var(--text-light); font-size: 0.9rem;">R&D Equipment Sets</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: 64px 24px; max-width: 900px; margin: 0 auto;">
+    <h2 style="font-size: 1.6rem; font-weight: 800; color: var(--primary); margin-bottom: 20px;">Core Philosophy</h2>
+    <blockquote style="border-left: 4px solid var(--accent); padding-left: 20px; color: var(--text-light); font-style: italic; font-size: 1.1rem; line-height: 1.7; margin-bottom: 20px;">
+      "Premium quality at competitive prices, crafted with artisan dedication and attentive service."
+    </blockquote>
+    <p style="color: var(--text-light); line-height: 1.8;">
+      This philosophy drives every decision we make—from raw material selection to final packaging. We believe that carbon fiber's exceptional performance should be accessible to manufacturers of all scales, not just aerospace primes. Our custom production lines can adjust fiber length, sizing chemistry, and bundle count to match your specific resin system and processing method.
+    </p>
+  </section>
+
+  <section style="background: var(--bg-alt); padding: 64px 24px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-size: 1.6rem; font-weight: 800; color: var(--primary); margin-bottom: 32px; text-align: center;">Certifications & Compliance</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: center;">
+        <div style="padding: 24px; background: white; border-radius: 8px; border: 1px solid var(--border);">
+          <h4 style="font-weight: 700; color: var(--primary); margin-bottom: 8px;">ISO 9001</h4>
+          <p style="color: var(--text-light); font-size: 0.9rem;">Quality Management System</p>
+        </div>
+        <div style="padding: 24px; background: white; border-radius: 8px; border: 1px solid var(--border);">
+          <h4 style="font-weight: 700; color: var(--primary); margin-bottom: 8px;">MSDS</h4>
+          <p style="color: var(--text-light); font-size: 0.9rem;">Material Safety Data Sheet</p>
+        </div>
+        <div style="padding: 24px; background: white; border-radius: 8px; border: 1px solid var(--border);">
+          <h4 style="font-weight: 700; color: var(--primary); margin-bottom: 8px;">ROHS 2.0</h4>
+          <p style="color: var(--text-light); font-size: 0.9rem;">Hazardous Substances Restricted</p>
+        </div>
+        <div style="padding: 24px; background: white; border-radius: 8px; border: 1px solid var(--border);">
+          <h4 style="font-weight: 700; color: var(--primary); margin-bottom: 8px;">REACH</h4>
+          <p style="color: var(--text-light); font-size: 0.9rem;">EU Chemical Compliance</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

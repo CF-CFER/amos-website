@@ -1,0 +1,62 @@
+---
+const { title, description, keywords, canonical, schema = {} } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="keywords" content={keywords} />
+  <meta name="author" content="Amos Composites Technology (Shenzhen) Co., Ltd." />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Canonical -->
+  <link rel="canonical" href={`https://amoscomposites.cn${canonical || ''}`} />
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={`https://amoscomposites.cn${canonical || ''}`} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content="https://amoscomposites.cn/og-image.jpg" />
+  <meta property="og:site_name" content="Amos Composites" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content="https://amoscomposites.cn/og-image.jpg" />
+  
+  <!-- Schema.org -->
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <style is:global>
+    :root {
+      --primary: #1a365d;
+      --primary-light: #2c5282;
+      --accent: #c53030;
+      --text: #1a202c;
+      --text-light: #4a5568;
+      --bg: #ffffff;
+      --bg-alt: #f7fafc;
+      --border: #e2e8f0;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: var(--text); line-height: 1.6; }
+    img { max-width: 100%; height: auto; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+  </style>
+</head>
+<body>
+  <slot />
+</body>
+</html>
