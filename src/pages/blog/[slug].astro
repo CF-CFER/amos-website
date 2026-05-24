@@ -1,0 +1,93 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+// 获取所有博客文章
+const posts = await Astro.glob('../../content/blog/*.md');
+
+// 从URL获取slug
+const { slug } = Astro.params;
+
+// 查找对应文章
+const post = posts.find((p) => p.frontmatter.slug === slug);
+
+// 如果没有找到，返回404
+if (!post) {
+  return Astro.redirect('/404');
+}
+
+const { Content } = post;
+---
+
+<Layout
+  title={`${post.frontmatter.title} - 碳烯技术博客`}
+  description={post.frontmatter.description}
+  keywords={post.frontmatter.keywords}
+  canonical={`/blog/${post.frontmatter.slug}`}
+>
+  <Header />
+
+  <article style="padding: 80px 24px 48px; max-width: 900px; margin: 0 auto;">
+    <!-- 面包屑导航 -->
+    <nav style="margin-bottom: 24px; font-size: 0.9rem; color: var(--text-light);">
+      <a href="/" style="color: var(--primary);">首页</a>
+      <span style="margin: 0 8px;">/</span>
+      <a href="/blog" style="color: var(--primary);">博客</a>
+      <span style="margin: 0 8px;">/</span>
+      <span>{post.frontmatter.title}</span>
+    </nav>
+
+    <!-- 文章头部 -->
+    <header style="margin-bottom: 48px; border-bottom: 1px solid var(--border); padding-bottom: 24px;">
+      <h1 style="font-size: clamp(1.5rem, 4vw, 2.2rem); font-weight: 800; color: var(--primary); margin-bottom: 16px;">
+        {post.frontmatter.title}
+      </h1>
+      
+      <div style="display: flex; gap: 16px; flex-wrap: wrap; color: var(--text-light); font-size: 0.9rem;">
+        <time>
+          {new Date(post.frontmatter.date).toLocaleDateString('zh-CN', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+          })}
+        </time>
+        <span>|</span>
+        <span>碳烯技术</span>
+        
+        {post.frontmatter.tags && (
+          <>
+            <span>|</span>
+            <div style="display: flex; gap: 8px;">
+              {post.frontmatter.tags.map((tag: string) => (
+                <span style="background: var(--bg-alt); padding: 2px 10px; border-radius: 12px; font-size: 0.8rem;">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </>
+        )}
+      </div>
+    </header>
+
+    <!-- 文章内容 -->
+    <div style="line-height: 1.8; color: var(--text); font-size: 1.05rem;">
+      <Content />
+    </div>
+
+    <!-- 文章底部CTA -->
+    <div style="margin-top: 64px; padding: 32px; background: var(--bg-alt); border-radius: 12px; text-align: center;">
+      <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--primary); margin-bottom: 12px;">
+        需要更多碳纤维技术支持？
+      </h3>
+      <p style="color: var(--text-light); margin-bottom: 20px;">
+        无论您需要什么规格或应用场景，我们都能提供专业建议
+      </p>
+      <a href="/contact" style="background: var(--accent); color: white; padding: 12px 28px; border-radius: 8px; font-weight: 700; display: inline-block;">
+        联系我们 / Contact Us
+      </a>
+    </div>
+  </article>
+
+  <Footer />
+</Layout>

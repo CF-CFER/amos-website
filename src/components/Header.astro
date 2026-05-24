@@ -1,9 +1,9 @@
 ---
 const navItems = [
-  { label: 'Home', href: '/' },
-  { label: 'Products', href: '/products.html' },
-  { label: 'About', href: '/about.html' },
-  { label: 'Contact', href: '/contact.html' }
+  { label: 'Home / 首页', href: '/' },
+  { label: 'Products / 产品', href: '/products' },
+  { label: 'About / 关于', href: '/about' },
+  { label: 'Contact / 联系', href: '/contact' }
 ];
 const current = Astro.url.pathname;
 ---
@@ -29,7 +29,7 @@ const current = Astro.url.pathname;
       </ul>
     </nav>
     <a 
-      href="/contact.html" 
+      href="/contact" 
       style="background: var(--accent); color: white; padding: 8px 20px; border-radius: 6px; font-weight: 600; font-size: 0.9rem; transition: background 0.2s;"
       onmouseover="this.style.background='#9b2c2c'" 
       onmouseout="this.style.background='var(--accent)'"

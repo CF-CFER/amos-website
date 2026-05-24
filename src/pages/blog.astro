@@ -1,0 +1,85 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+// 获取所有博客文章
+const posts = await Astro.glob('../../content/blog/*.md');
+
+// 按日期排序
+const sortedPosts = posts.sort((a, b) => {
+  return new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime();
+});
+---
+
+<Layout
+  title="技术博客_碳纤维知识_塑料改性技术-碳烯技术"
+  description="碳烯技术官方博客：碳纤维材料技术知识、塑料改性方案、行业应用案例。深入了解碳纤维丝、碳纤维粉、短切碳纤维、塑料改性碳纤维的专业内容。"
+  keywords="碳纤维博客,碳纤维技术,塑料改性技术,碳纤维应用,碳纤维知识"
+  canonical="/blog"
+>
+  <Header />
+
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 80px 24px 60px; text-align: center;">
+    <h1 style="font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin-bottom: 12px;">
+      技术博客 / Technical Blog
+    </h1>
+    <p style="color: #e2e8f0; max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
+      碳纤维材料技术知识 · 塑料改性方案 · 行业应用案例
+    </p>
+  </section>
+
+  <section style="padding: 64px 24px; max-width: 1200px; margin: 0 auto;">
+    <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--primary); margin-bottom: 32px;">
+      最新文章 / Latest Articles
+    </h2>
+
+    <div style="display: grid; gap: 24px;">
+      {sortedPosts.map((post) => (
+        <article style="background: var(--bg-alt); border-radius: 12px; padding: 32px; border: 1px solid var(--border);">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
+            <h3 style="font-size: 1.3rem; font-weight: 700; color: var(--primary); margin: 0;">
+              <a href={`/blog/${post.frontmatter.slug}`} style="color: inherit; text-decoration: none;">
+                {post.frontmatter.title}
+              </a>
+            </h3>
+            <time style="color: var(--text-light); font-size: 0.85rem; white-space: nowrap;">
+              {new Date(post.frontmatter.date).toLocaleDateString('zh-CN')}
+            </time>
+          </div>
+          <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">
+            {post.frontmatter.description}
+          </p>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            {post.frontmatter.tags?.map((tag: string) => (
+              <span style="background: var(--bg); color: var(--text-light); padding: 4px 12px; border-radius: 20px; font-size: 0.8rem;">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </article>
+      ))}
+    </div>
+
+    {sortedPosts.length === 0 && (
+      <div style="text-align: center; padding: 64px 24px; color: var(--text-light);">
+        <p style="font-size: 1.1rem; margin-bottom: 16px;">文章即将发布，敬请期待...</p>
+        <p style="font-size: 0.9rem;">我们即将发布碳纤维技术相关的专业文章</p>
+      </div>
+    )}
+  </section>
+
+  <section style="background: var(--primary); color: white; padding: 48px 24px; text-align: center;">
+    <h2 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 12px;">
+      获取定制化碳纤维方案
+    </h2>
+    <p style="color: #e2e8f0; margin-bottom: 24px;">
+      无论您需要什么规格，我们都能提供专业建议
+    </p>
+    <a href="/contact" style="background: var(--accent); color: white; padding: 14px 32px; border-radius: 8px; font-weight: 700; display: inline-block;">
+      联系我们 / Contact Us
+    </a>
+  </section>
+
+  <Footer />
+</Layout>

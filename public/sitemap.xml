@@ -2,22 +2,74 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://amoscomposites.cn/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://amoscomposites.cn/products.html</loc>
+    <loc>https://amoscomposites.cn/products</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://amoscomposites.cn/carbon-fiber-filament</loc>
+    <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://amoscomposites.cn/about.html</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://amoscomposites.cn/carbon-fiber-powder</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://amoscomposites.cn/contact.html</loc>
-    <priority>0.8</priority>
+    <loc>https://amoscomposites.cn/chopped-carbon-fiber</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://amoscomposites.cn/plastic-modified-carbon</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://amoscomposites.cn/carbon-fiber-fabric</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://amoscomposites.cn/nickel-plated-carbon</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://amoscomposites.cn/about</loc>
+    <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://amoscomposites.cn/blog</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://amoscomposites.cn/blog/carbon-fiber-filament-selection-guide</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://amoscomposites.cn/contact</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

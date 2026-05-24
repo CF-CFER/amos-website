@@ -3,24 +3,90 @@ import nodemailer from 'nodemailer';
 
 export const prerender = false;
 
+const SMTP_USER = import.meta.env.SMTP_USER || '289614365@qq.com';
+const SMTP_PASS = import.meta.env.SMTP_PASS || '';
+const ALLOWED_ORIGIN = 'https://amoscomposites.cn';
+
+// Simple rate limiter based on request timestamp (5 per minute window)
+const RATE_LIMIT_MAX = 5;
+const RATE_LIMIT_WINDOW = 60 * 1000; // 1 minute
+
+function checkRateLimit(clientIP: string): { allowed: boolean; remaining: number } {
+  const now = Date.now();
+  // Use a simple hash of IP + minute timestamp to create a bucket key
+  const timeBucket = Math.floor(now / RATE_LIMIT_WINDOW);
+  const bucketKey = `${clientIP}:${timeBucket}`;
+  
+  // Use globalThis to persist across warm invocations
+  const store = (globalThis as any).__rateLimitStore || {};
+  (globalThis as any).__rateLimitStore = store;
+  
+  const current = store[bucketKey] || 0;
+  if (current >= RATE_LIMIT_MAX) {
+    return { allowed: false, remaining: 0 };
+  }
+  
+  store[bucketKey] = current + 1;
+  return { allowed: true, remaining: RATE_LIMIT_MAX - current - 1 };
+}
+
+function cleanupOldBuckets() {
+  const now = Date.now();
+  const currentBucket = Math.floor(now / RATE_LIMIT_WINDOW);
+  const store = (globalThis as any).__rateLimitStore || {};
+  
+  // Remove buckets older than current window
+  Object.keys(store).forEach(key => {
+    const keyBucket = parseInt(key.split(':').pop() || '0');
+    if (keyBucket < currentBucket - 1) {
+      delete store[key];
+    }
+  });
+}
+
 const transporter = nodemailer.createTransport({
   host: 'smtp.qq.com',
   port: 465,
   secure: true,
   auth: {
-    user: '289614365@qq.com',
-    pass: 'mcxuaqwwrplqbgeg',
+    user: SMTP_USER,
+    pass: SMTP_PASS,
   },
 });
 
 const corsHeaders = {
-  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Origin': ALLOWED_ORIGIN,
   'Access-Control-Allow-Methods': 'POST, OPTIONS',
   'Access-Control-Allow-Headers': 'Content-Type',
+  'X-Content-Type-Options': 'nosniff',
+  'X-Frame-Options': 'DENY',
+  'Referrer-Policy': 'strict-origin-when-cross-origin',
 };
 
 export const POST: APIRoute = async ({ request }) => {
   try {
+    const clientIP = request.headers.get('x-forwarded-for') || 
+                     request.headers.get('x-real-ip') || 
+                     request.headers.get('cf-connecting-ip') || 
+                     'unknown';
+    
+    cleanupOldBuckets();
+    const rateCheck = checkRateLimit(clientIP);
+    
+    if (!rateCheck.allowed) {
+      return new Response(
+        JSON.stringify({ success: false, error: 'Rate limit exceeded. Please try again in a minute.' }),
+        { status: 429, headers: { ...corsHeaders, 'Content-Type': 'application/json', 'Retry-After': '60' } }
+      );
+    }
+    
+    if (!SMTP_PASS) {
+      return new Response(
+        JSON.stringify({ success: false, error: 'SMTP not configured' }),
+        { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
     const data = await request.json();
     const { name, contact, message } = data;
 
@@ -34,7 +100,7 @@ export const POST: APIRoute = async ({ request }) => {
     const submitTime = new Date().toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' });
 
     const mailOptions = {
-      from: '"Amos Composites Website" <289614365@qq.com>',
+      from: '"Amos Composites" <289614365@qq.com>',
       to: '289614365@qq.com',
       subject: `New Inquiry from ${name}`,
       text: `
@@ -66,7 +132,7 @@ ${message || 'No message provided'}
 
     return new Response(
       JSON.stringify({ success: true, message: 'Inquiry sent successfully' }),
-      { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json', 'X-RateLimit-Remaining': String(rateCheck.remaining) } }
     );
   } catch (error: any) {
     console.error('Email send error:', error);

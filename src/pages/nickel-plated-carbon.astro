@@ -1,0 +1,108 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "镀镍碳纤维 - 丝·粉·短切全覆盖",
+  "description": "碳烯技术镀镍碳纤维全形态覆盖：镀镍碳纤维丝、镀镍碳纤维粉、镀镍短切碳纤维。EMI电磁屏蔽、防静电、导电材料一站式供应。",
+  "brand": { "@type": "Brand", "name": "Amos Composites" },
+  "offers": { "@type": "Offer", "availability": "https://schema.org/InStock" }
+};
+---
+
+<Layout
+  title="镀镍碳纤维_镀镍碳纤维丝_镀镍碳纤维粉_电磁屏蔽-碳烯技术"
+  description="碳烯技术镀镍碳纤维供应商：镀镍碳纤维丝（1K-24K）、镀镍碳纤维粉（50-300目）、镀镍短切碳纤维（1mm-50mm）。EMI电磁屏蔽效能60dB+，表面电阻率<0.1Ω/sq。"
+  keywords="镀镍碳纤维,镀镍碳纤维丝,镀镍碳纤维粉,镀镍短切碳纤维,电磁屏蔽碳纤维,导电碳纤维,EMI屏蔽材料,防静电碳纤维"
+  canonical="/nickel-plated-carbon"
+  schema={schema}
+>
+  <Header />
+
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 80px 24px 60px; text-align: center;">
+    <h1 style="font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin-bottom: 12px;">
+      镀镍碳纤维 / Nickel-Plated Carbon Fiber
+    </h1>
+    <p style="color: #e2e8f0; max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
+      丝 · 粉 · 短切 · 全覆盖<br/>
+      EMI电磁屏蔽 · 防静电 · 导电材料一站式供应
+    </p>
+  </section>
+
+  <section style="padding: 64px 24px; max-width: 1200px; margin: 0 auto;">
+    <div style="background: var(--accent); color: white; padding: 24px; border-radius: 12px; text-align: center; margin-bottom: 48px;">
+      <h2 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 12px;">独家优势：全形态覆盖</h2>
+      <p style="font-size: 1.05rem;">市场上大多数供应商只提供镀镍碳纤维丝或粉，<strong>碳烯技术独家提供丝+粉+短切三种形态</strong>，满足注塑、涂料、纺织等不同工艺需求。</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
+      <div style="padding: 32px; background: var(--bg-alt); border-radius: 12px; border: 1px solid var(--border);">
+        <h3 style="font-size: 1.3rem; font-weight: 700; color: var(--primary); margin-bottom: 16px;">🧵 镀镍碳纤维丝</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8;">
+          <li>规格：1K / 3K / 6K / 12K / 24K</li>
+          <li>镍层厚度：0.2-2.0 μm（可定制）</li>
+          <li>表面电阻率：< 0.1 Ω/sq</li>
+          <li>屏蔽效能：> 60 dB</li>
+          <li>应用：编织导电布、屏蔽线缆、复合材料</li>
+        </ul>
+      </div>
+      
+      <div style="padding: 32px; background: var(--bg-alt); border-radius: 12px; border: 1px solid var(--border);">
+        <h3 style="font-size: 1.3rem; font-weight: 700; color: var(--primary); margin-bottom: 16px;">⚡ 镀镍碳纤维粉</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8;">
+          <li>目数：50目 / 100目 / 200目 / 300目</li>
+          <li>镍层厚度：0.5-2.0 μm</li>
+          <li>体积电阻率：10⁻²-10¹ Ω·cm</li>
+          <li>屏蔽效能：40-60 dB</li>
+          <li>应用：导电涂料、电磁屏蔽涂料、防静电地坪</li>
+        </ul>
+      </div>
+      
+      <div style="padding: 32px; background: var(--bg-alt); border-radius: 12px; border: 1px solid var(--border);">
+        <h3 style="font-size: 1.3rem; font-weight: 700; color: var(--primary); margin-bottom: 16px;">🔧 镀镍短切碳纤维</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8;">
+          <li>长度：3mm / 6mm / 10mm / 20mm / 50mm</li>
+          <li>镍层厚度：0.5-2.0 μm</li>
+          <li>应用：导电塑料改性、电磁屏蔽塑料</li>
+          <li>特点：注塑分散性好，导电网络形成快</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: var(--bg-alt); padding: 64px 24px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--primary); margin-bottom: 16px; text-align: center;">应用领域</h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: center; margin-top: 32px;">
+        <div style="padding: 24px; background: white; border-radius: 8px; border: 1px solid var(--border);">
+          <h4 style="font-weight: 700; color: var(--primary); margin-bottom: 8px;">5G通信</h4>
+          <p style="color: var(--text-light); font-size: 0.85rem;">基站屏蔽罩、天线罩</p>
+        </div>
+        <div style="padding: 24px; background: white; border-radius: 8px; border: 1px solid var(--border);">
+          <h4 style="font-weight: 700; color: var(--primary); margin-bottom: 8px;">新能源汽车</h4>
+          <p style="color: var(--text-light); font-size: 0.85rem;">电池包屏蔽、充电桩</p>
+        </div>
+        <div style="padding: 24px; background: white; border-radius: 8px; border: 1px solid var(--border);">
+          <h4 style="font-weight: 700; color: var(--primary); margin-bottom: 8px;">医疗器械</h4>
+          <p style="color: var(--text-light); font-size: 0.85rem;">MRI屏蔽、手术器械</p>
+        </div>
+        <div style="padding: 24px; background: white; border-radius: 8px; border: 1px solid var(--border);">
+          <h4 style="font-weight: 700; color: var(--primary); margin-bottom: 8px;">军工航天</h4>
+          <p style="color: var(--text-light); font-size: 0.85rem;">雷达罩、隐身材料</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: var(--primary); color: white; padding: 64px 24px; text-align: center;">
+    <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 16px;">获取镀镍碳纤维报价</h2>
+    <p style="color: #e2e8f0; max-width: 600px; margin: 0 auto 28px; font-size: 1.05rem;">提供应用场景（屏蔽/导电/防静电）和形态需求（丝/粉/短切），24小时内获取精准方案</p>
+    <a href="/contact" style="background: var(--accent); color: white; padding: 16px 40px; border-radius: 8px; font-weight: 700; font-size: 1.05rem; display: inline-block;">获取报价 / Get Quote</a>
+  </section>
+
+  <Footer />
+</Layout>

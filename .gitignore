@@ -22,3 +22,5 @@ Thumbs.db
 # Test files
 test-*.mjs
 test-*.js
+
+.vercel
