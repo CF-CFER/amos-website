@@ -733,10 +733,10 @@ tags: {json.dumps(topic['tags'], ensure_ascii=False)}
     
     filepath.write_text(frontmatter + content, encoding='utf-8')
     
-    print(f"✅ 文章已生成：{filepath}")
-    print(f"   标题：{topic['title']}")
-    print(f"   Slug：{topic['slug']}")
-    print(f"   日期：{date_str}")
+    print(f"OK Article generated: {filepath}")
+    print(f"   Title: {topic['title']}")
+    print(f"   Slug: {topic['slug']}")
+    print(f"   Date: {date_str}")
 
 if __name__ == "__main__":
     main()
