@@ -1,0 +1,51 @@
+name: Auto Publish Blog Article
+
+on:
+  # 每天北京时间 10:00 运行 (UTC 02:00)
+  schedule:
+    - cron: '0 2 * * *'
+  
+  # 允许手动触发
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: '文章主题（可选）'
+        required: false
+        default: ''
+
+jobs:
+  generate-and-publish:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        pip install openai requests
+    
+    - name: Generate article
+      env:
+        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+      run: |
+        python scripts/generate_article.py "${{ github.event.inputs.topic }}"
+    
+    - name: Commit and push
+      run: |
+        git config user.name "GitHub Actions Bot"
+        git config user.email "actions@github.com"
+        git add src/content/blog/
+        git diff --staged --quiet || (git commit -m "Auto-publish: $(date +%Y-%m-%d) blog article" && git push)
+    
+    - name: Trigger Vercel Deploy
+      run: |
+        curl -X POST "${{ secrets.VERCEL_DEPLOY_HOOK }}" || echo "Deploy hook not configured"
