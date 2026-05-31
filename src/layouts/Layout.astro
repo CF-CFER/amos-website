@@ -59,6 +59,33 @@ const { title, description, keywords, canonical, schema = {} } = Astro.props;
     img { max-width: 100%; height: auto; }
     a { text-decoration: none; color: inherit; }
     ul { list-style: none; }
+    
+    /* Button Styles */
+    .btn-primary { background: white; color: var(--primary); padding: 14px 32px; border-radius: 8px; font-weight: 700; font-size: 1rem; display: inline-block; }
+    .btn-secondary { background: transparent; color: white; padding: 14px 32px; border-radius: 8px; font-weight: 700; font-size: 1rem; border: 2px solid white; display: inline-block; }
+    .btn-cta { background: var(--accent); color: white; padding: 16px 40px; border-radius: 8px; font-weight: 700; font-size: 1.05rem; display: inline-block; }
+    
+    /* Product Card */
+    .product-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 32px; }
+    .product-card h3 { font-size: 1.15rem; font-weight: 700; color: var(--primary); margin-bottom: 10px; }
+    .product-card p { color: var(--text-light); font-size: 0.9rem; line-height: 1.6; }
+    .product-card a { display: inline-block; margin-top: 16px; color: var(--accent); font-weight: 600; font-size: 0.9rem; }
+    
+    /* Feature Item */
+    .feature-item { display: flex; gap: 16px; }
+    .feature-num { width: 48px; height: 48px; background: var(--primary); color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
+    .feature-item h4 { font-weight: 700; margin-bottom: 6px; }
+    .feature-item p { color: var(--text-light); font-size: 0.9rem; }
+    
+    /* Industry Card */
+    .industry-card { padding: 24px; background: var(--bg-alt); border-radius: 8px; }
+    .industry-card h4 { font-weight: 700; color: var(--primary); }
+    .industry-card p { color: var(--text-light); font-size: 0.85rem; margin-top: 6px; }
+    
+    /* Mobile Optimizations */
+    @media (max-width: 768px) {
+      .product-card { padding: 20px; }
+    }
   </style>
 </head>
 <body>

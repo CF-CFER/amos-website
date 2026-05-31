@@ -34,7 +34,6 @@ const schema = {
   <Header />
 
   <!-- Hero Section -->
-  <div style="background: red; color: white; padding: 10px; text-align: center;">BUILD TEST v2</div>
   <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 100px 24px 80px;">
     <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
       <h1 style="font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; line-height: 1.15; margin-bottom: 20px; max-width: 900px; margin-left: auto; margin-right: auto;">
@@ -45,8 +44,8 @@ const schema = {
         ISO 9001认证制造商，产品包括碳纤维丝、短切碳纤维、碳纤维粉、碳纤维布
       </p>
       <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-        <a href="/products" style="background: white; color: var(--primary); padding: 14px 32px; border-radius: 8px; font-weight: 700; font-size: 1rem; transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 12px rgba(0,0,0,0.2)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';">Explore Products</a>
-        <a href="/contact" style="background: transparent; color: white; padding: 14px 32px; border-radius: 8px; font-weight: 700; font-size: 1rem; border: 2px solid white; transition: background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='transparent';">Request Quote</a>
+        <a href="/products" class="btn-primary">Explore Products</a>
+        <a href="/contact" class="btn-secondary">Request Quote</a>
       </div>
     </div>
   </section>
@@ -68,35 +67,35 @@ const schema = {
       <p style="color: var(--text-light); max-width: 600px; margin: 0 auto;">Comprehensive carbon fiber solutions for plastic modification, reinforcement, and composite manufacturing. / 全面的碳纤维改性、增强及复合材料解决方案</p>
     </div>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
-      <div style="background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 32px; transition: box-shadow 0.2s, transform 0.2s;" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)';this.style.transform='translateY(-4px)';" onmouseout="this.style.boxShadow='none';this.style.transform='translateY(0)';">
-        <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--primary); margin-bottom: 10px;">Carbon Fiber Filament / 碳纤维丝</h3>
-        <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.6;">PAN-based and pitch-based carbon fiber filament for high-performance composites. Available in multiple specifications. / PAN基和沥青基碳纤维丝，高性能复合材料专用</p>
-        <a href="/products" style="display: inline-block; margin-top: 16px; color: var(--accent); font-weight: 600; font-size: 0.9rem;">Learn more -&gt;</a>
+      <div class="product-card">
+        <h3>Carbon Fiber Filament / 碳纤维丝</h3>
+        <p>PAN-based and pitch-based carbon fiber filament for high-performance composites. Available in multiple specifications. / PAN基和沥青基碳纤维丝，高性能复合材料专用</p>
+        <a href="/products">Learn more -&gt;</a>
       </div>
-      <div style="background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 32px; transition: box-shadow 0.2s, transform 0.2s;" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)';this.style.transform='translateY(-4px)';" onmouseout="this.style.boxShadow='none';this.style.transform='translateY(0)';">
-        <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--primary); margin-bottom: 10px;">Chopped Carbon Fiber / 短切碳纤维</h3>
-        <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.6;">Short-cut fibers for PA, PP, PEEK, PEI, ABS, PE, PPS, PA66, PU, PI plastic modification. Custom lengths available. / PA、PP、PEEK、PEI等塑料改性专用短切碳纤维</p>
-        <a href="/products" style="display: inline-block; margin-top: 16px; color: var(--accent); font-weight: 600; font-size: 0.9rem;">Learn more -&gt;</a>
+      <div class="product-card">
+        <h3>Chopped Carbon Fiber / 短切碳纤维</h3>
+        <p>Short-cut fibers for PA, PP, PEEK, PEI, ABS, PE, PPS, PA66, PU, PI plastic modification. Custom lengths available. / PA、PP、PEEK、PEI等塑料改性专用短切碳纤维</p>
+        <a href="/products">Learn more -&gt;</a>
       </div>
-      <div style="background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 32px; transition: box-shadow 0.2s, transform 0.2s;" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)';this.style.transform='translateY(-4px)';" onmouseout="this.style.boxShadow='none';this.style.transform='translateY(0)';">
-        <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--primary); margin-bottom: 10px;">Carbon Fiber Powder / 碳纤维粉</h3>
-        <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.6;">Milled carbon fiber powder for conductive coatings, EMI shielding, and thermoplastic/thermoset reinforcement. / 导电涂料、电磁屏蔽专用碳纤维粉</p>
-        <a href="/products" style="display: inline-block; margin-top: 16px; color: var(--accent); font-weight: 600; font-size: 0.9rem;">Learn more -&gt;</a>
+      <div class="product-card">
+        <h3>Carbon Fiber Powder / 碳纤维粉</h3>
+        <p>Milled carbon fiber powder for conductive coatings, EMI shielding, and thermoplastic/thermoset reinforcement. / 导电涂料、电磁屏蔽专用碳纤维粉</p>
+        <a href="/products">Learn more -&gt;</a>
       </div>
-      <div style="background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 32px; transition: box-shadow 0.2s, transform 0.2s;" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)';this.style.transform='translateY(-4px)';" onmouseout="this.style.boxShadow='none';this.style.transform='translateY(0)';">
-        <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--primary); margin-bottom: 10px;">Carbon Fiber Fabric / 碳纤维布</h3>
-        <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.6;">Woven carbon fiber fabric in various weaves (plain, twill, satin) for hand layup, RTM, and vacuum infusion processes. / 平纹、斜纹、缎纹编织碳纤维布</p>
-        <a href="/products" style="display: inline-block; margin-top: 16px; color: var(--accent); font-weight: 600; font-size: 0.9rem;">Learn more -&gt;</a>
+      <div class="product-card">
+        <h3>Carbon Fiber Fabric / 碳纤维布</h3>
+        <p>Woven carbon fiber fabric in various weaves (plain, twill, satin) for hand layup, RTM, and vacuum infusion processes. / 平纹、斜纹、缎纹编织碳纤维布</p>
+        <a href="/products">Learn more -&gt;</a>
       </div>
-      <div style="background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 32px; transition: box-shadow 0.2s, transform 0.2s;" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)';this.style.transform='translateY(-4px)';" onmouseout="this.style.boxShadow='none';this.style.transform='translateY(0)';">
-        <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--primary); margin-bottom: 10px;">Nickel-Plated Fiber / 镀镍碳纤维</h3>
-        <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.6;">Electromagnetic shielding grade nickel-plated carbon fiber filament and powder for EMI/RFI applications. / 电磁屏蔽级镀镍碳纤维丝及粉末</p>
-        <a href="/products" style="display: inline-block; margin-top: 16px; color: var(--accent); font-weight: 600; font-size: 0.9rem;">Learn more -&gt;</a>
+      <div class="product-card">
+        <h3>Nickel-Plated Fiber / 镀镍碳纤维</h3>
+        <p>Electromagnetic shielding grade nickel-plated carbon fiber filament and powder for EMI/RFI applications. / 电磁屏蔽级镀镍碳纤维丝及粉末</p>
+        <a href="/products">Learn more -&gt;</a>
       </div>
-      <div style="background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 32px; transition: box-shadow 0.2s, transform 0.2s;" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.08)';this.style.transform='translateY(-4px)';" onmouseout="this.style.boxShadow='none';this.style.transform='translateY(0)';">
-        <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--primary); margin-bottom: 10px;">Custom Solutions / 定制方案</h3>
-        <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.6;">Tailored fiber sizing, bundle sizing, and surface treatments for your specific resin system and processing method. / 根据客户树脂体系和加工方式定制</p>
-        <a href="/contact" style="display: inline-block; margin-top: 16px; color: var(--accent); font-weight: 600; font-size: 0.9rem;">Request custom -&gt;</a>
+      <div class="product-card">
+        <h3>Custom Solutions / 定制方案</h3>
+        <p>Tailored fiber sizing, bundle sizing, and surface treatments for your specific resin system and processing method. / 根据客户树脂体系和加工方式定制</p>
+        <a href="/contact">Request custom -&gt;</a>
       </div>
     </div>
   </section>
@@ -108,46 +107,46 @@ const schema = {
         <h2 style="font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 12px;">Why Choose Amos Composites / 为什么选择我们</h2>
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px;">
-        <div style="display: flex; gap: 16px;">
-          <div style="width: 48px; height: 48px; background: var(--primary); color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">01</div>
+        <div class="feature-item">
+          <div class="feature-num">01</div>
           <div>
-            <h4 style="font-weight: 700; margin-bottom: 6px;">Quality Certifications / 质量认证</h4>
-            <p style="color: var(--text-light); font-size: 0.9rem;">ISO 9001 certified with full MSDS, ROHS 2.0, and REACH third-party testing. / ISO 9001认证，全套MSDS、ROHS 2.0、REACH第三方检测</p>
+            <h4>Quality Certifications / 质量认证</h4>
+            <p>ISO 9001 certified with full MSDS, ROHS 2.0, and REACH third-party testing. / ISO 9001认证，全套MSDS、ROHS 2.0、REACH第三方检测</p>
           </div>
         </div>
-        <div style="display: flex; gap: 16px;">
-          <div style="width: 48px; height: 48px; background: var(--primary); color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">02</div>
+        <div class="feature-item">
+          <div class="feature-num">02</div>
           <div>
-            <h4 style="font-weight: 700; margin-bottom: 6px;">Global Brand Partners / 品牌合作</h4>
-            <p style="color: var(--text-light); font-size: 0.9rem;">Supplying raw materials compatible with Toray, Toho, Mitsubishi, Zoltek, Zhongfu Shenying standards. / 原料兼容东丽、东邦、三菱、卓尔泰克、中复神鹰标准</p>
+            <h4>Global Brand Partners / 品牌合作</h4>
+            <p>Supplying raw materials compatible with Toray, Toho, Mitsubishi, Zoltek, Zhongfu Shenying standards. / 原料兼容东丽、东邦、三菱、卓尔泰克、中复神鹰标准</p>
           </div>
         </div>
-        <div style="display: flex; gap: 16px;">
-          <div style="width: 48px; height: 48px; background: var(--primary); color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">03</div>
+        <div class="feature-item">
+          <div class="feature-num">03</div>
           <div>
-            <h4 style="font-weight: 700; margin-bottom: 6px;">R&D Capability / 研发能力</h4>
-            <p style="color: var(--text-light); font-size: 0.9rem;">4 in-house R&D equipment sets. 4 engineers developing custom sizing and bundle solutions. / 4套研发设备，4名工程师开发定制上浆剂和束丝方案</p>
+            <h4>R&D Capability / 研发能力</h4>
+            <p>4 in-house R&D equipment sets. 4 engineers developing custom sizing and bundle solutions. / 4套研发设备，4名工程师开发定制上浆剂和束丝方案</p>
           </div>
         </div>
-        <div style="display: flex; gap: 16px;">
-          <div style="width: 48px; height: 48px; background: var(--primary); color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">04</div>
+        <div class="feature-item">
+          <div class="feature-num">04</div>
           <div>
-            <h4 style="font-weight: 700; margin-bottom: 6px;">Custom Production / 定制生产</h4>
-            <p style="color: var(--text-light); font-size: 0.9rem;">Adjust fiber length, sizing chemistry, and bundle count for PA, PP, PEEK, PEI, ABS and other matrices. / 可调整纤维长度、上浆化学成分、束丝数量</p>
+            <h4>Custom Production / 定制生产</h4>
+            <p>Adjust fiber length, sizing chemistry, and bundle count for PA, PP, PEEK, PEI, ABS and other matrices. / 可调整纤维长度、上浆化学成分、束丝数量</p>
           </div>
         </div>
-        <div style="display: flex; gap: 16px;">
-          <div style="width: 48px; height: 48px; background: var(--primary); color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">05</div>
+        <div class="feature-item">
+          <div class="feature-num">05</div>
           <div>
-            <h4 style="font-weight: 700; margin-bottom: 6px;">Competitive Pricing / 价格优势</h4>
-            <p style="color: var(--text-light); font-size: 0.9rem;">Factory-direct pricing with consistent batch quality. Small MOQ available for trial orders. / 工厂直供，批次质量稳定，小批量试单可接</p>
+            <h4>Competitive Pricing / 价格优势</h4>
+            <p>Factory-direct pricing with consistent batch quality. Small MOQ available for trial orders. / 工厂直供，批次质量稳定，小批量试单可接</p>
           </div>
         </div>
-        <div style="display: flex; gap: 16px;">
-          <div style="width: 48px; height: 48px; background: var(--primary); color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0;">06</div>
+        <div class="feature-item">
+          <div class="feature-num">06</div>
           <div>
-            <h4 style="font-weight: 700; margin-bottom: 6px;">Fast Response / 快速响应</h4>
-            <p style="color: var(--text-light); font-size: 0.9rem;">Technical consultation and quotation within 24 hours. Sample shipping within 3 business days. / 24小时内技术咨询和报价，3个工作日内寄样</p>
+            <h4>Fast Response / 快速响应</h4>
+            <p>Technical consultation and quotation within 24 hours. Sample shipping within 3 business days. / 24小时内技术咨询和报价，3个工作日内寄样</p>
           </div>
         </div>
       </div>
@@ -161,12 +160,12 @@ const schema = {
       <p style="color: var(--text-light); max-width: 600px; margin: 0 auto;">Our materials are used across demanding industries requiring strength, lightweight, and conductivity. / 产品广泛应用于需要高强度、轻量化和导电性的行业</p>
     </div>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: center;">
-      <div style="padding: 24px; background: var(--bg-alt); border-radius: 8px;"><h4 style="font-weight: 700; color: var(--primary);">Automotive / 汽车</h4><p style="color: var(--text-light); font-size: 0.85rem; margin-top: 6px;">Lightweight structural parts / 轻量化结构件</p></div>
-      <div style="padding: 24px; background: var(--bg-alt); border-radius: 8px;"><h4 style="font-weight: 700; color: var(--primary);">Aerospace / 航空航天</h4><p style="color: var(--text-light); font-size: 0.85rem; margin-top: 6px;">High-strength composites / 高强度复合材料</p></div>
-      <div style="padding: 24px; background: var(--bg-alt); border-radius: 8px;"><h4 style="font-weight: 700; color: var(--primary);">Electronics / 电子</h4><p style="color: var(--text-light); font-size: 0.85rem; margin-top: 6px;">EMI shielding housings / 电磁屏蔽外壳</p></div>
-      <div style="padding: 24px; background: var(--bg-alt); border-radius: 8px;"><h4 style="font-weight: 700; color: var(--primary);">Sports Equipment / 体育器材</h4><p style="color: var(--text-light); font-size: 0.85rem; margin-top: 6px;">Performance gear / 高性能装备</p></div>
-      <div style="padding: 24px; background: var(--bg-alt); border-radius: 8px;"><h4 style="font-weight: 700; color: var(--primary);">Marine / 船舶</h4><p style="color: var(--text-light); font-size: 0.85rem; margin-top: 6px;">Corrosion-resistant hulls / 耐腐蚀船体</p></div>
-      <div style="padding: 24px; background: var(--bg-alt); border-radius: 8px;"><h4 style="font-weight: 700; color: var(--primary);">Construction / 建筑</h4><p style="color: var(--text-light); font-size: 0.85rem; margin-top: 6px;">Structural reinforcement / 结构加固</p></div>
+      <div class="industry-card"><h4>Automotive / 汽车</h4><p>Lightweight structural parts / 轻量化结构件</p></div>
+      <div class="industry-card"><h4>Aerospace / 航空航天</h4><p>High-strength composites / 高强度复合材料</p></div>
+      <div class="industry-card"><h4>Electronics / 电子</h4><p>EMI shielding housings / 电磁屏蔽外壳</p></div>
+      <div class="industry-card"><h4>Sports Equipment / 体育器材</h4><p>Performance gear / 高性能装备</p></div>
+      <div class="industry-card"><h4>Marine / 船舶</h4><p>Corrosion-resistant hulls / 耐腐蚀船体</p></div>
+      <div class="industry-card"><h4>Construction / 建筑</h4><p>Structural reinforcement / 结构加固</p></div>
     </div>
   </section>
 
@@ -174,34 +173,8 @@ const schema = {
   <section style="background: var(--primary); color: white; padding: 64px 24px; text-align: center;">
     <h2 style="font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; margin-bottom: 16px;">Ready to Strengthen Your Products? / 立即咨询</h2>
     <p style="color: #e2e8f0; max-width: 600px; margin: 0 auto 28px; font-size: 1.05rem;">Get a free technical consultation and sample quotation within 24 hours. / 24小时内获得免费技术咨询和样品报价</p>
-    <a href="/contact" style="background: var(--accent); color: white; padding: 16px 40px; border-radius: 8px; font-weight: 700; font-size: 1.05rem; display: inline-block; transition: background 0.2s;" onmouseover="this.style.background='#9b2c2c'" onmouseout="this.style.background='var(--accent)';">Request a Quote / 获取报价</a>
+    <a href="/contact" class="btn-cta">Request a Quote / 获取报价</a>
   </section>
 
   <Footer />
-
-  <!-- ICP Filing -->
-  <div style="background: var(--primary); color: #a0aec0; padding: 16px 24px; text-align: center; font-size: 0.85rem;">
-    <p>&copy; 2025 Amos Composites Technology (Shenzhen) Co., Ltd. All rights reserved.</p>
-    <p style="margin-top: 4px;">
-      <a href="https://beian.miit.gov.cn" target="_blank" style="color: #a0aec0; text-decoration: none;">&#31908;ICP&#22791;2025440727&#21495;</a>
-    </p>
-  </div>
-</Layout>\n<!-- ICP trigger: 2025-05-30 -->\n
-<!-- ICP Filing - Dynamic Injection (Fallback) -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var footer = document.querySelector('footer');
-    if (footer) {
-      var existingIcp = footer.querySelector('a[href*=\"beian.miit.gov.cn\"]');
-      if (!existingIcp) {
-        var div = footer.querySelector('div:last-child');
-        if (div) {
-          var p = document.createElement('p');
-          p.style.marginTop = '8px';
-          p.innerHTML = '<a href=\"https://beian.miit.gov.cn\" target=\"_blank\" style=\"color: #a0aec0; text-decoration: none;\" onmouseover=\"this.style.color=\'white\'\" onmouseout=\"this.style.color=\'#a0aec0\'\"\u003e粤ICP备2025440727号</a>';
-          div.appendChild(p);
-        }
-      }
-    }
-  });
-</script>
+</Layout>
