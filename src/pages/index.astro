@@ -34,6 +34,7 @@ const schema = {
   <Header />
 
   <!-- Hero Section -->
+  <div style="background: red; color: white; padding: 10px; text-align: center;">BUILD TEST v2</div>
   <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 100px 24px 80px;">
     <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
       <h1 style="font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; line-height: 1.15; margin-bottom: 20px; max-width: 900px; margin-left: auto; margin-right: auto;">
@@ -177,4 +178,30 @@ const schema = {
   </section>
 
   <Footer />
-</Layout>
+
+  <!-- ICP Filing -->
+  <div style="background: var(--primary); color: #a0aec0; padding: 16px 24px; text-align: center; font-size: 0.85rem;">
+    <p>&copy; 2025 Amos Composites Technology (Shenzhen) Co., Ltd. All rights reserved.</p>
+    <p style="margin-top: 4px;">
+      <a href="https://beian.miit.gov.cn" target="_blank" style="color: #a0aec0; text-decoration: none;">&#31908;ICP&#22791;2025440727&#21495;</a>
+    </p>
+  </div>
+</Layout>\n<!-- ICP trigger: 2025-05-30 -->\n
+<!-- ICP Filing - Dynamic Injection (Fallback) -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var footer = document.querySelector('footer');
+    if (footer) {
+      var existingIcp = footer.querySelector('a[href*=\"beian.miit.gov.cn\"]');
+      if (!existingIcp) {
+        var div = footer.querySelector('div:last-child');
+        if (div) {
+          var p = document.createElement('p');
+          p.style.marginTop = '8px';
+          p.innerHTML = '<a href=\"https://beian.miit.gov.cn\" target=\"_blank\" style=\"color: #a0aec0; text-decoration: none;\" onmouseover=\"this.style.color=\'white\'\" onmouseout=\"this.style.color=\'#a0aec0\'\"\u003e粤ICP备2025440727号</a>';
+          div.appendChild(p);
+        }
+      }
+    }
+  });
+</script>
