@@ -9,7 +9,7 @@ const { title, description, keywords, canonical, schema = {} } = Astro.props;
   <title>{title}</title>
   <meta name="description" content={description} />
   <meta name="keywords" content={keywords} />
-  <meta name="author" content="Amos Composites Technology (Shenzhen) Co., Ltd." />
+  <meta name="author" content="碳烯技术有限公司 (Amos Composites Technology Co., Ltd.)" />
   <meta name="robots" content="index, follow" />
   
   <!-- 搜索引擎验证标签 - 请替换为实际验证代码 -->
@@ -25,7 +25,7 @@ const { title, description, keywords, canonical, schema = {} } = Astro.props;
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:image" content="https://amoscomposites.cn/og-image.jpg" />
-  <meta property="og:site_name" content="Amos Composites" />
+  <meta property="og:site_name" content="碳烯技术有限公司 (Amos Composites Technology Co., Ltd.)" />
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -81,6 +81,12 @@ const { title, description, keywords, canonical, schema = {} } = Astro.props;
     .industry-card { padding: 24px; background: var(--bg-alt); border-radius: 8px; }
     .industry-card h4 { font-weight: 700; color: var(--primary); }
     .industry-card p { color: var(--text-light); font-size: 0.85rem; margin-top: 6px; }
+    
+    /* Footer Links */
+    .footer-link { color: #cbd5e0; font-size: 0.9rem; transition: color 0.2s; }
+    .footer-link:hover { color: white; }
+    .icp-link { color: #a0aec0; text-decoration: none; }
+    .icp-link:hover { color: white; }
     
     /* Mobile Optimizations */
     @media (max-width: 768px) {
