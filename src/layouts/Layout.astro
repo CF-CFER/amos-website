@@ -25,7 +25,7 @@ const { title, description, keywords, canonical, schema = {} } = Astro.props;
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:image" content="https://amoscomposites.cn/og-image.jpg" />
-  <meta property="og:site_name" content="碳烯技术有限公司 (Amos Composites Technology Co., Ltd.)" />
+  <meta property="og:site_name" content="碳烯技术有限公司 (Carbene Technology (Shenzhen) Co., Ltd.)" />
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -76,6 +76,11 @@ const { title, description, keywords, canonical, schema = {} } = Astro.props;
     .feature-num { width: 48px; height: 48px; background: var(--primary); color: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
     .feature-item h4 { font-weight: 700; margin-bottom: 6px; }
     .feature-item p { color: var(--text-light); font-size: 0.9rem; }
+    
+    /* Features Grid - 3+3 layout */
+    .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    @media (max-width: 900px) { .features-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 580px) { .features-grid { grid-template-columns: 1fr; } }
     
     /* Industry Card */
     .industry-card { padding: 24px; background: var(--bg-alt); border-radius: 8px; }
