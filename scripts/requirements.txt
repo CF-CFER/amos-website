@@ -1,0 +1,3 @@
+# amoscomposites.cn 自动发布系统依赖
+requests>=2.31.0
+Pillow>=10.0.0
