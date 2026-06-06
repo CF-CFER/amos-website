@@ -55,7 +55,7 @@ def publish_article(publisher,article):
 def test_token():
   L.info('Testing token...')
   publisher=W()
-  token=publisher.get_access_token()
+  token=publisher.gt()
   if token: L.info(f'Token OK: {token[:20]}...'); return True
   else: L.error('Token failed'); return False
 
