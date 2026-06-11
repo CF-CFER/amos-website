@@ -3,6 +3,7 @@ const current = Astro.url.pathname;
 
 const navItems = [
   { label: 'Home', href: '/' },
+  { label: 'Blog', href: '/blog' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' }
 ];
@@ -20,7 +21,8 @@ const products = [
   <div class="header-container">
     <!-- 左侧：公司名称 -->
     <a href="/" class="logo">
-      碳烯技术有限公司
+      <div class="logo-cn">碳烯技术有限公司</div>
+      <div class="logo-en">Carbene Technology Co., Ltd.</div>
     </a>
 
     <!-- 右侧区域 -->
@@ -79,6 +81,20 @@ const products = [
     text-decoration: none;
     white-space: nowrap;
     flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+  }
+  .logo-cn {
+    font-size: 1.25rem;
+    font-weight: 800;
+  }
+  .logo-en {
+    font-size: 0.65rem;
+    font-weight: 500;
+    opacity: 0.85;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
   }
   .header-right {
     display: flex;
@@ -175,8 +191,13 @@ const products = [
       min-height: auto;
     }
     .logo {
-      font-size: 1.1rem;
       text-align: center;
+    }
+    .logo-cn {
+      font-size: 1.1rem;
+    }
+    .logo-en {
+      font-size: 0.6rem;
     }
     .header-right {
       align-items: center;
@@ -197,8 +218,11 @@ const products = [
     .header-container {
       padding: 8px 12px;
     }
-    .logo {
+    .logo-cn {
       font-size: 1rem;
+    }
+    .logo-en {
+      font-size: 0.55rem;
     }
     .product-item {
       font-size: 0.6rem;
