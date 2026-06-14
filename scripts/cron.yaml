@@ -1,0 +1,14 @@
+jobs:
+  # amoscomposites.cn 自动文章发布
+  - name: amoscomposites-daily-publish
+    schedule: "0 3,9,15 * * *"  # 每天 3点、9点、15点（Asia/Shanghai）
+    timezone: Asia/Shanghai
+    payload:
+      kind: agentTurn
+      message: "执行 amoscomposites.cn 自动文章发布任务：python D:/OpenClaw工作区/amoscomposites-cn/scripts/amoscomposites_auto_publish.py"
+      timeoutSeconds: 600
+    delivery:
+      mode: announce
+      channel: last
+    sessionTarget: isolated
+    enabled: true

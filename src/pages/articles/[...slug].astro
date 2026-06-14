@@ -1,0 +1,77 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles');
+  return articles.map(article => ({
+    params: { slug: article.slug },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content } = await article.render();
+---
+
+<Layout title={article.data.title}>
+  <article class="article-page">
+    <div class="container">
+      <header class="article-header">
+        <h1>{article.data.title}</h1>
+        <div class="meta">
+          <span class="date">{article.data.pubDate}</span>
+          <span class="category">{article.data.category}</span>
+        </div>
+      </header>
+      
+      <div class="article-content">
+        <Content />
+      </div>
+      
+      <footer class="article-footer">
+        <p>Published by {article.data.author}</p>
+      </footer>
+    </div>
+  </article>
+</Layout>
+
+<style>
+  .article-page {
+    padding: 80px 0;
+    background: #f8f9fa;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  .article-header {
+    margin-bottom: 40px;
+  }
+  .article-header h1 {
+    font-size: 2.5rem;
+    color: #1a1a2e;
+    margin-bottom: 16px;
+  }
+  .meta {
+    display: flex;
+    gap: 16px;
+    color: #666;
+    font-size: 0.9rem;
+  }
+  .article-content {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .article-footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    color: #666;
+  }
+</style>
