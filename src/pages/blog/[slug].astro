@@ -3,20 +3,15 @@ import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 
-// 获取所有博客文章
-const posts = await Astro.glob('../../content/blog/*.md');
-
-// 从URL获取slug
-const { slug } = Astro.params;
-
-// 查找对应文章
-const post = posts.find((p) => p.frontmatter.slug === slug);
-
-// 如果没有找到，返回404
-if (!post) {
-  return Astro.redirect('/404');
+export async function getStaticPaths() {
+  const posts = await Astro.glob('../../content/blog/*.md');
+  return posts.map((post) => ({
+    params: { slug: post.frontmatter.slug },
+    props: { post },
+  }));
 }
 
+const { post } = Astro.props;
 const { Content } = post;
 ---
 
