@@ -1,10 +1,11 @@
 ---
+slug: carbon-fiber-composite-materials-test
 title: "碳纤维复合材料性能测试与评估"
-description: "测试文章：碳纤维复合材料力学性能、导电性能、耐腐蚀性能测试"
-pubDate: "2026-06-14"
-category: "性能测试"
-keywords: ["碳纤维复合材料", "力学性能", "导电性能", "测试"]
+date: "2026-06-14"
 author: "碳烯技术"
+description: "测试文章：碳纤维复合材料力学性能、导电性能、耐腐蚀性能测试"
+keywords: "碳纤维复合材料,力学性能,导电性能,测试"
+tags: ["性能测试", "复合材料"]
 ---
 
 ## 测试概述
