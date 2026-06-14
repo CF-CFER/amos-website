@@ -3,7 +3,7 @@ import vercel from '@astrojs/vercel';
 
 export default defineConfig({
   site: 'https://amoscomposites.cn',
-  output: 'hybrid',
+  output: 'static',
   adapter: vercel(),
   compressHTML: true,
   build: {
