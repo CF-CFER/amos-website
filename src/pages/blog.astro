@@ -3,12 +3,16 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-// 获取所有博客文章
-const posts = await Astro.glob('../content/blog/*.md');
+// 获取所有博客文章（同时读取 blog 和 articles 目录）
+const blogPosts = await Astro.glob('../content/blog/*.md');
+const articlePosts = await Astro.glob('../content/articles/*.md');
+const allPosts = [...blogPosts, ...articlePosts];
 
-// 按日期排序
-const sortedPosts = posts.sort((a, b) => {
-  return new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime();
+// 按日期排序（支持 date 和 pubDate 两种格式）
+const sortedPosts = allPosts.sort((a, b) => {
+  const dateA = a.frontmatter.date || a.frontmatter.pubDate;
+  const dateB = b.frontmatter.date || b.frontmatter.pubDate;
+  return new Date(dateB).getTime() - new Date(dateA).getTime();
 });
 ---
 
@@ -39,12 +43,12 @@ const sortedPosts = posts.sort((a, b) => {
         <article style="background: var(--bg-alt); border-radius: 12px; padding: 32px; border: 1px solid var(--border);">
           <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
             <h3 style="font-size: 1.3rem; font-weight: 700; color: var(--primary); margin: 0;">
-              <a href={`/blog/${post.frontmatter.slug}`} style="color: inherit; text-decoration: none;">
+              <a href={`/blog/${post.frontmatter.slug || post.frontmatter.canonical?.replace('/articles/', '') || post.file?.split('/').pop().replace('.md', '')}`} style="color: inherit; text-decoration: none;">
                 {post.frontmatter.title}
               </a>
             </h3>
             <time style="color: var(--text-light); font-size: 0.85rem; white-space: nowrap;">
-              {new Date(post.frontmatter.date).toLocaleDateString('zh-CN')}
+              {new Date(post.frontmatter.date || post.frontmatter.pubDate).toLocaleDateString('zh-CN')}
             </time>
           </div>
           <p style="color: var(--text-light); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px;">

@@ -4,11 +4,19 @@ import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 
 export async function getStaticPaths() {
-  const posts = await Astro.glob('../../content/blog/*.md');
-  return posts.map((post) => ({
-    params: { slug: post.frontmatter.slug },
-    props: { post },
-  }));
+  const blogPosts = await Astro.glob('../../content/blog/*.md');
+  const articlePosts = await Astro.glob('../../content/articles/*.md');
+  const allPosts = [...blogPosts, ...articlePosts];
+  
+  return allPosts.map((post) => {
+    const slug = post.frontmatter.slug || 
+                 post.frontmatter.canonical?.replace('/articles/', '') || 
+                 post.file?.split('/').pop().replace('.md', '');
+    return {
+      params: { slug },
+      props: { post },
+    };
+  });
 }
 
 const { post } = Astro.props;
@@ -19,7 +27,7 @@ const { Content } = post;
   title={`${post.frontmatter.title} - 碳烯技术博客`}
   description={post.frontmatter.description}
   keywords={post.frontmatter.keywords}
-  canonical={`/blog/${post.frontmatter.slug}`}
+  canonical={`/blog/${post.frontmatter.slug || post.frontmatter.canonical?.replace('/articles/', '') || post.file?.split('/').pop().replace('.md', '')}`}
 >
   <Header />
 
@@ -41,7 +49,7 @@ const { Content } = post;
       
       <div style="display: flex; gap: 16px; flex-wrap: wrap; color: var(--text-light); font-size: 0.9rem;">
         <time>
-          {new Date(post.frontmatter.date).toLocaleDateString('zh-CN', {
+          {new Date(post.frontmatter.date || post.frontmatter.pubDate).toLocaleDateString('zh-CN', {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
