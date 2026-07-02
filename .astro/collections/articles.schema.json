@@ -33,27 +33,61 @@
             }
           ]
         },
+        "date": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "type": "integer",
+                  "format": "unix-time"
+                }
+              ]
+            }
+          ]
+        },
+        "author": {
+          "type": "string"
+        },
         "category": {
           "type": "string"
         },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "keywords": {
           "anyOf": [
+            {
+              "type": "string"
+            },
             {
               "type": "array",
               "items": {
                 "type": "string"
               }
-            },
-            {
-              "type": "string"
             }
           ]
         },
-        "author": {
-          "type": "string",
-          "default": "Amos Composites"
+        "canonical": {
+          "type": "string"
         },
         "image": {
+          "type": "string"
+        },
+        "slug": {
           "type": "string"
         },
         "$schema": {
@@ -62,10 +96,7 @@
       },
       "required": [
         "title",
-        "description",
-        "pubDate",
-        "category",
-        "keywords"
+        "description"
       ],
       "additionalProperties": false
     }
