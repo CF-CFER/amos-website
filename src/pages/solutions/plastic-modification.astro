@@ -1,0 +1,245 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = "塑料改性增强碳纤维解决方案 | 碳烯技术";
+const description = "碳烯技术提供碳纤维增强塑料改性一站式解决方案。PA66添加20%短切碳纤维（3mm），抗拉强度可从80MPa提升至180-220MPa，提升2-3倍。覆盖PA/PP/ABS/PEEK等15种塑料体系。";
+const keywords = "塑料改性碳纤维,碳纤维增强塑料,PA66碳纤维,短切碳纤维,塑料增强,碳纤维改性PP,碳纤维改性尼龙,碳纤维改性PEEK";
+const canonical = "/solutions/plastic-modification";
+
+const faqData = [
+  {
+    question: "PA66加碳纤维和加玻璃纤维有什么区别？",
+    answer: "碳纤维增强PA66强度提升2-3倍（80→220MPa），玻璃纤维提升1.5-2倍；碳纤维密度更低（1.76g/cm³ vs 2.5g/cm³），减重30%；碳纤维导电导热，玻璃纤维绝缘；但碳纤维价格是玻璃纤维的5-8倍。"
+  },
+  {
+    question: "短切碳纤维多长最适合塑料改性？",
+    answer: "3mm短切碳纤维最适合注塑成型，能保持较好的纤维长度保留率（L/D比>100）；6mm适合挤出和模压工艺；1-2mm适合薄壁件和复杂结构。3mm是注塑改性的黄金长度。"
+  },
+  {
+    question: "碳纤维增强塑料的导电性怎么控制？",
+    answer: "导电性取决于添加量和纤维取向：5%以下基本绝缘；10-15%出现渗流阈值，表面电阻降至10⁴-10⁶Ω；20%以上导电性稳定。可通过控制添加量、使用绝缘上浆剂、或添加绝缘填料来调节。"
+  },
+  {
+    question: "塑料改性碳纤维添加量多少最合适？",
+    answer: "通用塑料（PP/ABS/PC）推荐10-20%；尼龙系（PA6/PA66）推荐15-30%；高温工程塑料（PEEK/PEI）推荐20-35%；弹性体推荐5-15%。超过35%后加工困难，性价比下降。"
+  },
+  {
+    question: "碳纤维增强尼龙和纯尼龙价格差多少？",
+    answer: "以PA66为例：纯PA66约25-35元/kg；添加20%短切碳纤维后约80-120元/kg，价格提升3-4倍；添加30%后约120-180元/kg。虽然单价高，但零件可减重30-50%，综合成本可能更低。"
+  },
+  {
+    question: "碳纤维改性塑料注塑有什么注意事项？",
+    answer: "① 模具需耐磨处理（纤维磨损严重）；② 注塑温度提高10-20°C；③ 注射速度适中，避免纤维过度折断；④ 浇口设计要减少纤维取向不均；⑤ 需充分干燥（尼龙系含水率<0.1%）；⑥ 螺杆选用双合金或碳化钨材质。"
+  }
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://amoscomposites.cn/solutions/plastic-modification",
+      "url": "https://amoscomposites.cn/solutions/plastic-modification",
+      "name": title,
+      "description": description
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqData.map(f => ({
+        "@type": "Question",
+        "name": f.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": f.answer
+        }
+      }))
+    }
+  ]
+};
+---
+
+<Layout title={title} description={description} keywords={keywords} canonical={canonical} schema={schema}>
+  <Header />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 80px 24px 60px; text-align: center;">
+    <h1 style="font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin-bottom: 16px;">
+      碳纤维增强塑料改性一站式解决方案
+    </h1>
+    <p style="color: #e2e8f0; max-width: 900px; margin: 0 auto; font-size: 1.1rem; line-height: 1.7;">
+      添加20%短切碳纤维（3mm），PA66抗拉强度可从80MPa提升至180-220MPa，提升2-3倍，同时热变形温度提高30-50°C。
+      碳烯技术懂塑料更懂碳纤维，一站解决分散、界面结合、性能提升三大难题。
+    </p>
+  </section>
+
+  <!-- 5大塑料体系 -->
+  <section style="padding: 64px 24px; max-width: 1200px; margin: 0 auto;">
+    <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--primary); margin-bottom: 8px; text-align: center;">
+      5大塑料体系选型指南
+    </h2>
+    <p style="text-align: center; color: var(--text-light); margin-bottom: 40px;">覆盖从通用塑料到高温工程塑料的全场景需求</p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px;">
+      <div class="product-card">
+        <h3>🧵 尼龙系 (PA6/PA66/PA12)</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8; margin-top: 12px;">
+          <li>短切长度：3-6mm</li>
+          <li>推荐添加量：15-30%</li>
+          <li>抗拉强度提升：<strong>2-3倍</strong></li>
+          <li>热变形温度提升：30-50°C</li>
+          <li>典型应用：齿轮、轴承、连接器</li>
+        </ul>
+        <a href="/plastic-modified-carbon">查看详情 →</a>
+      </div>
+
+      <div class="product-card">
+        <h3>🔥 高温工程塑料 (PEEK/PEI/PPS)</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8; margin-top: 12px;">
+          <li>短切长度：3mm</li>
+          <li>推荐添加量：20-35%</li>
+          <li>耐温提升：<strong>50°C+</strong></li>
+          <li>长期使用温度可达250°C</li>
+          <li>典型应用：医疗器械、航空部件</li>
+        </ul>
+        <a href="/plastic-modified-carbon">查看详情 →</a>
+      </div>
+
+      <div class="product-card">
+        <h3>💰 通用塑料 (PP/ABS/PC)</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8; margin-top: 12px;">
+          <li>短切长度：6mm</li>
+          <li>推荐添加量：10-20%</li>
+          <li>成本最优方案</li>
+          <li>强度提升：40-80%</li>
+          <li>典型应用：汽车保险杠、家电外壳</li>
+        </ul>
+        <a href="/plastic-modified-carbon">查看详情 →</a>
+      </div>
+
+      <div class="product-card">
+        <h3>⚙️ 热固性塑料 (环氧/酚醛)</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8; margin-top: 12px;">
+          <li>碳纤维形态：碳纤维粉/短切</li>
+          <li>推荐添加量：15-25%</li>
+          <li>高刚性、尺寸稳定</li>
+          <li>弯曲模量提升：100-200%</li>
+          <li>典型应用：模具、治具、结构件</li>
+        </ul>
+        <a href="/carbon-fiber-powder">查看碳纤维粉 →</a>
+      </div>
+
+      <div class="product-card">
+        <h3>🎯 弹性体 (TPE/TPU)</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8; margin-top: 12px;">
+          <li>短切长度：3mm</li>
+          <li>推荐添加量：5-15%</li>
+          <li>导电+增强双功能</li>
+          <li>表面电阻可达10³-10⁵Ω</li>
+          <li>典型应用：抗静电脚轮、导电密封件</li>
+        </ul>
+        <a href="/plastic-modified-carbon">查看详情 →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 客户案例 -->
+  <section style="background: var(--bg-alt); padding: 64px 24px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--primary); margin-bottom: 32px; text-align: center;">
+        客户成功案例
+      </h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+        <div style="background: var(--bg); padding: 28px; border-radius: 12px; border: 1px solid var(--border);">
+          <h4 style="color: var(--primary); font-weight: 700; margin-bottom: 12px;">案例一：汽车连接器（PA66+30%CF）</h4>
+          <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.7;">
+            某汽车零部件供应商采用PA66+30%短切碳纤维（3mm），抗拉强度从82MPa提升至215MPa，
+            热变形温度从75°C提升至145°C，成功替代进口材料，年采购量12吨，成本降低25%。
+          </p>
+        </div>
+        <div style="background: var(--bg); padding: 28px; border-radius: 12px; border: 1px solid var(--border);">
+          <h4 style="color: var(--primary); font-weight: 700; margin-bottom: 12px;">案例二：无人机机臂（PEEK+25%CF）</h4>
+          <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.7;">
+            某无人机厂商采用PEEK+25%短切碳纤维，弯曲强度达285MPa，
+            密度仅1.45g/cm³，比铝合金减重40%，同时耐化学腐蚀性能优异。
+            零件寿命从500小时提升至2000小时。
+          </p>
+        </div>
+        <div style="background: var(--bg); padding: 28px; border-radius: 12px; border: 1px solid var(--border);">
+          <h4 style="color: var(--primary); font-weight: 700; margin-bottom: 12px;">案例三：抗静电托盘（PP+15%CF）</h4>
+          <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.7;">
+            某电子厂采用PP+15%短切碳纤维，表面电阻稳定在10⁴-10⁵Ω，
+            满足ESD防护要求。弯曲模量从1.2GPa提升至3.8GPa，
+            托盘承重从15kg提升至45kg，使用寿命延长3倍。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3步选型流程 -->
+  <section style="padding: 64px 24px; max-width: 1200px; margin: 0 auto;">
+    <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--primary); margin-bottom: 32px; text-align: center;">
+      3步选型流程
+    </h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px;">
+      <div class="feature-item">
+        <div class="feature-num">1</div>
+        <div>
+          <h4>明确塑料基体与应用场景</h4>
+          <p>确定塑料类型（PA/PP/PEEK等）、成型工艺（注塑/挤出/模压）、使用环境（温度/湿度/化学介质）</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-num">2</div>
+        <div>
+          <h4>选择碳纤维规格与添加量</h4>
+          <p>根据强度要求和成本预算，选择短切长度（3mm/6mm）、添加量（10-35%）、上浆剂类型</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-num">3</div>
+        <div>
+          <h4>试样验证与批量交付</h4>
+          <p>提供1-5kg试样料，7天内完成注塑/挤出试样，验证力学性能和外观质量后批量交付</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background: var(--bg-alt); padding: 64px 24px;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--primary); margin-bottom: 32px; text-align: center;">
+        常见问题解答
+      </h2>
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        {faqData.map((faq, index) => (
+          <details style="background: var(--bg); border-radius: 8px; border: 1px solid var(--border); overflow: hidden;">
+            <summary style="padding: 20px 24px; font-weight: 700; color: var(--primary); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+              <span>{faq.question}</span>
+              <span style="color: var(--accent); font-size: 1.2rem;">+</span>
+            </summary>
+            <div style="padding: 0 24px 20px; color: var(--text-light); line-height: 1.7; font-size: 0.95rem;">
+              {faq.answer}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background: var(--primary); color: white; padding: 64px 24px; text-align: center;">
+    <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 16px;">
+      获取免费选型方案
+    </h2>
+    <p style="color: #e2e8f0; max-width: 600px; margin: 0 auto 28px; font-size: 1.05rem;">
+      告诉我们您的塑料类型、性能要求和应用场景，24小时内提供定制化碳纤维增强方案
+    </p>
+    <a href="/contact" class="btn-cta">立即咨询 / Get Free Quote</a>
+  </section>
+
+  <Footer />
+</Layout>

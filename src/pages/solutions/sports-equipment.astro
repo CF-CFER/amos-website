@@ -1,0 +1,210 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = "体育器材碳纤维材料一站式供应解决方案 | 碳烯技术";
+const description = "高尔夫球杆推荐T800级碳纤维（强度5880MPa，模量294GPa），兼顾弹性和控制性。碳烯技术提供高尔夫球杆/自行车/球拍/钓鱼竿/滑雪板五大品类碳纤维材料一站式供应。";
+const keywords = "体育器材碳纤维,高尔夫球杆碳纤维,碳纤维自行车,碳纤维球拍,碳纤维钓鱼竿,碳纤维滑雪板,T800碳纤维,运动器材碳纤维";
+const canonical = "/solutions/sports-equipment";
+
+const faqData = [
+  {
+    question: "什么级别碳纤维适合做高尔夫球杆？",
+    answer: "高尔夫球杆身推荐T800级碳纤维（强度5880MPa，模量294GPa），兼顾弹性和控制性。杆身中段用T700（弹性好，距离远），握把端和杆头端用T800（控制好，稳定性高）。职业选手杆身多用T1100+高模M40J混编，实现距离和控制的完美平衡。"
+  },
+  {
+    question: "碳纤维自行车架用T700还是T800？",
+    answer: "入门/中端车架用T700（强度4900MPa），性价比高，韧性好；高端竞技车架用T800（强度5880MPa），更轻更硬。顶级车架采用T800+M40J混编，关键受力部位用T800保证强度，非关键部位用M40J减轻重量。整车架重量可从铝合金的1800g降至850g。"
+  },
+  {
+    question: "碳纤维球拍（羽毛球/网球）有什么优势？",
+    answer: "碳纤维球拍优势：① 重量轻（羽毛球拍75-90g，比铝合金轻30%）；② 刚性好，击球反馈直接；③ 可设计不同硬度区域（拍头硬、拍杆弹）；④ 减震性能优异。推荐T700-T800级，3K/6K编织布，拍框用高模量纤维，拍杆用高强度纤维。"
+  },
+  {
+    question: "碳纤维钓鱼竿怎么选材料？",
+    answer: "钓鱼竿按调性选材料：硬调竿（黑坑/竞技）用高模量M40J（模量377GPa），回弹快、控鱼稳；中调竿（综合）用T800（模量294GPa），弹性适中；软调竿（溪流/手感）用T700（模量230GPa），护线性好、手感柔和。竿梢常用高吨位碳布，竿身逐渐过渡。"
+  },
+  {
+    question: "碳纤维滑雪板比传统材料好在哪里？",
+    answer: "碳纤维滑雪板优势：① 比玻璃纤维板轻25-30%，操控更灵活；② 刚性更好，高速稳定性强；③ 能量回馈效率高，起跳更有力。竞技级滑雪板采用T700+玄武岩纤维混编，兼顾轻量化和耐冲击性。全碳板价格约4000-8000元，玻纤板约1500-3000元。"
+  },
+  {
+    question: "体育器材碳纤维可以定制颜色吗？",
+    answer: "可以。① 编织布可选3K/6K/12K，纹路不同视觉效果不同；② 可定制彩色凯夫拉混编（黑黄/黑红/黑蓝）；③ 可定制Logo水印编织；④ 表面可做哑光/亮光/3D纹理。定制起订量通常100支/件起，交货周期4-6周。"
+  }
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://amoscomposites.cn/solutions/sports-equipment",
+      "url": "https://amoscomposites.cn/solutions/sports-equipment",
+      "name": title,
+      "description": description
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqData.map(f => ({
+        "@type": "Question",
+        "name": f.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": f.answer
+        }
+      }))
+    }
+  ]
+};
+---
+
+<Layout title={title} description={description} keywords={keywords} canonical={canonical} schema={schema}>
+  <Header />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 80px 24px 60px; text-align: center;">
+    <h1 style="font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin-bottom: 16px;">
+      体育器材碳纤维材料一站式供应解决方案
+    </h1>
+    <p style="color: #e2e8f0; max-width: 900px; margin: 0 auto; font-size: 1.1rem; line-height: 1.7;">
+      高尔夫球杆推荐T800级碳纤维（强度5880MPa，模量294GPa），兼顾弹性和控制性。
+      碳烯技术提供高尔夫球杆/自行车/球拍/钓鱼竿/滑雪板五大品类碳纤维材料一站式供应，
+      支持定制编织纹路和混编方案。
+    </p>
+  </section>
+
+  <!-- 5大器材品类 -->
+  <section style="padding: 64px 24px; max-width: 1200px; margin: 0 auto;">
+    <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--primary); margin-bottom: 8px; text-align: center;">
+      五大器材品类材料方案
+    </h2>
+    <p style="text-align: center; color: var(--text-light); margin-bottom: 40px;">专业级到竞技级，全级别覆盖</p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+      <div class="product-card">
+        <h3>⛳ 高尔夫球杆</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8; margin-top: 12px;">
+          <li>推荐材料：T800 单向带 + M40J 局部增强</li>
+          <li>杆身重量：45-65g（碳素 vs 钢110g）</li>
+          <li>挥重降低：<strong>20-30%</strong></li>
+          <li>扭矩控制：2-4°（T800高刚性）</li>
+          <li>价格区间：材料成本150-400元/支</li>
+        </ul>
+        <a href="/carbon-fiber-filament">查看碳纤维丝 →</a>
+      </div>
+
+      <div class="product-card">
+        <h3>🚴 自行车架</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8; margin-top: 12px;">
+          <li>推荐材料：T700/T800 预浸料</li>
+          <li>车架重量：850-1200g（碳）vs 1800g（铝）</li>
+          <li>减重效果：<strong>40-55%</strong></li>
+          <li>刚性指标：头管刚性>100N/mm</li>
+          <li>价格区间：材料成本800-2500元/架</li>
+        </ul>
+        <a href="/carbon-fiber-fabric">查看碳纤维布 →</a>
+      </div>
+
+      <div class="product-card">
+        <h3>🏸 羽毛球/网球拍</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8; margin-top: 12px;">
+          <li>推荐材料：T700-T800 3K编织布</li>
+          <li>拍框重量：75-90g（碳）vs 110g（铝）</li>
+          <li>平衡点可调：280-310mm</li>
+          <li>磅数支持：可达30lbs（T800）</li>
+          <li>价格区间：材料成本80-200元/支</li>
+        </ul>
+        <a href="/carbon-fiber-fabric">查看碳纤维布 →</a>
+      </div>
+
+      <div class="product-card">
+        <h3>🎣 钓鱼竿</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8; margin-top: 12px;">
+          <li>推荐材料：T700-M40J 梯度设计</li>
+          <li>竿重降低：<strong>30-40%</strong></li>
+          <li>灵敏度提升：碳纤维传声性更好</li>
+          <li>腰力指标：取决于模量选择</li>
+          <li>价格区间：材料成本60-150元/支</li>
+        </ul>
+        <a href="/carbon-fiber-filament">查看碳纤维丝 →</a>
+      </div>
+
+      <div class="product-card">
+        <h3>⛷️ 滑雪板</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8; margin-top: 12px;">
+          <li>推荐材料：T700 + 玄武岩纤维混编</li>
+          <li>板重降低：<strong>25-30%</strong></li>
+          <li>扭转刚性：比玻纤板高40%</li>
+          <li>能量回馈：起跳效率提升15%</li>
+          <li>价格区间：材料成本300-600元/对</li>
+        </ul>
+        <a href="/carbon-fiber-fabric">查看碳纤维布 →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 定制服务 -->
+  <section style="background: var(--bg-alt); padding: 64px 24px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--primary); margin-bottom: 8px; text-align: center;">
+        体育器材定制服务
+      </h2>
+      <p style="text-align: center; color: var(--text-light); margin-bottom: 40px;">从材料选型到成品交付，一站式定制</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px;">
+        <div style="background: var(--bg); padding: 24px; border-radius: 8px; text-align: center;">
+          <h4 style="color: var(--primary); font-weight: 700; margin-bottom: 10px;">🎨 纹路定制</h4>
+          <p style="color: var(--text-light); font-size: 0.9rem;">3K/6K/12K编织可选，支持平纹/斜纹/缎纹，可定制Logo水印</p>
+        </div>
+        <div style="background: var(--bg); padding: 24px; border-radius: 8px; text-align: center;">
+          <h4 style="color: var(--primary); font-weight: 700; margin-bottom: 10px;">🌈 混编定制</h4>
+          <p style="color: var(--text-light); font-size: 0.9rem;">碳纤维+凯夫拉混编（黑黄/黑红/黑蓝），兼具美观和韧性</p>
+        </div>
+        <div style="background: var(--bg); padding: 24px; border-radius: 8px; text-align: center;">
+          <h4 style="color: var(--primary); font-weight: 700; margin-bottom: 10px;">📐 梯度设计</h4>
+          <p style="color: var(--text-light); font-size: 0.9rem;">不同部位使用不同模量纤维，实现重量和性能最优配比</p>
+        </div>
+        <div style="background: var(--bg); padding: 24px; border-radius: 8px; text-align: center;">
+          <h4 style="color: var(--primary); font-weight: 700; margin-bottom: 10px;">✨ 表面处理</h4>
+          <p style="color: var(--text-light); font-size: 0.9rem;">哑光/亮光/3D纹理/透明清漆，满足品牌外观需求</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="padding: 64px 24px;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--primary); margin-bottom: 32px; text-align: center;">
+        常见问题解答
+      </h2>
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        {faqData.map((faq) => (
+          <details style="background: var(--bg); border-radius: 8px; border: 1px solid var(--border); overflow: hidden;">
+            <summary style="padding: 20px 24px; font-weight: 700; color: var(--primary); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+              <span>{faq.question}</span>
+              <span style="color: var(--accent); font-size: 1.2rem;">+</span>
+            </summary>
+            <div style="padding: 0 24px 20px; color: var(--text-light); line-height: 1.7; font-size: 0.95rem;">
+              {faq.answer}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background: var(--primary); color: white; padding: 64px 24px; text-align: center;">
+    <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 16px;">
+      获取体育器材材料方案
+    </h2>
+    <p style="color: #e2e8f0; max-width: 600px; margin: 0 auto 28px; font-size: 1.05rem;">
+      支持小批量定制（100件起），4-6周交货，提供从材料到工艺的全流程支持
+    </p>
+    <a href="/contact" class="btn-cta">立即咨询 / Get Sports Quote</a>
+  </section>
+
+  <Footer />
+</Layout>

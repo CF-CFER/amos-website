@@ -1,0 +1,380 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = "碳纤维材料选型完全指南 | 2026版 | 碳烯技术";
+const description = "2026版碳纤维材料选型完全指南：涵盖T300/T700/T800/T1000/M40J/M55J全系列参数、品牌对照、价格区间、选型流程。密度1.76g/cm³，T800强度5.49GPa，M55J模量540GPa。";
+const keywords = "碳纤维选型,碳纤维指南,T300,T700,T800,M40J,M55J,碳纤维参数,碳纤维价格,碳纤维品牌,东丽碳纤维";
+const canonical = "/whitepaper/carbon-fiber-selection-guide";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://amoscomposites.cn/whitepaper/carbon-fiber-selection-guide",
+      "headline": title,
+      "description": description,
+      "author": { "@type": "Organization", "name": "碳烯技术" },
+      "publisher": { "@type": "Organization", "name": "碳烯技术", "logo": { "@type": "ImageObject", "url": "https://amoscomposites.cn/logo.png" } },
+      "datePublished": "2026-07-02",
+      "dateModified": "2026-07-02"
+    },
+    {
+      "@type": "Book",
+      "name": "碳纤维材料选型完全指南 | 2026版",
+      "author": { "@type": "Organization", "name": "碳烯技术" },
+      "publisher": { "@type": "Organization", "name": "碳烯技术" },
+      "datePublished": "2026-07-02",
+      "about": "碳纤维材料选型技术指南"
+    }
+  ]
+};
+---
+
+<Layout title={title} description={description} keywords={keywords} canonical={canonical} schema={schema}>
+  <Header />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 80px 24px 60px; text-align: center;">
+    <h1 style="font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin-bottom: 16px;">
+      碳纤维材料选型完全指南
+    </h1>
+    <p style="color: #ffd700; font-size: 1.1rem; font-weight: 600; margin-bottom: 8px;">2026版 · 碳烯技术出品</p>
+    <p style="color: #e2e8f0; max-width: 800px; margin: 0 auto; font-size: 1rem; line-height: 1.7;">
+      覆盖T300~T1000高强系列、M40J~M55J高模系列，10大章节、6大品牌、30+型号全面对照。
+      工程师必备的碳纤维选型工具书。
+    </p>
+    <div style="margin-top: 28px;">
+      <a href="/whitepaper/carbon-fiber-selection-guide-2026.pdf" download style="background: var(--accent); color: white; padding: 14px 32px; border-radius: 8px; font-weight: 700; display: inline-block; margin-right: 12px;">
+        📥 下载PDF版
+      </a>
+      <a href="/contact" style="background: transparent; color: white; padding: 14px 32px; border-radius: 8px; font-weight: 700; border: 2px solid white; display: inline-block;">
+        获取选型支持
+      </a>
+    </div>
+  </section>
+
+  <div style="padding: 48px 24px; max-width: 960px; margin: 0 auto;">
+
+    <!-- 目录 -->
+    <nav style="background: var(--bg-alt); padding: 32px; border-radius: 12px; margin-bottom: 48px;">
+      <h2 style="font-size: 1.3rem; font-weight: 800; color: var(--primary); margin-bottom: 16px;">📑 目录</h2>
+      <ol style="color: var(--text-light); line-height: 2; padding-left: 20px;">
+        <li><a href="#ch1" style="color: var(--primary-light);">碳纤维基础参数速查表</a></li>
+        <li><a href="#ch2" style="color: var(--primary-light);">PAN基/沥青基/粘胶基分类</a></li>
+        <li><a href="#ch3" style="color: var(--primary-light);">丝束规格</a></li>
+        <li><a href="#ch4" style="color: var(--primary-light);">上浆剂匹配表</a></li>
+        <li><a href="#ch5" style="color: var(--primary-light);">表面处理</a></li>
+        <li><a href="#ch6" style="color: var(--primary-light);">品牌型号对照表</a></li>
+        <li><a href="#ch7" style="color: var(--primary-light);">价格区间</a></li>
+        <li><a href="#ch8" style="color: var(--primary-light);">选型决策流程</a></li>
+        <li><a href="#ch9" style="color: var(--primary-light);">常见选型错误</a></li>
+        <li><a href="#ch10" style="color: var(--primary-light);">碳烯技术供应能力</a></li>
+      </ol>
+    </nav>
+
+    <!-- 第1章 -->
+    <h2 id="ch1" style="font-size: 1.6rem; font-weight: 800; color: var(--primary); margin: 48px 0 20px;">第1章 碳纤维基础参数速查表</h2>
+    <div style="overflow-x: auto;">
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem; margin-bottom: 24px;">
+        <thead>
+          <tr style="background: var(--primary); color: white;">
+            <th style="padding: 12px; text-align: left;">等级</th>
+            <th style="padding: 12px; text-align: left;">代表型号</th>
+            <th style="padding: 12px; text-align: left;">拉伸强度 (GPa)</th>
+            <th style="padding: 12px; text-align: left;">拉伸模量 (GPa)</th>
+            <th style="padding: 12px; text-align: left;">密度 (g/cm³)</th>
+            <th style="padding: 12px; text-align: left;">断裂伸长率 (%)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid var(--border); background: var(--bg);"><td style="padding: 12px; font-weight: 700;">T300</td><td style="padding: 12px;">T300-12K</td><td style="padding: 12px;">3.53</td><td style="padding: 12px;">230</td><td style="padding: 12px;">1.76</td><td style="padding: 12px;">1.5</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 12px; font-weight: 700;">T700</td><td style="padding: 12px;">T700SC-12K</td><td style="padding: 12px;">4.90</td><td style="padding: 12px;">230</td><td style="padding: 12px;">1.80</td><td style="padding: 12px;">2.1</td></tr>
+          <tr style="border-bottom: 1px solid var(--border); background: var(--bg);"><td style="padding: 12px; font-weight: 700;">T800</td><td style="padding: 12px;">T800SC-12K</td><td style="padding: 12px;">5.49</td><td style="padding: 12px;">294</td><td style="padding: 12px;">1.80</td><td style="padding: 12px;">2.0</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 12px; font-weight: 700;">T1000</td><td style="padding: 12px;">T1000G-12K</td><td style="padding: 12px;">6.37</td><td style="padding: 12px;">294</td><td style="padding: 12px;">1.80</td><td style="padding: 12px;">2.2</td></tr>
+          <tr style="border-bottom: 1px solid var(--border); background: var(--bg);"><td style="padding: 12px; font-weight: 700;">M40J</td><td style="padding: 12px;">M40J-12K</td><td style="padding: 12px;">4.41</td><td style="padding: 12px;">377</td><td style="padding: 12px;">1.77</td><td style="padding: 12px;">1.2</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 12px; font-weight: 700;">M55J</td><td style="padding: 12px;">M55J-6K</td><td style="padding: 12px;">4.02</td><td style="padding: 12px;">540</td><td style="padding: 12px;">1.91</td><td style="padding: 12px;">0.8</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.7;">
+      <strong>核心结论：</strong>选强度看T系列（T300→T1000递增），选刚度看M系列（M40J→M55J递增）。
+      T800是强度与模量的最佳平衡点，M40J是高模量的入门选择。
+    </p>
+
+    <!-- 第2章 -->
+    <h2 id="ch2" style="font-size: 1.6rem; font-weight: 800; color: var(--primary); margin: 48px 0 20px;">第2章 PAN基/沥青基/粘胶基分类</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-bottom: 24px;">
+      <div style="background: var(--bg-alt); padding: 20px; border-radius: 8px;">
+        <h4 style="color: var(--primary); font-weight: 700; margin-bottom: 8px;">PAN基碳纤维（占90%+）</h4>
+        <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.7;">
+          聚丙烯腈基碳纤维，强度高、性价比高。T300/T700/T800/T1000/M40J/M55J均为PAN基。
+          拉伸强度3.5-6.4GPa，模量230-540GPa。适用航空航天、汽车、体育器材等绝大多数场景。
+        </p>
+      </div>
+      <div style="background: var(--bg-alt); padding: 20px; border-radius: 8px;">
+        <h4 style="color: var(--primary); font-weight: 700; margin-bottom: 8px;">沥青基碳纤维</h4>
+        <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.7;">
+          模量极高（最高900GPa），但强度较低（2.0-3.5GPa）。用于卫星天线、精密仪器等对刚度极端要求的场景。
+          代表型号：K13D2U（模量935GPa）。价格昂贵，约2000-5000元/kg。
+        </p>
+      </div>
+      <div style="background: var(--bg-alt); padding: 20px; border-radius: 8px;">
+        <h4 style="color: var(--primary); font-weight: 700; margin-bottom: 8px;">粘胶基碳纤维</h4>
+        <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.7;">
+          原料为粘胶纤维，含碳量高、导热性好，用于保温材料、刹车片、隔热屏等。
+          强度低（1.5-2.5GPa），不适合结构件。产量小，市场份额小于1%。
+        </p>
+      </div>
+    </div>
+    <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.7;">
+      <strong>选型建议：</strong>除非有特殊需求（超高模量或隔热），否则一律选择PAN基碳纤维。
+    </p>
+
+    <!-- 第3章 -->
+    <h2 id="ch3" style="font-size: 1.6rem; font-weight: 800; color: var(--primary); margin: 48px 0 20px;">第3章 丝束规格</h2>
+    <div style="overflow-x: auto; margin-bottom: 24px;">
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+        <thead>
+          <tr style="background: var(--primary); color: white;">
+            <th style="padding: 12px; text-align: left;">丝束规格</th>
+            <th style="padding: 12px; text-align: left;">单丝数量</th>
+            <th style="padding: 12px; text-align: left;">线密度 (tex)</th>
+            <th style="padding: 12px; text-align: left;">适用场景</th>
+            <th style="padding: 12px; text-align: left;">优缺点</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid var(--border); background: var(--bg);"><td style="padding: 12px; font-weight: 700;">1K</td><td style="padding: 12px;">~1000丝</td><td style="padding: 12px;">~66</td><td style="padding: 12px;">高端外观件、无人机</td><td style="padding: 12px;">纹理细、贵</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 12px; font-weight: 700;">3K</td><td style="padding: 12px;">~3000丝</td><td style="padding: 12px;">~200</td><td style="padding: 12px;">体育器材、内饰</td><td style="padding: 12px;">纹理美观、通用</td></tr>
+          <tr style="border-bottom: 1px solid var(--border); background: var(--bg);"><td style="padding: 12px; font-weight: 700;">6K</td><td style="padding: 12px;">~6000丝</td><td style="padding: 12px;">~400</td><td style="padding: 12px;">预浸料、织物</td><td style="padding: 12px;">平衡效率与成本</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 12px; font-weight: 700;">12K</td><td style="padding: 12px;">~12000丝</td><td style="padding: 12px;">~800</td><td style="padding: 12px;">航空、缠绕、拉挤</td><td style="padding: 12px;">效率最高、标准规格</td></tr>
+          <tr style="border-bottom: 1px solid var(--border); background: var(--bg);"><td style="padding: 12px; font-weight: 700;">24K</td><td style="padding: 12px;">~24000丝</td><td style="padding: 12px;">~1600</td><td style="padding: 12px;">工业批量、风电</td><td style="padding: 12px;">成本低、效率高</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 12px; font-weight: 700;">48K/50K</td><td style="padding: 12px;">~48000-50000丝</td><td style="padding: 12px;">~3200-3300</td><td style="padding: 12px;">风电叶片、汽车</td><td style="padding: 12px;">成本最低、效率最高</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.7;">
+      <strong>选型建议：</strong>航空/高端体育选3K/6K；通用工业选12K；大批量低成本选24K/50K。
+      1K仅用于特殊外观需求，性价比低。
+    </p>
+
+    <!-- 第4章 -->
+    <h2 id="ch4" style="font-size: 1.6rem; font-weight: 800; color: var(--primary); margin: 48px 0 20px;">第4章 上浆剂匹配表</h2>
+    <div style="overflow-x: auto; margin-bottom: 24px;">
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+        <thead>
+          <tr style="background: var(--primary); color: white;">
+            <th style="padding: 12px; text-align: left;">上浆剂类型</th>
+            <th style="padding: 12px; text-align: left;">适用树脂体系</th>
+            <th style="padding: 12px; text-align: left;">典型应用</th>
+            <th style="padding: 12px; text-align: left;">碳烯标识</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid var(--border); background: var(--bg);"><td style="padding: 12px; font-weight: 700;">环氧树脂上浆剂</td><td style="padding: 12px;">环氧、乙烯基酯</td><td style="padding: 12px;">航空航天、结构件</td><td style="padding: 12px;">EP</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 12px; font-weight: 700;">聚酯上浆剂</td><td style="padding: 12px;">不饱和聚酯、乙烯基酯</td><td style="padding: 12px;">船舶、储罐、管道</td><td style="padding: 12px;">VE</td></tr>
+          <tr style="border-bottom: 1px solid var(--border); background: var(--bg);"><td style="padding: 12px; font-weight: 700;">尼龙上浆剂</td><td style="padding: 12px;">尼龙、PA66等热塑性塑料</td><td style="padding: 12px;">塑料改性、注塑</td><td style="padding: 12px;">NY</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 12px; font-weight: 700;">通用型上浆剂</td><td style="padding: 12px;">多种树脂兼容</td><td style="padding: 12px;">通用工业、研发</td><td style="padding: 12px;">GP</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.7;">
+      <strong>选型建议：</strong>上浆剂不匹配会导致层间剪切强度下降30-50%。购买前务必确认上浆剂与树脂体系的兼容性。
+      不确定时选择通用型上浆剂（GP）。
+    </p>
+
+    <!-- 第5章 -->
+    <h2 id="ch5" style="font-size: 1.6rem; font-weight: 800; color: var(--primary); margin: 48px 0 20px;">第5章 表面处理</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-bottom: 24px;">
+      <div style="background: var(--bg-alt); padding: 20px; border-radius: 8px;">
+        <h4 style="color: var(--primary); font-weight: 700; margin-bottom: 8px;">阳极氧化处理</h4>
+        <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.7;">
+          行业标准表面处理，通过电解氧化在纤维表面引入活性基团（-COOH、-OH），提高与树脂的化学键合。
+          层间剪切强度（ILSS）提升40-60%。成本最低，应用最广泛。
+        </p>
+      </div>
+      <div style="background: var(--bg-alt); padding: 20px; border-radius: 8px;">
+        <h4 style="color: var(--primary); font-weight: 700; margin-bottom: 8px;">涂层处理（上浆）</h4>
+        <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.7;">
+          在纤维表面涂覆有机聚合物层（环氧树脂、聚氨酯等），保护纤维、改善集束性、提高界面结合。
+          上浆量通常0.5-2.0%。不同上浆剂适配不同树脂体系。
+        </p>
+      </div>
+      <div style="background: var(--bg-alt); padding: 20px; border-radius: 8px;">
+        <h4 style="color: var(--primary); font-weight: 700; margin-bottom: 8px;">等离子处理</h4>
+        <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.7;">
+          低温等离子体处理，清洁纤维表面、引入极性基团，不改变纤维本体性能。
+          适用于高性能复合材料、热塑性预浸料。处理成本较高。
+        </p>
+      </div>
+    </div>
+
+    <!-- 第6章 -->
+    <h2 id="ch6" style="font-size: 1.6rem; font-weight: 800; color: var(--primary); margin: 48px 0 20px;">第6章 品牌型号对照表</h2>
+    <div style="overflow-x: auto; margin-bottom: 24px;">
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
+        <thead>
+          <tr style="background: var(--primary); color: white;">
+            <th style="padding: 10px; text-align: left;">品牌</th>
+            <th style="padding: 10px; text-align: left;">型号</th>
+            <th style="padding: 10px; text-align: left;">强度(GPa)</th>
+            <th style="padding: 10px; text-align: left;">模量(GPa)</th>
+            <th style="padding: 10px; text-align: left;">丝束</th>
+            <th style="padding: 10px; text-align: left;">产地</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid var(--border); background: var(--bg);"><td style="padding: 10px; font-weight: 700;" rowspan="6">东丽 Toray</td><td style="padding: 10px;">T300</td><td style="padding: 10px;">3.53</td><td style="padding: 10px;">230</td><td style="padding: 10px;">1K/3K/6K/12K</td><td style="padding: 10px;" rowspan="6">日本</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 10px;">T700SC</td><td style="padding: 10px;">4.90</td><td style="padding: 10px;">230</td><td style="padding: 10px;">12K</td></tr>
+          <tr style="border-bottom: 1px solid var(--border); background: var(--bg);"><td style="padding: 10px;">T800SC</td><td style="padding: 10px;">5.49</td><td style="padding: 10px;">294</td><td style="padding: 10px;">12K</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 10px;">T1000G</td><td style="padding: 10px;">6.37</td><td style="padding: 10px;">294</td><td style="padding: 10px;">12K</td></tr>
+          <tr style="border-bottom: 1px solid var(--border); background: var(--bg);"><td style="padding: 10px;">M40J</td><td style="padding: 10px;">4.41</td><td style="padding: 10px;">377</td><td style="padding: 10px;">6K/12K</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 10px;">M55J</td><td style="padding: 10px;">4.02</td><td style="padding: 10px;">540</td><td style="padding: 10px;">6K</td></tr>
+          <tr style="border-bottom: 1px solid var(--border); background: var(--bg);"><td style="padding: 10px; font-weight: 700;" rowspan="4">东邦 Toho</td><td style="padding: 10px;">HTA40</td><td style="padding: 10px;">3.92</td><td style="padding: 10px;">238</td><td style="padding: 10px;">3K/6K/12K</td><td style="padding: 10px;" rowspan="4">日本</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 10px;">HTS40</td><td style="padding: 10px;">4.41</td><td style="padding: 10px;">250</td><td style="padding: 10px;">3K/6K/12K/24K</td></tr>
+          <tr style="border-bottom: 1px solid var(--border); background: var(--bg);"><td style="padding: 10px;">HR40</td><td style="padding: 10px;">4.90</td><td style="padding: 10px;">290</td><td style="padding: 10px;">12K/24K</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 10px;">MR60H</td><td style="padding: 10px;">5.88</td><td style="padding: 10px;">290</td><td style="padding: 10px;">12K/24K</td></tr>
+          <tr style="border-bottom: 1px solid var(--border); background: var(--bg);"><td style="padding: 10px; font-weight: 700;" rowspan="4">中复神鹰</td><td style="padding: 10px;">SYT45</td><td style="padding: 10px;">4.50</td><td style="padding: 10px;">230</td><td style="padding: 10px;">12K</td><td style="padding: 10px;" rowspan="4">中国</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 10px;">SYT55</td><td style="padding: 10px;">5.50</td><td style="padding: 10px;">230</td><td style="padding: 10px;">12K</td></tr>
+          <tr style="border-bottom: 1px solid var(--border); background: var(--bg);"><td style="padding: 10px;">SYM30</td><td style="padding: 10px;">4.90</td><td style="padding: 10px;">295</td><td style="padding: 10px;">12K</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 10px;">SYM40</td><td style="padding: 10px;">4.50</td><td style="padding: 10px;">375</td><td style="padding: 10px;">6K/12K</td></tr>
+          <tr style="border-bottom: 1px solid var(--border); background: var(--bg);"><td style="padding: 10px; font-weight: 700;" rowspan="4">光威复材</td><td style="padding: 10px;">GW-T300</td><td style="padding: 10px;">3.53</td><td style="padding: 10px;">230</td><td style="padding: 10px;">3K/12K</td><td style="padding: 10px;" rowspan="4">中国</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 10px;">GW-T700</td><td style="padding: 10px;">4.90</td><td style="padding: 10px;">230</td><td style="padding: 10px;">12K</td></tr>
+          <tr style="border-bottom: 1px solid var(--border); background: var(--bg);"><td style="padding: 10px;">GW-M40J</td><td style="padding: 10px;">4.50</td><td style="padding: 10px;">380</td><td style="padding: 10px;">12K</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 10px;">GW-M55J</td><td style="padding: 10px;">4.00</td><td style="padding: 10px;">540</td><td style="padding: 10px;">6K/12K</td></tr>
+          <tr style="border-bottom: 1px solid var(--border); background: var(--bg);"><td style="padding: 10px; font-weight: 700;" rowspan="2">三菱</td><td style="padding: 10px;">TR30S</td><td style="padding: 10px;">3.53</td><td style="padding: 10px;">230</td><td style="padding: 10px;">12K/24K</td><td style="padding: 10px;" rowspan="2">日本</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 10px;">TR50S</td><td style="padding: 10px;">4.90</td><td style="padding: 10px;">240</td><td style="padding: 10px;">12K/24K</td></tr>
+          <tr style="border-bottom: 1px solid var(--border); background: var(--bg);"><td style="padding: 10px; font-weight: 700;" rowspan="2">台丽</td><td style="padding: 10px;">TC35</td><td style="padding: 10px;">3.53</td><td style="padding: 10px;">230</td><td style="padding: 10px;">12K/24K</td><td style="padding: 10px;" rowspan="2">中国台湾</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 10px;">TC36</td><td style="padding: 10px;">4.90</td><td style="padding: 10px;">240</td><td style="padding: 10px;">12K/24K</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 第7章 -->
+    <h2 id="ch7" style="font-size: 1.6rem; font-weight: 800; color: var(--primary); margin: 48px 0 20px;">第7章 价格区间（2026年参考）</h2>
+    <div style="overflow-x: auto; margin-bottom: 24px;">
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+        <thead>
+          <tr style="background: var(--primary); color: white;">
+            <th style="padding: 12px; text-align: left;">等级</th>
+            <th style="padding: 12px; text-align: left;">进口价格 (元/kg)</th>
+            <th style="padding: 12px; text-align: left;">国产价格 (元/kg)</th>
+            <th style="padding: 12px; text-align: left;">主要品牌</th>
+            <th style="padding: 12px; text-align: left;">性价比</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid var(--border); background: var(--bg);"><td style="padding: 12px; font-weight: 700;">T300级</td><td style="padding: 12px;">80-120</td><td style="padding: 12px;">50-90</td><td style="padding: 12px;">东丽/光威/台丽</td><td style="padding: 12px; color: #38a169;">★★★★★</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 12px; font-weight: 700;">T700级</td><td style="padding: 12px;">150-200</td><td style="padding: 12px;">100-160</td><td style="padding: 12px;">东丽/中复神鹰/光威</td><td style="padding: 12px; color: #38a169;">★★★★☆</td></tr>
+          <tr style="border-bottom: 1px solid var(--border); background: var(--bg);"><td style="padding: 12px; font-weight: 700;">T800级</td><td style="padding: 12px;">250-350</td><td style="padding: 12px;">180-280</td><td style="padding: 12px;">东丽/中复神鹰</td><td style="padding: 12px; color: #38a169;">★★★★☆</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 12px; font-weight: 700;">M40J级</td><td style="padding: 12px;">400-600</td><td style="padding: 12px;">300-450</td><td style="padding: 12px;">东丽/光威/中复神鹰</td><td style="padding: 12px; color: #d69e2e;">★★★☆☆</td></tr>
+          <tr style="border-bottom: 1px solid var(--border); background: var(--bg);"><td style="padding: 12px; font-weight: 700;">M55J级</td><td style="padding: 12px;">800-1200</td><td style="padding: 12px;">600-900</td><td style="padding: 12px;">东丽/光威</td><td style="padding: 12px; color: #e53e3e;">★★☆☆☆</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.7;">
+      <strong>注意：</strong>以上为12K丝束参考价格，3K/6K价格上浮20-40%，24K/50K价格下浮15-30%。
+      航空认证材料（SC版）比工业级（GC版）贵30-50%。
+    </p>
+
+    <!-- 第8章 -->
+    <h2 id="ch8" style="font-size: 1.6rem; font-weight: 800; color: var(--primary); margin: 48px 0 20px;">第8章 选型决策流程（4步）</h2>
+    <div style="display: flex; flex-direction: column; gap: 20px; margin-bottom: 24px;">
+      <div class="feature-item" style="background: var(--bg-alt); padding: 24px; border-radius: 8px;">
+        <div class="feature-num">1</div>
+        <div>
+          <h4>明确性能需求：强度优先还是刚度优先？</h4>
+          <p>需要高承力（抗拉/抗压）→ 选T系列（T700/T800/T1000）；需要高刚性（抗弯/抗变形）→ 选M系列（M40J/M55J）。一般结构件T700够用，主承力结构选T800。</p>
+        </div>
+      </div>
+      <div class="feature-item" style="background: var(--bg-alt); padding: 24px; border-radius: 8px;">
+        <div class="feature-num">2</div>
+        <div>
+          <h4>确定认证和工艺要求</h4>
+          <p>航空项目需AS9100认证 → 选东丽SC版；汽车项目需IATF → 选工业级即可；一般工业 → 国产替代（中复神鹰/光威）。确认成型工艺：缠绕选12K/24K，铺层选3K/6K织物。</p>
+        </div>
+      </div>
+      <div class="feature-item" style="background: var(--bg-alt); padding: 24px; border-radius: 8px;">
+        <div class="feature-num">3</div>
+        <div>
+          <h4>评估成本预算</h4>
+          <p>预算敏感 → T300/国产T700；中高端 → T800/国产T800；不计成本 → T1000/M55J。记住：材料成本只占复材零件成本的30-50%，过度追求高端材料可能不划算。</p>
+        </div>
+      </div>
+      <div class="feature-item" style="background: var(--bg-alt); padding: 24px; border-radius: 8px;">
+        <div class="feature-num">4</div>
+        <div>
+          <h4>小批量验证后批量采购</h4>
+          <p>先采购5-10kg试样，制作标准试片测试力学性能（拉伸/弯曲/层剪），确认与树脂的界面结合和工艺适配性。验证通过后再批量采购，避免材料浪费。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 第9章 -->
+    <h2 id="ch9" style="font-size: 1.6rem; font-weight: 800; color: var(--primary); margin: 48px 0 20px;">第9章 常见选型错误（5个）</h2>
+    <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 24px;">
+      <div style="background: #fff5f5; border-left: 4px solid var(--accent); padding: 20px; border-radius: 0 8px 8px 0;">
+        <h4 style="color: var(--accent); font-weight: 700; margin-bottom: 6px;">❌ 错误1：只看强度不看模量</h4>
+        <p style="color: var(--text-light); font-size: 0.9rem;">很多工程师只关注拉伸强度，忽略模量。实际结构中刚度往往比强度更关键（变形控制）。T700和T300强度差40%，但模量相同（230GPa），刚度没区别。</p>
+      </div>
+      <div style="background: #fff5f5; border-left: 4px solid var(--accent); padding: 20px; border-radius: 0 8px 8px 0;">
+        <h4 style="color: var(--accent); font-weight: 700; margin-bottom: 6px;">❌ 错误2：上浆剂与树脂不匹配</h4>
+        <p style="color: var(--text-light); font-size: 0.9rem;">环氧上浆剂配聚酯树脂 → 层间剪切强度下降50%。购买碳纤维时必须确认上浆剂类型，或进行界面剪切试验验证。</p>
+      </div>
+      <div style="background: #fff5f5; border-left: 4px solid var(--accent); padding: 20px; border-radius: 0 8px 8px 0;">
+        <h4 style="color: var(--accent); font-weight: 700; margin-bottom: 6px;">❌ 错误3：过度追求高端材料</h4>
+        <p style="color: var(--text-light); font-size: 0.9rem;">T800比T700贵60%，强度只高20%。对于非承力件或一般结构，用T700完全够用。材料升级带来的性能提升有边际效应。</p>
+      </div>
+      <div style="background: #fff5f5; border-left: 4px solid var(--accent); padding: 20px; border-radius: 0 8px 8px 0;">
+        <h4 style="color: var(--accent); font-weight: 700; margin-bottom: 6px;">❌ 错误4：忽略丝束规格对工艺的影响</h4>
+        <p style="color: var(--text-light); font-size: 0.9rem;">50K大丝束效率高但铺层难度大，容易褶皱；3K小丝束美观但成本高。选择丝束必须匹配成型工艺，不能只看价格。</p>
+      </div>
+      <div style="background: #fff5f5; border-left: 4px solid var(--accent); padding: 20px; border-radius: 0 8px 8px 0;">
+        <h4 style="color: var(--accent); font-weight: 700; margin-bottom: 6px;">❌ 错误5：不考虑材料可追溯性</h4>
+        <p style="color: var(--text-light); font-size: 0.9rem;">航空、医疗等高端应用要求材料可追溯。采购时必须索要COA（检验证书）和TDS（技术数据表），并保留批号记录。</p>
+      </div>
+    </div>
+
+    <!-- 第10章 -->
+    <h2 id="ch10" style="font-size: 1.6rem; font-weight: 800; color: var(--primary); margin: 48px 0 20px;">第10章 碳烯技术供应能力</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 24px;">
+      <div style="background: var(--bg-alt); padding: 20px; border-radius: 8px; text-align: center;">
+        <h4 style="color: var(--primary); font-weight: 700; margin-bottom: 8px;">📦 常备库存</h4>
+        <p style="color: var(--text-light); font-size: 0.9rem;">T300/T700/T800 12K丝束常备库存500kg+，24-48小时发货</p>
+      </div>
+      <div style="background: var(--bg-alt); padding: 20px; border-radius: 8px; text-align: center;">
+        <h4 style="color: var(--primary); font-weight: 700; margin-bottom: 8px;">📋 完整证书</h4>
+        <p style="color: var(--text-light); font-size: 0.9rem;">每批随货提供COA、TDS、MSDS、ROHS/REACH合规声明</p>
+      </div>
+      <div style="background: var(--bg-alt); padding: 20px; border-radius: 8px; text-align: center;">
+        <h4 style="color: var(--primary); font-weight: 700; margin-bottom: 8px;">✂️ 分切服务</h4>
+        <p style="color: var(--text-light); font-size: 0.9rem;">预浸料分切幅宽100mm起，支持小批量试样（1-5kg）</p>
+      </div>
+      <div style="background: var(--bg-alt); padding: 20px; border-radius: 8px; text-align: center;">
+        <h4 style="color: var(--primary); font-weight: 700; margin-bottom: 8px;">🔬 技术支持</h4>
+        <p style="color: var(--text-light); font-size: 0.9rem;">材料选型建议、成型工艺指导、失效分析服务</p>
+      </div>
+    </div>
+    <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.7; text-align: center;">
+      <strong>碳烯技术（深圳）有限公司</strong> — ISO 9001认证碳纤维材料供应商<br/>
+      电话：+86-189-3369-4802 | 邮箱：289614365@qq.com
+    </p>
+
+  </div>
+
+  <!-- CTA -->
+  <section style="background: var(--primary); color: white; padding: 64px 24px; text-align: center;">
+    <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 16px;">
+      下载完整PDF白皮书
+    </h2>
+    <p style="color: #e2e8f0; max-width: 600px; margin: 0 auto 28px; font-size: 1.05rem;">
+      包含10大章节完整内容，随时查阅的碳纤维选型工具书
+    </p>
+    <a href="/whitepaper/carbon-fiber-selection-guide-2026.pdf" download class="btn-cta">📥 下载PDF</a>
+  </section>
+
+  <Footer />
+</Layout>

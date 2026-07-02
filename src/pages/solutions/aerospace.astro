@@ -1,0 +1,268 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = "航空航天碳纤维材料供应解决方案 | 碳烯技术";
+const description = "航空级碳纤维需要AS9100质量管理体系认证和NADCAP特种工艺认证。碳烯技术提供T300-T800级航空碳纤维，通过完整航空认证体系，服务无人机、卫星、航空内饰三大场景。";
+const keywords = "航空碳纤维,航空航天材料,AS9100认证,无人机碳纤维,卫星碳纤维,航空内饰,碳纤维认证,NADCAP";
+const canonical = "/solutions/aerospace";
+
+const faqData = [
+  {
+    question: "航空级碳纤维需要什么认证？",
+    answer: "核心认证包括：AS9100航空航天质量管理体系、NADCAP特种工艺认证（复合材料/热处理/无损检测）、材料原厂COA及TDS、可追溯性文件。民用航空还需通过波音BMS或空客AIMS材料认证。"
+  },
+  {
+    question: "无人机用碳纤维和航空碳纤维有什么区别？",
+    answer: "无人机多用T300-T700工业级碳纤维，成本更低（80-200元/kg），无需航空认证；航空结构件要求T700SC-T800SC航空级，必须通过AS9100认证，价格300-800元/kg，每批需提供完整追溯文件。"
+  },
+  {
+    question: "卫星结构件用碳纤维有什么特殊要求？",
+    answer: "卫星用碳纤维要求：① 低热膨胀系数（CTE接近0）；② 高模量（M40J/M55J，模量377-540GPa）；③ 耐空间辐照；④ 真空放气率<1%（ASTM E595）。常用M40J高模碳纤维，密度1.77g/cm³，模量377GPa。"
+  },
+  {
+    question: "T700和T800在航空领域怎么选？",
+    answer: "T700SC（强度4900MPa，模量230GPa）用于次级结构件：整流罩、襟翼、舱门；T800SC（强度5880MPa，模量294GPa）用于主承力结构：翼梁、机身框、起落架舱。T800比T700强度高20%，模量高28%，价格贵约60%。"
+  },
+  {
+    question: "航空碳纤维的储存和保质期有什么要求？",
+    answer: "原丝丝束：密封防潮，15-25°C，湿度<60%，保质期2年；预浸料：-18°C冷冻储存，保质期6-12个月；开封后需尽快使用，残余重新密封。每批需记录温湿度日志，确保可追溯。"
+  },
+  {
+    question: "碳纤维在航空内饰中的应用有哪些？",
+    answer: "航空内饰多用碳纤维装饰件：座椅骨架（减重30%）、行李架边框、舱壁装饰板、厨房组件。内饰用碳纤维无需航空结构级认证，可用T300工业级，但需通过FAR 25.853阻燃测试。"
+  }
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://amoscomposites.cn/solutions/aerospace",
+      "url": "https://amoscomposites.cn/solutions/aerospace",
+      "name": title,
+      "description": description
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqData.map(f => ({
+        "@type": "Question",
+        "name": f.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": f.answer
+        }
+      }))
+    }
+  ]
+};
+---
+
+<Layout title={title} description={description} keywords={keywords} canonical={canonical} schema={schema}>
+  <Header />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 80px 24px 60px; text-align: center;">
+    <h1 style="font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin-bottom: 16px;">
+      航空航天碳纤维材料选型与供应解决方案
+    </h1>
+    <p style="color: #e2e8f0; max-width: 900px; margin: 0 auto; font-size: 1.1rem; line-height: 1.7;">
+      航空级碳纤维需要AS9100质量管理体系认证和NADCAP特种工艺认证。碳烯技术提供T300-T800级航空碳纤维，
+      通过完整航空认证体系，密度1.76g/cm³，比强度为钢材的15倍，服务无人机、卫星、航空内饰三大场景。
+    </p>
+  </section>
+
+  <!-- 3大应用场景 -->
+  <section style="padding: 64px 24px; max-width: 1200px; margin: 0 auto;">
+    <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--primary); margin-bottom: 8px; text-align: center;">
+      三大应用场景
+    </h2>
+    <p style="text-align: center; color: var(--text-light); margin-bottom: 40px;">从消费级无人机到航天器结构，全级别覆盖</p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px;">
+      <div class="product-card">
+        <h3>🚁 无人机结构件</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8; margin-top: 12px;">
+          <li>推荐材料：T300/T700 12K丝束</li>
+          <li>强度要求：≥3500MPa（T300级）</li>
+          <li>典型部件：机臂、中心板、起落架</li>
+          <li>减重效果：比铝合金减重40-50%</li>
+          <li>价格区间：80-200元/kg</li>
+        </ul>
+        <a href="/carbon-fiber-filament">查看碳纤维丝产品 →</a>
+      </div>
+
+      <div class="product-card">
+        <h3>🛰️ 卫星与航天器</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8; margin-top: 12px;">
+          <li>推荐材料：M40J/M55J 高模碳纤维</li>
+          <li>模量要求：≥377GPa（M40J级）</li>
+          <li>典型部件：承力筒、太阳能帆板基板</li>
+          <li>热膨胀系数：接近0（±1×10⁻⁶/°C）</li>
+          <li>价格区间：400-1200元/kg</li>
+        </ul>
+        <a href="/carbon-fiber-filament">查看高模碳纤维 →</a>
+      </div>
+
+      <div class="product-card">
+        <h3>✈️ 航空内饰件</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8; margin-top: 12px;">
+          <li>推荐材料：T300 3K/6K织物</li>
+          <li>阻燃要求：FAR 25.853标准</li>
+          <li>典型部件：座椅骨架、行李架、舱壁</li>
+          <li>减重效果：比金属减重25-35%</li>
+          <li>价格区间：150-350元/kg</li>
+        </ul>
+        <a href="/carbon-fiber-fabric">查看碳纤维布 →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 认证要求 -->
+  <section style="background: var(--bg-alt); padding: 64px 24px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--primary); margin-bottom: 32px; text-align: center;">
+        航空级认证体系
+      </h2>
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+          <thead>
+            <tr style="background: var(--primary); color: white;">
+              <th style="padding: 14px; text-align: left;">认证类型</th>
+              <th style="padding: 14px; text-align: left;">适用范围</th>
+              <th style="padding: 14px; text-align: left;">核心要求</th>
+              <th style="padding: 14px; text-align: left;">碳烯状态</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--border); background: var(--bg);">
+              <td style="padding: 14px; font-weight: 700;">AS9100</td>
+              <td style="padding: 14px;">航空质量管理体系</td>
+              <td style="padding: 14px;">基于ISO 9001，增加航空特殊要求</td>
+              <td style="padding: 14px; color: #38a169; font-weight: 600;">✓ 已通过</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 14px; font-weight: 700;">NADCAP</td>
+              <td style="padding: 14px;">特种工艺认证</td>
+              <td style="padding: 14px;">复合材料、热处理、无损检测</td>
+              <td style="padding: 14px; color: #38a169; font-weight: 600;">✓ 合作实验室</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border); background: var(--bg);">
+              <td style="padding: 14px; font-weight: 700;">材料可追溯性</td>
+              <td style="padding: 14px;">每批材料</td>
+              <td style="padding: 14px;">从原丝到成品的完整追溯链</td>
+              <td style="padding: 14px; color: #38a169; font-weight: 600;">✓ 全程追溯</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 14px; font-weight: 700;">COA/TDS</td>
+              <td style="padding: 14px;">每批交付</td>
+              <td style="padding: 14px;">原厂证书、技术数据表</td>
+              <td style="padding: 14px; color: #38a169; font-weight: 600;">✓ 随货提供</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 案例 -->
+  <section style="padding: 64px 24px; max-width: 1200px; margin: 0 auto;">
+    <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--primary); margin-bottom: 32px; text-align: center;">
+      典型客户案例
+    </h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+      <div style="background: var(--bg-alt); padding: 28px; border-radius: 12px;">
+        <h4 style="color: var(--primary); font-weight: 700; margin-bottom: 12px;">案例一：工业无人机机臂</h4>
+        <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.7;">
+          某工业无人机厂商采用T700SC-12K碳纤维预浸料，通过热压罐成型工艺制造机臂。
+          单根机臂重量从铝合金的380g降至210g，减重45%；抗弯强度达650MPa，
+          满足10kg载重、抗阵风8级要求。年采购量2吨。
+        </p>
+      </div>
+      <div style="background: var(--bg-alt); padding: 28px; border-radius: 12px;">
+        <h4 style="color: var(--primary); font-weight: 700; margin-bottom: 12px;">案例二：卫星承力筒</h4>
+        <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.7;">
+          某航天院所采用M40J-12K高模碳纤维，缠绕成型工艺制造卫星承力筒。
+          模量377GPa，轴向热膨胀系数0.2×10⁻⁶/°C，重量仅铝合金的25%，
+          满足±100°C交变温度下的尺寸稳定性要求。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4步选型 -->
+  <section style="background: var(--bg-alt); padding: 64px 24px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--primary); margin-bottom: 32px; text-align: center;">
+        4步选型流程
+      </h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px;">
+        <div class="feature-item">
+          <div class="feature-num">1</div>
+          <div>
+            <h4>确定结构级别</h4>
+            <p>区分主承力结构（T800）、次级结构（T700）、非承力件（T300）</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-num">2</div>
+          <div>
+            <h4>选择材料等级</h4>
+            <p>根据认证要求选择航空级（SC）或工业级（GC），确认丝束规格</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-num">3</div>
+          <div>
+            <h4>匹配成型工艺</h4>
+            <p>热压罐、缠绕、自动铺放（AFP/ATL）、模压等工艺适配</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-num">4</div>
+          <div>
+            <h4>验证与交付</h4>
+            <p>提供COA/TDS，配合客户完成材料入厂检验和首件验证</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="padding: 64px 24px;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--primary); margin-bottom: 32px; text-align: center;">
+        常见问题解答
+      </h2>
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        {faqData.map((faq) => (
+          <details style="background: var(--bg); border-radius: 8px; border: 1px solid var(--border); overflow: hidden;">
+            <summary style="padding: 20px 24px; font-weight: 700; color: var(--primary); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+              <span>{faq.question}</span>
+              <span style="color: var(--accent); font-size: 1.2rem;">+</span>
+            </summary>
+            <div style="padding: 0 24px 20px; color: var(--text-light); line-height: 1.7; font-size: 0.95rem;">
+              {faq.answer}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background: var(--primary); color: white; padding: 64px 24px; text-align: center;">
+    <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 16px;">
+      获取航空材料认证方案
+    </h2>
+    <p style="color: #e2e8f0; max-width: 600px; margin: 0 auto 28px; font-size: 1.05rem;">
+      提供完整AS9100/NADCAP认证材料，每批附带COA和完整追溯文件
+    </p>
+    <a href="/contact" class="btn-cta">立即咨询 / Get Aerospace Quote</a>
+  </section>
+
+  <Footer />
+</Layout>

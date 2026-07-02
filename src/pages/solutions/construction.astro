@@ -1,0 +1,237 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = "建筑结构碳纤维加固材料供应解决方案 | 碳烯技术";
+const description = "碳纤维布加固混凝土可提高承载力30-50%。碳烯技术提供CFRP布/碳纤维筋/碳纤维板三大加固方案，符合GB 50367-2013《混凝土结构加固设计规范》，抗拉强度T300=3530MPa。";
+const keywords = "碳纤维布加固,建筑碳纤维,混凝土加固,CFRP布,碳纤维筋,碳纤维板,GB50367,结构加固材料";
+const canonical = "/solutions/construction";
+
+const faqData = [
+  {
+    question: "碳纤维布加固混凝土能提高多少承载力？",
+    answer: "碳纤维布（CFRP）加固混凝土可提高承载力30-50%，具体取决于粘贴层数和混凝土原强度。单层200g/m² CFRP布抗拉强度可达3500MPa以上，是钢材的7-10倍。梁抗弯加固可提高承载力40-60%，柱箍加固可提高延性2-3倍。"
+  },
+  {
+    question: "碳纤维布和钢板加固哪个更好？",
+    answer: "碳纤维布优势：重量轻（1.8g/cm³ vs 钢7.8g/cm³），不增加结构自重；耐腐蚀，无需防锈处理；施工便捷，无需大型设备；可弯曲贴合复杂表面。钢板优势：刚度更高，成本更低（约为碳纤维的1/3）。一般情况优先选CFRP，大刚度需求选钢板。"
+  },
+  {
+    question: "碳纤维布加固施工流程是什么？",
+    answer: "标准施工流程：① 混凝土表面处理（打磨至坚硬层，平整度<5mm/2m）；② 涂底胶（渗透型环氧树脂，0.2-0.3kg/m²）；③ 找平修补（环氧腻子填补缺陷）；④ 粘贴碳纤维布（浸渍胶涂刷，滚压排气）；⑤ 表面防护（防火涂料或防腐涂层）。施工温度5-35°C，相对湿度<85%。"
+  },
+  {
+    question: "碳纤维加固符合什么国家标准？",
+    answer: "主要标准：GB 50367-2013《混凝土结构加固设计规范》——设计依据；GB/T 26743-2011《结构加固修复用碳纤维片材》——材料标准；CECS 146:2003《碳纤维片材加固混凝土结构技术规程》——施工规范。碳纤维布要求：抗拉强度≥3000MPa，弹性模量≥210GPa，伸长率≥1.5%。"
+  },
+  {
+    question: "碳纤维筋和钢筋哪个更适合新建结构？",
+    answer: "碳纤维筋（GFRP/CFRP筋）适合：强腐蚀环境（海水/化工/除冰盐）、需要电磁透波的结构、对重量敏感的项目。不适用于：高温环境（>60°C长期）、需要延性破坏的抗震结构、后期需焊接/改造的结构。碳纤维筋抗拉强度≥1500MPa，但无屈服平台，破坏呈脆性。"
+  },
+  {
+    question: "碳纤维加固后的使用寿命有多长？",
+    answer: "按照GB 50367-2013设计，CFRP加固后设计使用年限为30年（与建筑物同步）。在正常使用环境下，碳纤维本身寿命可达50年以上（耐酸碱、不锈蚀）。限制因素通常是粘结胶的老化，环氧树脂在紫外线下会降解，因此表面必须做防护涂层。"
+  }
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://amoscomposites.cn/solutions/construction",
+      "url": "https://amoscomposites.cn/solutions/construction",
+      "name": title,
+      "description": description
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqData.map(f => ({
+        "@type": "Question",
+        "name": f.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": f.answer
+        }
+      }))
+    }
+  ]
+};
+---
+
+<Layout title={title} description={description} keywords={keywords} canonical={canonical} schema={schema}>
+  <Header />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 80px 24px 60px; text-align: center;">
+    <h1 style="font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin-bottom: 16px;">
+      建筑结构碳纤维加固材料供应解决方案
+    </h1>
+    <p style="color: #e2e8f0; max-width: 900px; margin: 0 auto; font-size: 1.1rem; line-height: 1.7;">
+      碳纤维布加固混凝土可提高承载力30-50%。碳烯技术提供CFRP布/碳纤维筋/碳纤维板三大加固方案，
+      符合GB 50367-2013《混凝土结构加固设计规范》，抗拉强度T300=3530MPa，是钢材的7-10倍。
+    </p>
+  </section>
+
+  <!-- 3大加固方案 -->
+  <section style="padding: 64px 24px; max-width: 1200px; margin: 0 auto;">
+    <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--primary); margin-bottom: 8px; text-align: center;">
+      三大加固方案
+    </h2>
+    <p style="text-align: center; color: var(--text-light); margin-bottom: 40px;">符合GB 50367-2013国家标准，安全可靠</p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px;">
+      <div class="product-card">
+        <h3>🧱 CFRP碳纤维布加固</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8; margin-top: 12px;">
+          <li>抗拉强度：≥3500MPa（T300级）</li>
+          <li>弹性模量：≥230GPa</li>
+          <li>常用规格：200g/m² / 300g/m²</li>
+          <li>宽度：100mm / 200mm / 300mm / 500mm</li>
+          <li>适用场景：梁抗弯、柱箍加固、楼板补强</li>
+          <li>承载力提升：<strong>30-50%</strong></li>
+        </ul>
+        <a href="/carbon-fiber-fabric">查看碳纤维布 →</a>
+      </div>
+
+      <div class="product-card">
+        <h3>🔩 碳纤维筋（CFRP Rebar）</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8; margin-top: 12px;">
+          <li>抗拉强度：≥1500MPa</li>
+          <li>弹性模量：≥140GPa</li>
+          <li>常用直径：6mm / 8mm / 10mm / 12mm / 16mm</li>
+          <li>密度：1.6g/cm³（钢筋的1/5）</li>
+          <li>适用场景：新建耐腐蚀结构、电磁透波结构</li>
+          <li>耐腐蚀性：<strong>100%不生锈</strong></li>
+        </ul>
+        <a href="/carbon-fiber-filament">查看碳纤维丝 →</a>
+      </div>
+
+      <div class="product-card">
+        <h3>📐 碳纤维板加固</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8; margin-top: 12px;">
+          <li>抗拉强度：≥2400MPa</li>
+          <li>弹性模量：≥160GPa</li>
+          <li>常用规格：1.2mm×50mm / 1.4mm×100mm</li>
+          <li>预应力张拉：可施加30-50%极限应力</li>
+          <li>适用场景：大跨度梁预应力加固、桥梁加固</li>
+          <li>刚度提升：<strong>2-3倍</strong></li>
+        </ul>
+        <a href="/carbon-fiber-fabric">查看碳纤维板 →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GB标准 -->
+  <section style="background: var(--bg-alt); padding: 64px 24px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--primary); margin-bottom: 32px; text-align: center;">
+        GB 50367-2013 标准材料要求
+      </h2>
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+          <thead>
+            <tr style="background: var(--primary); color: white;">
+              <th style="padding: 14px; text-align: left;">材料类型</th>
+              <th style="padding: 14px; text-align: left;">抗拉强度 (MPa)</th>
+              <th style="padding: 14px; text-align: left;">弹性模量 (GPa)</th>
+              <th style="padding: 14px; text-align: left;">伸长率 (%)</th>
+              <th style="padding: 14px; text-align: left;">碳烯产品指标</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--border); background: var(--bg);">
+              <td style="padding: 14px; font-weight: 700;">高强I级碳纤维布</td>
+              <td style="padding: 14px;">≥3400</td>
+              <td style="padding: 14px;">≥240</td>
+              <td style="padding: 14px;">≥1.6</td>
+              <td style="padding: 14px; color: #38a169; font-weight: 600;">≥3530 / ≥230 / ≥1.7</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 14px; font-weight: 700;">高强II级碳纤维布</td>
+              <td style="padding: 14px;">≥3000</td>
+              <td style="padding: 14px;">≥210</td>
+              <td style="padding: 14px;">≥1.5</td>
+              <td style="padding: 14px; color: #38a169; font-weight: 600;">符合</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border); background: var(--bg);">
+              <td style="padding: 14px; font-weight: 700;">碳纤维筋</td>
+              <td style="padding: 14px;">≥1500</td>
+              <td style="padding: 14px;">≥140</td>
+              <td style="padding: 14px;">—</td>
+              <td style="padding: 14px; color: #38a169; font-weight: 600;">≥1800 / ≥150</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 14px; font-weight: 700;">碳纤维板</td>
+              <td style="padding: 14px;">≥2400</td>
+              <td style="padding: 14px;">≥160</td>
+              <td style="padding: 14px;">≥1.5</td>
+              <td style="padding: 14px; color: #38a169; font-weight: 600;">≥2600 / ≥170</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 案例 -->
+  <section style="padding: 64px 24px; max-width: 1200px; margin: 0 auto;">
+    <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--primary); margin-bottom: 32px; text-align: center;">
+      典型加固案例
+    </h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+      <div style="background: var(--bg-alt); padding: 28px; border-radius: 12px;">
+        <h4 style="color: var(--primary); font-weight: 700; margin-bottom: 12px;">案例一：某厂房梁抗弯加固</h4>
+        <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.7;">
+          跨度12m混凝土梁，因荷载增加需加固。采用2层300g/m² CFRP布粘贴于梁底，
+          配合U型箍包裹梁端。加固后抗弯承载力从185kN·m提升至268kN·m，提升45%。
+          施工周期仅5天，不影响厂房正常生产。
+        </p>
+      </div>
+      <div style="background: var(--bg-alt); padding: 28px; border-radius: 12px;">
+        <h4 style="color: var(--primary); font-weight: 700; margin-bottom: 12px;">案例二：某桥梁墩柱抗震加固</h4>
+        <p style="color: var(--text-light); font-size: 0.9rem; line-height: 1.7;">
+          圆形墩柱直径800mm，采用环向缠绕CFRP布加固。缠绕3层200g/m²碳纤维布，
+          柱约束效应显著提升，延性系数从3.2提升至7.8，满足8度抗震设防要求。
+          碳纤维用量仅45kg，相比钢套筒减重80%。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background: var(--bg-alt); padding: 64px 24px;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--primary); margin-bottom: 32px; text-align: center;">
+        常见问题解答
+      </h2>
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        {faqData.map((faq) => (
+          <details style="background: var(--bg); border-radius: 8px; border: 1px solid var(--border); overflow: hidden;">
+            <summary style="padding: 20px 24px; font-weight: 700; color: var(--primary); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+              <span>{faq.question}</span>
+              <span style="color: var(--accent); font-size: 1.2rem;">+</span>
+            </summary>
+            <div style="padding: 0 24px 20px; color: var(--text-light); line-height: 1.7; font-size: 0.95rem;">
+              {faq.answer}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background: var(--primary); color: white; padding: 64px 24px; text-align: center;">
+    <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 16px;">
+      获取建筑加固材料方案
+    </h2>
+    <p style="color: #e2e8f0; max-width: 600px; margin: 0 auto 28px; font-size: 1.05rem;">
+      提供GB 50367-2013标准材料，附带检测报告和施工技术指导
+    </p>
+    <a href="/contact" class="btn-cta">立即咨询 / Get Construction Quote</a>
+  </section>
+
+  <Footer />
+</Layout>

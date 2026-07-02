@@ -1,0 +1,248 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const title = "汽车碳纤维轻量化部件材料供应解决方案 | 碳烯技术";
+const description = "汽车碳纤维改装可减重40-60%。碳烯技术提供IATF 16949认证汽车碳纤维材料，覆盖车身外观、结构件、内饰、电池包四大方向。T700级碳纤维比强度为钢材的15倍，密度仅1.76g/cm³。";
+const keywords = "汽车碳纤维,汽车轻量化,碳纤维改装,IATF16949,碳纤维车身,碳纤维电池包,汽车结构件,碳纤维内饰";
+const canonical = "/solutions/automotive";
+
+const faqData = [
+  {
+    question: "汽车碳纤维改装能减多少重量？",
+    answer: "汽车碳纤维改装减重效果：车身外观件（引擎盖、尾翼）减重40-50%；结构件（底盘加强件）减重30-40%；内饰件减重25-35%；电池包壳体减重35-45%。整车碳纤维化可减重200-400kg，续航提升15-25%。"
+  },
+  {
+    question: "碳纤维汽车零部件需要IATF 16949认证吗？",
+    answer: "是的，主机厂一级供应商必须通过IATF 16949认证。二级材料供应商建议通过IATF 16949或至少ISO 9001。碳烯技术已通过ISO 9001，可提供完整的材料PPAP文件（Level 3），包括材料测试报告、MSDS、ROHS/REACH合规声明。"
+  },
+  {
+    question: "碳纤维电池包壳体有什么优势？",
+    answer: "碳纤维电池包壳体比铝合金减重35-45%，比强度高（T700级比强度15倍于钢），电磁屏蔽性能优异（可屏蔽99%以上EMI），热扩散系数低（有助于热管理）。某新能源车型采用碳纤维电池包上盖，减重18kg，续航提升8%。"
+  },
+  {
+    question: "汽车用碳纤维和航空用碳纤维有什么区别？",
+    answer: "汽车多用T700GC工业级（300-450元/kg），无需航空认证，大丝束（24K/50K）效率高；航空用T700SC航空级（350-500元/kg），需AS9100认证，12K丝束为主。汽车注重成本和批量，航空注重认证和可靠性。"
+  },
+  {
+    question: "碳纤维汽车改装的ROI怎么计算？",
+    answer: "ROI计算模型：减重1kg≈续航提升1-1.5km（电动车）。以碳纤维引擎盖为例：成本增加约2000元，减重8kg，续航提升10-12km，按电池成本800元/kWh计算，等效节省约1500元。改装件回本周期约3-5年。"
+  },
+  {
+    question: "碳纤维在汽车碰撞安全方面表现如何？",
+    answer: "碳纤维碰撞特性与金属不同：吸能方式是分层碎裂而非塑性变形，吸能效率（比吸能）是铝合金的3-5倍。F1赛车单体壳采用碳纤维，可承受超过50G的冲击。但需注意：碳纤维部件碰撞后需整体更换，不可修复。"
+  }
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://amoscomposites.cn/solutions/automotive",
+      "url": "https://amoscomposites.cn/solutions/automotive",
+      "name": title,
+      "description": description
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqData.map(f => ({
+        "@type": "Question",
+        "name": f.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": f.answer
+        }
+      }))
+    }
+  ]
+};
+---
+
+<Layout title={title} description={description} keywords={keywords} canonical={canonical} schema={schema}>
+  <Header />
+
+  <!-- Hero -->
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 80px 24px 60px; text-align: center;">
+    <h1 style="font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin-bottom: 16px;">
+      汽车碳纤维轻量化部件材料供应解决方案
+    </h1>
+    <p style="color: #e2e8f0; max-width: 900px; margin: 0 auto; font-size: 1.1rem; line-height: 1.7;">
+      汽车碳纤维改装可减重40-60%。碳烯技术提供IATF 16949认证汽车碳纤维材料，
+      覆盖车身外观、结构件、内饰、电池包四大方向。T700级碳纤维比强度为钢材的15倍，密度仅1.76g/cm³。
+    </p>
+  </section>
+
+  <!-- 4大应用方向 -->
+  <section style="padding: 64px 24px; max-width: 1200px; margin: 0 auto;">
+    <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--primary); margin-bottom: 8px; text-align: center;">
+      四大应用方向
+    </h2>
+    <p style="text-align: center; color: var(--text-light); margin-bottom: 40px;">从外饰到核心结构，全面轻量化</p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
+      <div class="product-card">
+        <h3>🚗 车身外观件</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8; margin-top: 12px;">
+          <li>典型部件：引擎盖、尾翼、后视镜壳</li>
+          <li>推荐材料：T300/T700 3K平纹布</li>
+          <li>减重效果：<strong>40-50%</strong></li>
+          <li>成型工艺：RTM真空导入、热压罐</li>
+          <li>价格区间：200-400元/件</li>
+        </ul>
+        <a href="/carbon-fiber-fabric">查看碳纤维布 →</a>
+      </div>
+
+      <div class="product-card">
+        <h3>⚙️ 结构件</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8; margin-top: 12px;">
+          <li>典型部件：底盘加强件、传动轴、摆臂</li>
+          <li>推荐材料：T700 单向预浸料</li>
+          <li>减重效果：<strong>30-40%</strong></li>
+          <li>强度要求：≥4900MPa</li>
+          <li>疲劳寿命：10⁶次循环保留率>85%</li>
+        </ul>
+        <a href="/carbon-fiber-filament">查看碳纤维丝 →</a>
+      </div>
+
+      <div class="product-card">
+        <h3>🪑 内饰件</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8; margin-top: 12px;">
+          <li>典型部件：座椅骨架、门板装饰、中控台</li>
+          <li>推荐材料：T300 3K斜纹布</li>
+          <li>减重效果：<strong>25-35%</strong></li>
+          <li>表面效果：可呈现编织纹理</li>
+          <li>VOC要求：符合车内空气质量标准</li>
+        </ul>
+        <a href="/carbon-fiber-fabric">查看碳纤维布 →</a>
+      </div>
+
+      <div class="product-card">
+        <h3>🔋 电池包壳体</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8; margin-top: 12px;">
+          <li>典型部件：电池包上盖、模组端板</li>
+          <li>推荐材料：T700 SMC模塑料</li>
+          <li>减重效果：<strong>35-45%</strong></li>
+          <li>EMI屏蔽：>40dB衰减</li>
+          <li>阻燃等级：UL94 V-0</li>
+        </ul>
+        <a href="/plastic-modified-carbon">查看改性材料 →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IATF标准 -->
+  <section style="background: var(--bg-alt); padding: 64px 24px;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--primary); margin-bottom: 32px; text-align: center;">
+        IATF 16949 汽车行业质量管理体系
+      </h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px;">
+        <div style="background: var(--bg); padding: 24px; border-radius: 8px; text-align: center;">
+          <h4 style="color: var(--primary); font-weight: 700; margin-bottom: 10px;">📋 PPAP文件</h4>
+          <p style="color: var(--text-light); font-size: 0.9rem;">提供Level 3 PPAP：材料测试报告、MSDS、ROHS/REACH、尺寸报告、过程流程图</p>
+        </div>
+        <div style="background: var(--bg); padding: 24px; border-radius: 8px; text-align: center;">
+          <h4 style="color: var(--primary); font-weight: 700; margin-bottom: 10px;">🔍 批次追溯</h4>
+          <p style="color: var(--text-light); font-size: 0.9rem;">每批材料完整追溯：原丝批号→上浆批号→分切批号→交付日期→客户PO</p>
+        </div>
+        <div style="background: var(--bg); padding: 24px; border-radius: 8px; text-align: center;">
+          <h4 style="color: var(--primary); font-weight: 700; margin-bottom: 10px;">✅ 入厂检验</h4>
+          <p style="color: var(--text-light); font-size: 0.9rem;">配合客户IQC检验：线密度、上浆率、拉伸强度、模量、含水率全项检测</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROI计算 -->
+  <section style="padding: 64px 24px; max-width: 1200px; margin: 0 auto;">
+    <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--primary); margin-bottom: 32px; text-align: center;">
+      碳纤维轻量化 ROI 计算模型
+    </h2>
+    <div style="overflow-x: auto;">
+      <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+        <thead>
+          <tr style="background: var(--primary); color: white;">
+            <th style="padding: 14px; text-align: left;">部件类型</th>
+            <th style="padding: 14px; text-align: left;">原材质</th>
+            <th style="padding: 14px; text-align: left;">碳纤维替代</th>
+            <th style="padding: 14px; text-align: left;">减重</th>
+            <th style="padding: 14px; text-align: left;">成本增加</th>
+            <th style="padding: 14px; text-align: left;">续航提升*</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid var(--border); background: var(--bg);">
+            <td style="padding: 14px;">引擎盖</td>
+            <td style="padding: 14px;">铝合金</td>
+            <td style="padding: 14px;">T300 3K布</td>
+            <td style="padding: 14px; color: #38a169; font-weight: 700;">-8kg</td>
+            <td style="padding: 14px;">+2000元</td>
+            <td style="padding: 14px;">+10km</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--border);">
+            <td style="padding: 14px;">尾翼</td>
+            <td style="padding: 14px;">ABS塑料</td>
+            <td style="padding: 14px;">T300 3K布</td>
+            <td style="padding: 14px; color: #38a169; font-weight: 700;">-2kg</td>
+            <td style="padding: 14px;">+800元</td>
+            <td style="padding: 14px;">+3km</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--border); background: var(--bg);">
+            <td style="padding: 14px;">座椅骨架</td>
+            <td style="padding: 14px;">钢</td>
+            <td style="padding: 14px;">T700 单向带</td>
+            <td style="padding: 14px; color: #38a169; font-weight: 700;">-5kg</td>
+            <td style="padding: 14px;">+1500元</td>
+            <td style="padding: 14px;">+6km</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--border);">
+            <td style="padding: 14px;">电池包上盖</td>
+            <td style="padding: 14px;">铝合金</td>
+            <td style="padding: 14px;">T700 SMC</td>
+            <td style="padding: 14px; color: #38a169; font-weight: 700;">-18kg</td>
+            <td style="padding: 14px;">+3000元</td>
+            <td style="padding: 14px;">+20km</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="color: var(--text-light); font-size: 0.85rem; margin-top: 16px;">*基于60kWh电池包、15kWh/100km能耗计算，仅供参考</p>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background: var(--bg-alt); padding: 64px 24px;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--primary); margin-bottom: 32px; text-align: center;">
+        常见问题解答
+      </h2>
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        {faqData.map((faq) => (
+          <details style="background: var(--bg); border-radius: 8px; border: 1px solid var(--border); overflow: hidden;">
+            <summary style="padding: 20px 24px; font-weight: 700; color: var(--primary); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+              <span>{faq.question}</span>
+              <span style="color: var(--accent); font-size: 1.2rem;">+</span>
+            </summary>
+            <div style="padding: 0 24px 20px; color: var(--text-light); line-height: 1.7; font-size: 0.95rem;">
+              {faq.answer}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background: var(--primary); color: white; padding: 64px 24px; text-align: center;">
+    <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 16px;">
+      获取汽车轻量化方案
+    </h2>
+    <p style="color: #e2e8f0; max-width: 600px; margin: 0 auto 28px; font-size: 1.05rem;">
+      提供IATF 16949认证材料，完整PPAP文件支持，24小时快速响应
+    </p>
+    <a href="/contact" class="btn-cta">立即咨询 / Get Automotive Quote</a>
+  </section>
+
+  <Footer />
+</Layout>
