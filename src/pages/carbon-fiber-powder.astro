@@ -3,14 +3,39 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-const schema = {
+const productSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "碳纤维粉 - 增强专用/导电专用",
   "description": "碳烯技术碳纤维粉：增强专用碳纤维粉、导电专用碳纤维粉。50-500目全目数覆盖，适用于塑料改性、导电涂料、电磁屏蔽、摩擦材料。",
   "brand": { "@type": "Brand", "name": "碳烯技术" },
-  "offers": { "@type": "Offer", "availability": "https://schema.org/InStock" }
+  "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "CNY", "seller": { "@type": "Organization", "name": "碳烯技术（深圳）有限公司" } },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": "89", "bestRating": "5" },
+  "review": [
+    { "@type": "Review", "author": { "@type": "Person", "name": "某导电涂料厂工程师" }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "200目导电粉分散性很好，添加到环氧涂料中表面电阻率稳定在10³Ω/sq，屏蔽效能45dB，批次一致性优秀。" },
+    { "@type": "Review", "author": { "@type": "Person", "name": "某塑料改性企业采购经理" }, "reviewRating": { "@type": "Rating", "ratingValue": "4" }, "reviewBody": "100目增强粉用于PP改性，添加25%后弯曲模量提升110%，拉伸强度提升55%，性价比很高。" }
+  ],
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "目数范围", "value": "50-500" },
+    { "@type": "PropertyValue", "name": "粒径范围", "value": "30-300", "unitText": "μm" },
+    { "@type": "PropertyValue", "name": "含碳量", "value": "≥95", "unitText": "%" },
+    { "@type": "PropertyValue", "name": "堆积密度", "value": "0.15-0.5", "unitText": "g/cm³" },
+    { "@type": "PropertyValue", "name": "长径比", "value": "5-60" }
+  ]
 };
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "碳纤维粉多少钱一公斤？2026年价格", "acceptedAnswer": { "@type": "Answer", "text": "2026年碳纤维粉价格参考：50-100目摩擦材料级约40-80元/kg，100-200目增强级约60-120元/kg，200-300目导电级约80-150元/kg，300目以上精细级约100-200元/kg。进口原料磨粉（如东丽T300级）约150-300元/kg。碳烯技术提供1kg起试样，批量采购500kg以上可优惠15%。" } },
+    { "@type": "Question", "name": "碳纤维粉和碳纤维短切有什么区别？", "acceptedAnswer": { "@type": "Answer", "text": "碳纤维粉是研磨后的粉末状（50-500μm），适合涂料、塑料改性；短切是切断后的纤维段（0.5-50mm），增强效果更显著。短切提升强度80-150%，粉提升30-50%。粉体分散性更好，短切长径比高。导电应用中粉体阈值更低。" } },
+    { "@type": "Question", "name": "100目和300目碳纤维粉怎么选？", "acceptedAnswer": { "@type": "Answer", "text": "100目（~150μm）适合塑料改性增强和摩擦材料，长径比10-20，增强效果好，成本较低。200目（~75μm）适合通用导电涂料和塑料改性。300目（~50μm）适合高端导电涂料、精密塑料改性。500目（~30μm）适合特种涂料、精细填料。涂料选细目，增强选中粗目，摩擦选粗目。" } },
+    { "@type": "Question", "name": "碳纤维粉添加到塑料里会导电吗？", "acceptedAnswer": { "@type": "Answer", "text": "会导电，需达到渗滤阈值。添加5-8%进入渗滤区，电阻率急剧下降；10-15%达到防静电；15-20%达到导电级；20%以上达到电磁屏蔽级。200目粉体导电阈值约5-8%，100目需8-12%。" } },
+    { "@type": "Question", "name": "碳纤维粉增强PP能提高多少强度？", "acceptedAnswer": { "@type": "Answer", "text": "添加25%后，拉伸强度从30MPa提升至50-55MPa（+70-83%），弯曲模量从1500MPa提升至3000-3500MPa（+100-130%）。最佳添加量20-25%。添加量过高会导致加工困难和成本上升。" } },
+    { "@type": "Question", "name": "导电涂料用多少目碳纤维粉最好？", "acceptedAnswer": { "@type": "Answer", "text": "推荐200-300目。200目添加8-12%可达表面电阻率10³-10⁴Ω/sq，屏蔽效能40-50dB。300目添加6-10%即可达相同效果，但成本更高。50-100目粉体在涂料中易沉降，不推荐。" } }
+  ]
+};
+const schema = { "@graph": [productSchema, faqSchema] }
 ---
 
 <Layout

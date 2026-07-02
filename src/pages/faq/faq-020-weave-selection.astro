@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "平纹、斜纹、缎纹碳纤维布怎么选？",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "平纹、斜纹、缎纹碳纤维布的选择取决于应用场景和性能需求。平纹布：纤维一上一下交错编织，交错点最多，稳定性最好，不易变形，表面呈方格状，适合结构加固、层压板、一般复合材料。斜纹布：纤维一上二下或二上二下编织，呈45°斜向纹路，手感柔软，贴合曲面好，适合汽车改装件、运动器材、复杂曲面制品。缎纹布（通常为5枚缎）：纤维浮线长，交织点最少，表面光泽度最高，外观最精美，手感最柔软，适合高端装饰、工艺品、奢侈品、汽车内饰。单向布：所有纤维沿一个方向排列，强度最高（沿纤维方向），但横向强度极低，适合结构加固（需与90°层交叉铺设，如0°/90°铺层）。结构加固选平纹/单向，外观装饰选斜纹/缎纹。平纹/斜纹/...",
+      "datePublished": "2026-07-02"
+    }
+  }]
+};
+
+const title = "平纹、斜纹、缎纹碳纤维布怎么选？编织纹路特性与应用匹配 | 碳烯技术";
+const description = "平纹稳定性最好，斜纹贴合曲面好，缎纹光泽最高。结构用平纹/单向，外观用斜纹/缎纹。";
+---
+
+<Layout title={title} description={description} canonical="/faq/faq-020-weave-selection" schema={schema}>
+  <Header />
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 80px 24px 60px; text-align: center;">
+    <h1 style="font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; max-width: 900px; margin: 0 auto;">平纹、斜纹、缎纹碳纤维布怎么选？</h1>
+  </section>
+
+  <section style="padding: 64px 24px; max-width: 800px; margin: 0 auto;">
+    <div style="background: white; padding: 40px; border-radius: 12px; border: 1px solid var(--border); line-height: 1.8; color: var(--text);">
+      <div style="color: var(--text-light); line-height: 1.8;">
+        <p style="margin-bottom: 16px;">平纹、斜纹、缎纹碳纤维布的选择取决于应用场景和性能需求。平纹布：纤维一上一下交错编织，交错点最多，稳定性最好，不易变形，表面呈方格状，适合结构加固、层压板、一般复合材料。斜纹布：纤维一上二下或二上二下编织，呈45°斜向纹路，手感柔软，贴合曲面好，适合汽车改装件、运动器材、复杂曲面制品。缎纹布（通常为5枚缎）：纤维浮线长，交织点最少，表面光泽度最高，外观最精美，手感最柔软，适合高端装饰、工艺品、奢侈品、汽车内饰。单向布：所有纤维沿一个方向排列，强度最高（沿纤维方向），但横向强度极低，适合结构加固（需与90°层交叉铺设，如0°/90°铺层）。结构加固选平纹/单向，外观装饰选斜纹/缎纹。平纹/斜纹/缎纹的层间剪切强度相近（约40-50MPa），单向布层间剪切强度较低（需交叉铺层弥补）。碳烯技术提供平纹/斜纹/缎纹/单向全规格，支持定制幅宽和克重。</p>
+      </div>
+
+      <div style="background: var(--bg-alt); padding: 24px; border-radius: 8px; margin-top: 32px;">
+        <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--primary); margin-bottom: 12px;">相关型号推荐</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8;">
+          <li>3K平纹200g（结构/通用）</li>
+          <li>3K斜纹200g（曲面/外观）</li>
+          <li>3K缎纹200g（高端装饰）</li>
+          <li>12K单向400g（结构加固）</li>
+        </ul>
+      </div>
+
+      <div style="text-align: center; margin-top: 32px;">
+        <a href="/contact" style="background: var(--accent); color: white; padding: 16px 40px; border-radius: 8px; font-weight: 700; display: inline-block;">获取方案与报价</a>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>

@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "镀镍碳纤维多少钱一公斤？",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "镀镍碳纤维价格参考（含税）：镀镍碳纤维丝（1K-12K）约300-800元/kg，镀镍碳纤维粉（100-300目）约200-500元/kg，镀镍短切碳纤维（3mm-6mm）约250-600元/kg。镍层厚度对价格影响：0.2-0.5μm约300-400元/kg，0.5-1.0μm约400-600元/kg，1.0-2.0μm约600-800元/kg。镍层越厚导电性越好，但成本越高、纤维变脆。1.0μm是性价比最佳区间。价格随碳纤维原料品牌、镍层厚度、形态（丝/粉/短切）、订单量波动。碳烯技术独家提供丝+粉+短切三种形态，一站式满足注塑、涂料、纺织需求。批量折扣：100kg起95折，500kg起9...",
+      "datePublished": "2026-07-02"
+    }
+  }]
+};
+
+const title = "镀镍碳纤维多少钱一公斤？2026年价格与镍层厚度对比 | 碳烯技术";
+const description = "镀镍碳纤维丝约300-800元/kg，镀镍粉约200-500元/kg，镀镍短切约250-600元/kg。";
+---
+
+<Layout title={title} description={description} canonical="/faq/faq-025-nickel-plated-price" schema={schema}>
+  <Header />
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 80px 24px 60px; text-align: center;">
+    <h1 style="font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; max-width: 900px; margin: 0 auto;">镀镍碳纤维多少钱一公斤？</h1>
+  </section>
+
+  <section style="padding: 64px 24px; max-width: 800px; margin: 0 auto;">
+    <div style="background: white; padding: 40px; border-radius: 12px; border: 1px solid var(--border); line-height: 1.8; color: var(--text);">
+      <div style="color: var(--text-light); line-height: 1.8;">
+        <p style="margin-bottom: 16px;">镀镍碳纤维价格参考（含税）：镀镍碳纤维丝（1K-12K）约300-800元/kg，镀镍碳纤维粉（100-300目）约200-500元/kg，镀镍短切碳纤维（3mm-6mm）约250-600元/kg。镍层厚度对价格影响：0.2-0.5μm约300-400元/kg，0.5-1.0μm约400-600元/kg，1.0-2.0μm约600-800元/kg。镍层越厚导电性越好，但成本越高、纤维变脆。1.0μm是性价比最佳区间。价格随碳纤维原料品牌、镍层厚度、形态（丝/粉/短切）、订单量波动。碳烯技术独家提供丝+粉+短切三种形态，一站式满足注塑、涂料、纺织需求。批量折扣：100kg起95折，500kg起9折。1kg起试样，支持定制镍层厚度（0.2μm/0.5μm/1.0μm/2.0μm）。</p>
+      </div>
+
+      <div style="background: var(--bg-alt); padding: 24px; border-radius: 8px; margin-top: 32px;">
+        <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--primary); margin-bottom: 12px;">相关型号推荐</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8;">
+          <li>镀镍碳纤维丝（300-800元/kg）</li>
+          <li>镀镍碳纤维粉（200-500元/kg）</li>
+          <li>镀镍短切碳纤维（250-600元/kg）</li>
+          <li>镍层1.0μm（性价比最佳）</li>
+        </ul>
+      </div>
+
+      <div style="text-align: center; margin-top: 32px;">
+        <a href="/contact" style="background: var(--accent); color: white; padding: 16px 40px; border-radius: 8px; font-weight: 700; display: inline-block;">获取方案与报价</a>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>

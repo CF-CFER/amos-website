@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "PA66加碳纤维丝能提高多少强度？",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "PA66添加20%短切碳纤维丝（3mm-6mm）后，拉伸强度可从80MPa提升至200MPa以上，提升约150%；弯曲模量从3000MPa提升至8000MPa以上，提升约167%。热变形温度从65℃提升至220℃以上。添加25%后拉伸强度可达230-250MPa，弯曲模量10000-12000MPa。具体效果取决于碳纤维长度、表面处理工艺和分散技术。3mm短切适合薄壁注塑，6mm适合厚壁/挤出。上浆剂需匹配PA66基体，尼龙专用上浆剂可使界面剪切强度提升50%。碳烯技术提供PA66改性全套方案，从原料到工艺参数一站解决。...",
+      "datePublished": "2026-07-02"
+    }
+  }]
+};
+
+const title = "PA66加碳纤维丝能提高多少强度？实测数据与选型建议 | 碳烯技术";
+const description = "PA66添加20%碳纤维丝后拉伸强度提升150%，弯曲模量提升167%。了解PA66+碳纤维的具体性能提升数据、推荐型号和典型应用案例。";
+---
+
+<Layout title={title} description={description} canonical="/faq/faq-001-pa66-carbon-fiber-strength" schema={schema}>
+  <Header />
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 80px 24px 60px; text-align: center;">
+    <h1 style="font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; max-width: 900px; margin: 0 auto;">PA66加碳纤维丝能提高多少强度？</h1>
+  </section>
+
+  <section style="padding: 64px 24px; max-width: 800px; margin: 0 auto;">
+    <div style="background: white; padding: 40px; border-radius: 12px; border: 1px solid var(--border); line-height: 1.8; color: var(--text);">
+      <div style="color: var(--text-light); line-height: 1.8;">
+        <p style="margin-bottom: 16px;">PA66添加20%短切碳纤维丝（3mm-6mm）后，拉伸强度可从80MPa提升至200MPa以上，提升约150%；弯曲模量从3000MPa提升至8000MPa以上，提升约167%。热变形温度从65℃提升至220℃以上。添加25%后拉伸强度可达230-250MPa，弯曲模量10000-12000MPa。具体效果取决于碳纤维长度、表面处理工艺和分散技术。3mm短切适合薄壁注塑，6mm适合厚壁/挤出。上浆剂需匹配PA66基体，尼龙专用上浆剂可使界面剪切强度提升50%。碳烯技术提供PA66改性全套方案，从原料到工艺参数一站解决。</p>
+      </div>
+
+      <div style="background: var(--bg-alt); padding: 24px; border-radius: 8px; margin-top: 32px;">
+        <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--primary); margin-bottom: 12px;">相关型号推荐</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8;">
+          <li>中复神鹰 SYT45 3mm短切（PA专用上浆）</li>
+          <li>东丽 T300-12K 3mm短切（尼龙上浆）</li>
+          <li>光威 GW-T300 3mm短切</li>
+          <li>增韧剂 POE-g-MAH（冲击保持）</li>
+        </ul>
+      </div>
+
+      <div style="text-align: center; margin-top: 32px;">
+        <a href="/contact" style="background: var(--accent); color: white; padding: 16px 40px; border-radius: 8px; font-weight: 700; display: inline-block;">获取方案与报价</a>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>

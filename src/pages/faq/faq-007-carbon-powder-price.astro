@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "碳纤维粉多少钱一公斤？2026年价格",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "2026年碳纤维粉价格参考（含税）：50-100目摩擦材料级约40-80元/kg（原料多为大丝束），100-200目增强级约60-120元/kg（适合塑料改性），200-300目导电级约80-150元/kg（适合导电涂料），300目以上精细级约100-200元/kg（适合高端涂料、电池材料）。进口原料磨粉（如东丽T300级）约150-300元/kg。国产原料粉（中复神鹰/光威/碳谷）约80-150元/kg。超细粉（500目以上）约200-400元/kg。价格随原料品牌、目数精度、订单量波动。碳烯技术提供1kg起试样，批量采购500kg以上可优惠15%。选型建议：涂料选200-300目，塑料改性...",
+      "datePublished": "2026-07-02"
+    }
+  }]
+};
+
+const title = "碳纤维粉多少钱一公斤？2026年价格参考与目数选择 | 碳烯技术";
+const description = "50-100目约40-80元/kg，200-300目约80-150元/kg。了解碳纤维粉各目数价格区间和应用选型。";
+---
+
+<Layout title={title} description={description} canonical="/faq/faq-007-carbon-powder-price" schema={schema}>
+  <Header />
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 80px 24px 60px; text-align: center;">
+    <h1 style="font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; max-width: 900px; margin: 0 auto;">碳纤维粉多少钱一公斤？2026年价格</h1>
+  </section>
+
+  <section style="padding: 64px 24px; max-width: 800px; margin: 0 auto;">
+    <div style="background: white; padding: 40px; border-radius: 12px; border: 1px solid var(--border); line-height: 1.8; color: var(--text);">
+      <div style="color: var(--text-light); line-height: 1.8;">
+        <p style="margin-bottom: 16px;">2026年碳纤维粉价格参考（含税）：50-100目摩擦材料级约40-80元/kg（原料多为大丝束），100-200目增强级约60-120元/kg（适合塑料改性），200-300目导电级约80-150元/kg（适合导电涂料），300目以上精细级约100-200元/kg（适合高端涂料、电池材料）。进口原料磨粉（如东丽T300级）约150-300元/kg。国产原料粉（中复神鹰/光威/碳谷）约80-150元/kg。超细粉（500目以上）约200-400元/kg。价格随原料品牌、目数精度、订单量波动。碳烯技术提供1kg起试样，批量采购500kg以上可优惠15%。选型建议：涂料选200-300目，塑料改性选100-200目，摩擦材料选50-100目，电池导电剂选300-500目。导电涂料专用表面处理粉分散性提升40%。</p>
+      </div>
+
+      <div style="background: var(--bg-alt); padding: 24px; border-radius: 8px; margin-top: 32px;">
+        <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--primary); margin-bottom: 12px;">相关型号推荐</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8;">
+          <li>50-100目摩擦粉（40-80元/kg）</li>
+          <li>100-200目增强粉（60-120元/kg）</li>
+          <li>200-300目导电粉（80-150元/kg）</li>
+          <li>300目+精细粉（100-200元/kg）</li>
+        </ul>
+      </div>
+
+      <div style="text-align: center; margin-top: 32px;">
+        <a href="/contact" style="background: var(--accent); color: white; padding: 16px 40px; border-radius: 8px; font-weight: 700; display: inline-block;">获取方案与报价</a>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>

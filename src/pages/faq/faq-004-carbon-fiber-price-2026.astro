@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "碳纤维丝多少钱一公斤？2026年最新价格",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "2026年碳纤维丝价格参考（含税）：国产T300级12K约80-120元/kg，中复神鹰SYT45（T700级国产）约150-200元/kg，东丽T300-12K约200-300元/kg，东丽T700SC-12K约350-500元/kg，东丽T800SC-12K约600-900元/kg，东丽T1100G-12K约1200-1800元/kg。1K、3K小丝束价格约为12K的1.5-2倍（因编织效率低）。国产大丝束（24K/50K）约50-80元/kg。沥青基高模量碳纤维（M40J/M55J）约800-2000元/kg。实际价格随订单量（100kg起95折、500kg起9折、1吨起85折）、汇率、...",
+      "datePublished": "2026-07-02"
+    }
+  }]
+};
+
+const title = "碳纤维丝多少钱一公斤？2026年最新价格参考与采购建议 | 碳烯技术";
+const description = "2026年碳纤维丝价格：国产T300级12K约80-120元/kg，东丽T700SC-12K约350-500元/kg。了解各品牌型号价格区间。";
+---
+
+<Layout title={title} description={description} canonical="/faq/faq-004-carbon-fiber-price-2026" schema={schema}>
+  <Header />
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 80px 24px 60px; text-align: center;">
+    <h1 style="font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; max-width: 900px; margin: 0 auto;">碳纤维丝多少钱一公斤？2026年最新价格</h1>
+  </section>
+
+  <section style="padding: 64px 24px; max-width: 800px; margin: 0 auto;">
+    <div style="background: white; padding: 40px; border-radius: 12px; border: 1px solid var(--border); line-height: 1.8; color: var(--text);">
+      <div style="color: var(--text-light); line-height: 1.8;">
+        <p style="margin-bottom: 16px;">2026年碳纤维丝价格参考（含税）：国产T300级12K约80-120元/kg，中复神鹰SYT45（T700级国产）约150-200元/kg，东丽T300-12K约200-300元/kg，东丽T700SC-12K约350-500元/kg，东丽T800SC-12K约600-900元/kg，东丽T1100G-12K约1200-1800元/kg。1K、3K小丝束价格约为12K的1.5-2倍（因编织效率低）。国产大丝束（24K/50K）约50-80元/kg。沥青基高模量碳纤维（M40J/M55J）约800-2000元/kg。实际价格随订单量（100kg起95折、500kg起9折、1吨起85折）、汇率、交期、原料波动而变化。建议：小批量试样先验证性能，确认后再批量采购。碳烯技术提供所有品牌型号实时报价，支持1kg起试样。</p>
+      </div>
+
+      <div style="background: var(--bg-alt); padding: 24px; border-radius: 8px; margin-top: 32px;">
+        <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--primary); margin-bottom: 12px;">相关型号推荐</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8;">
+          <li>国产T300级12K（80-120元/kg）</li>
+          <li>中复神鹰SYT45（150-200元/kg）</li>
+          <li>东丽T300-12K（200-300元/kg）</li>
+          <li>东丽T700SC-12K（350-500元/kg）</li>
+        </ul>
+      </div>
+
+      <div style="text-align: center; margin-top: 32px;">
+        <a href="/contact" style="background: var(--accent); color: white; padding: 16px 40px; border-radius: 8px; font-weight: 700; display: inline-block;">获取方案与报价</a>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>

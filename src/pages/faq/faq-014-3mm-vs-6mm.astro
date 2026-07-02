@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "3mm和6mm短切碳纤维怎么选？",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "3mm和6mm短切碳纤维的选择取决于制品壁厚和加工工艺。3mm短切纤维：适合薄壁注塑（壁厚小于3mm），分散性好，表面光洁度高，纤维取向均匀，但增强效率略低于6mm。推荐用于：精密齿轮、薄壁外壳、小型结构件、PA66/PP薄壁件。6mm短切纤维：适合厚壁注塑（壁厚大于3mm）和挤出成型，长径比更高，增强效率提升20-30%，但注塑时需注意纤维取向控制（沿流动方向取向，横向强度低）。推荐用于：挤出板材、厚壁结构件、管材、PP大型件。10mm及以上：适合模压成型、拉挤成型、网胎增强。壁厚选择指南：壁厚小于2mm选3mm；壁厚2-5mm选3mm或6mm；壁厚大于5mm或挤出成型选6mm-10mm。P...",
+      "datePublished": "2026-07-02"
+    }
+  }]
+};
+
+const title = "3mm和6mm短切碳纤维怎么选？长度规格与注塑工艺匹配指南 | 碳烯技术";
+const description = "壁厚小于2mm选3mm，壁厚2-5mm选3mm或6mm，壁厚大于5mm或挤出成型选6mm-10mm。";
+---
+
+<Layout title={title} description={description} canonical="/faq/faq-014-3mm-vs-6mm" schema={schema}>
+  <Header />
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 80px 24px 60px; text-align: center;">
+    <h1 style="font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; max-width: 900px; margin: 0 auto;">3mm和6mm短切碳纤维怎么选？</h1>
+  </section>
+
+  <section style="padding: 64px 24px; max-width: 800px; margin: 0 auto;">
+    <div style="background: white; padding: 40px; border-radius: 12px; border: 1px solid var(--border); line-height: 1.8; color: var(--text);">
+      <div style="color: var(--text-light); line-height: 1.8;">
+        <p style="margin-bottom: 16px;">3mm和6mm短切碳纤维的选择取决于制品壁厚和加工工艺。3mm短切纤维：适合薄壁注塑（壁厚小于3mm），分散性好，表面光洁度高，纤维取向均匀，但增强效率略低于6mm。推荐用于：精密齿轮、薄壁外壳、小型结构件、PA66/PP薄壁件。6mm短切纤维：适合厚壁注塑（壁厚大于3mm）和挤出成型，长径比更高，增强效率提升20-30%，但注塑时需注意纤维取向控制（沿流动方向取向，横向强度低）。推荐用于：挤出板材、厚壁结构件、管材、PP大型件。10mm及以上：适合模压成型、拉挤成型、网胎增强。壁厚选择指南：壁厚小于2mm选3mm；壁厚2-5mm选3mm或6mm；壁厚大于5mm或挤出成型选6mm-10mm。PA66薄壁件推荐3mm，PP厚壁件推荐6mm。混合使用：3mm+6mm混配（比例7:3）可兼顾分散性和增强效率，适合复杂制品。碳烯技术提供3mm/6mm/10mm全规格，支持定制长度。</p>
+      </div>
+
+      <div style="background: var(--bg-alt); padding: 24px; border-radius: 8px; margin-top: 32px;">
+        <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--primary); margin-bottom: 12px;">相关型号推荐</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8;">
+          <li>3mm短切（薄壁注塑小于3mm）</li>
+          <li>6mm短切（厚壁/挤出大于3mm）</li>
+          <li>10mm短切（模压/拉挤）</li>
+          <li>3mm+6mm混配（复杂制品）</li>
+        </ul>
+      </div>
+
+      <div style="text-align: center; margin-top: 32px;">
+        <a href="/contact" style="background: var(--accent); color: white; padding: 16px 40px; border-radius: 8px; font-weight: 700; display: inline-block;">获取方案与报价</a>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>

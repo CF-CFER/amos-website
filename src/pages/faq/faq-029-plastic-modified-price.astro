@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "塑料改性碳纤维多少钱一公斤？",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "塑料改性碳纤维复合材料价格参考（含税）：PP+20%碳纤维粉约15-25元/kg，PP+30%碳纤维粉约20-35元/kg；PA6+20%短切碳纤维约35-50元/kg，PA66+20%短切碳纤维约40-60元/kg；ABS+15%短切碳纤维约25-40元/kg；PC+20%短切碳纤维约50-70元/kg；PEEK+30%短切碳纤维约150-250元/kg。以上价格为改性后的复合料价格（含塑料基体+碳纤维+助剂），纯碳纤维原料价格另计。定制配方根据具体要求和数量单独报价，1kg起试样。价格影响因素：塑料基体类型（PEEK大于PC大于PA66大于ABS大于PP）、碳纤维形态（短切大于粉末）、碳纤...",
+      "datePublished": "2026-07-02"
+    }
+  }]
+};
+
+const title = "塑料改性碳纤维多少钱一公斤？各塑料体系复合料价格参考 | 碳烯技术";
+const description = "PP+20%碳粉约15-25元/kg，PA66+20%短切约40-60元/kg，PEEK+30%短切约150-250元/kg。";
+---
+
+<Layout title={title} description={description} canonical="/faq/faq-029-plastic-modified-price" schema={schema}>
+  <Header />
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 80px 24px 60px; text-align: center;">
+    <h1 style="font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; max-width: 900px; margin: 0 auto;">塑料改性碳纤维多少钱一公斤？</h1>
+  </section>
+
+  <section style="padding: 64px 24px; max-width: 800px; margin: 0 auto;">
+    <div style="background: white; padding: 40px; border-radius: 12px; border: 1px solid var(--border); line-height: 1.8; color: var(--text);">
+      <div style="color: var(--text-light); line-height: 1.8;">
+        <p style="margin-bottom: 16px;">塑料改性碳纤维复合材料价格参考（含税）：PP+20%碳纤维粉约15-25元/kg，PP+30%碳纤维粉约20-35元/kg；PA6+20%短切碳纤维约35-50元/kg，PA66+20%短切碳纤维约40-60元/kg；ABS+15%短切碳纤维约25-40元/kg；PC+20%短切碳纤维约50-70元/kg；PEEK+30%短切碳纤维约150-250元/kg。以上价格为改性后的复合料价格（含塑料基体+碳纤维+助剂），纯碳纤维原料价格另计。定制配方根据具体要求和数量单独报价，1kg起试样。价格影响因素：塑料基体类型（PEEK大于PC大于PA66大于ABS大于PP）、碳纤维形态（短切大于粉末）、碳纤维品牌（东丽大于中复神鹰大于国产）、添加量、助剂种类。批量折扣：100kg起95折，500kg起9折，1吨起85折。碳烯技术提供15种塑料体系改性方案，从试样到量产全程支持。</p>
+      </div>
+
+      <div style="background: var(--bg-alt); padding: 24px; border-radius: 8px; margin-top: 32px;">
+        <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--primary); margin-bottom: 12px;">相关型号推荐</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8;">
+          <li>PP+20%碳粉（15-25元/kg）</li>
+          <li>PA66+20%短切（40-60元/kg）</li>
+          <li>ABS+15%短切（25-40元/kg）</li>
+          <li>PEEK+30%短切（150-250元/kg）</li>
+        </ul>
+      </div>
+
+      <div style="text-align: center; margin-top: 32px;">
+        <a href="/contact" style="background: var(--accent); color: white; padding: 16px 40px; border-radius: 8px; font-weight: 700; display: inline-block;">获取方案与报价</a>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>

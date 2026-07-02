@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "200g和400g碳纤维布有什么区别？",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "200g/㎡和400g/㎡碳纤维布的核心差异在于厚度、强度和适用场景。200g/㎡：厚度约0.25mm（单层固化后），纤维含量较少，柔韧性最好，适合多层铺叠、外观件、轻量化结构、复杂曲面。每层强度贡献约300-400MPa（沿纤维方向）。400g/㎡：厚度约0.5mm（单层固化后），纤维含量多，强度高，刚度大，适合单层加固、承力结构、厚壁件、建筑加固。每层强度贡献约600-800MPa（沿纤维方向）。200g布适合手糊和真空导入（树脂浸润快），400g布适合大型结构件（铺层效率高）。组合使用方案：200g做面层（外观细腻）+400g做结构层（强度），总厚度约0.75mm，兼顾外观和性能。建筑加...",
+      "datePublished": "2026-07-02"
+    }
+  }]
+};
+
+const title = "200g和400g碳纤维布有什么区别？克重选择与厚度对比 | 碳烯技术";
+const description = "200g厚约0.25mm，适合外观/多层铺叠；400g厚约0.5mm，强度高，适合结构加固。";
+---
+
+<Layout title={title} description={description} canonical="/faq/faq-021-200g-vs-400g" schema={schema}>
+  <Header />
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 80px 24px 60px; text-align: center;">
+    <h1 style="font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; max-width: 900px; margin: 0 auto;">200g和400g碳纤维布有什么区别？</h1>
+  </section>
+
+  <section style="padding: 64px 24px; max-width: 800px; margin: 0 auto;">
+    <div style="background: white; padding: 40px; border-radius: 12px; border: 1px solid var(--border); line-height: 1.8; color: var(--text);">
+      <div style="color: var(--text-light); line-height: 1.8;">
+        <p style="margin-bottom: 16px;">200g/㎡和400g/㎡碳纤维布的核心差异在于厚度、强度和适用场景。200g/㎡：厚度约0.25mm（单层固化后），纤维含量较少，柔韧性最好，适合多层铺叠、外观件、轻量化结构、复杂曲面。每层强度贡献约300-400MPa（沿纤维方向）。400g/㎡：厚度约0.5mm（单层固化后），纤维含量多，强度高，刚度大，适合单层加固、承力结构、厚壁件、建筑加固。每层强度贡献约600-800MPa（沿纤维方向）。200g布适合手糊和真空导入（树脂浸润快），400g布适合大型结构件（铺层效率高）。组合使用方案：200g做面层（外观细腻）+400g做结构层（强度），总厚度约0.75mm，兼顾外观和性能。建筑加固通常用400g单向布（强度高、成本低），汽车装饰通常用200g平纹/斜纹（外观好、重量轻），无人机用200g+200g交叉铺层（轻量化）。碳烯技术提供200g/300g/400g/600g全规格。</p>
+      </div>
+
+      <div style="background: var(--bg-alt); padding: 24px; border-radius: 8px; margin-top: 32px;">
+        <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--primary); margin-bottom: 12px;">相关型号推荐</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8;">
+          <li>3K平纹200g（外观/多层）</li>
+          <li>3K斜纹200g（装饰/曲面）</li>
+          <li>12K平纹400g（结构/厚壁）</li>
+          <li>12K单向400g（加固/承力）</li>
+        </ul>
+      </div>
+
+      <div style="text-align: center; margin-top: 32px;">
+        <a href="/contact" style="background: var(--accent); color: white; padding: 16px 40px; border-radius: 8px; font-weight: 700; display: inline-block;">获取方案与报价</a>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>

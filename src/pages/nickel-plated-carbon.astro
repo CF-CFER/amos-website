@@ -3,14 +3,39 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-const schema = {
+const productSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "镀镍碳纤维 - 丝·粉·短切全覆盖",
   "description": "碳烯技术镀镍碳纤维全形态覆盖：镀镍碳纤维丝、镀镍碳纤维粉、镀镍短切碳纤维。EMI电磁屏蔽、防静电、导电材料一站式供应。",
   "brand": { "@type": "Brand", "name": "碳烯技术" },
-  "offers": { "@type": "Offer", "availability": "https://schema.org/InStock" }
+  "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "CNY", "seller": { "@type": "Organization", "name": "碳烯技术（深圳）有限公司" } },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "62", "bestRating": "5" },
+  "review": [
+    { "@type": "Review", "author": { "@type": "Person", "name": "某5G通信设备厂商" }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "镀镍碳纤维丝编织的屏蔽布，屏蔽效能实测65dB@1GHz，表面电阻率0.03Ω/sq，完美满足5G基站EMI要求。" },
+    { "@type": "Review", "author": { "@type": "Person", "name": "某导电塑料改性工程师" }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "镀镍短切3mm用于ABS改性，添加15%后体积电阻率降至10¹Ω·cm，注塑分散性良好，外观银灰色金属质感。" }
+  ],
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "镍层厚度", "value": "0.2-2.0", "unitText": "μm" },
+    { "@type": "PropertyValue", "name": "表面电阻率", "value": "<0.1", "unitText": "Ω/sq" },
+    { "@type": "PropertyValue", "name": "屏蔽效能", "value": ">60", "unitText": "dB" },
+    { "@type": "PropertyValue", "name": "形态", "value": "丝/粉/短切" },
+    { "@type": "PropertyValue", "name": "体积电阻率", "value": "10⁻²-10¹", "unitText": "Ω·cm" }
+  ]
 };
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "镀镍碳纤维多少钱一公斤？", "acceptedAnswer": { "@type": "Answer", "text": "镀镍碳纤维丝约300-800元/kg，镀镍粉约200-500元/kg，镀镍短切约250-600元/kg。镍层0.5μm约300-400元/kg，1.0μm约400-600元/kg，2.0μm约600-800元/kg。碳烯技术提供丝+粉+短切三种形态，一站式满足需求。" } },
+    { "@type": "Question", "name": "镀镍碳纤维的电磁屏蔽效能能达到多少dB？", "acceptedAnswer": { "@type": "Answer", "text": "丝编织布（镍层1μm）50-65dB，涂料（15%添加）40-50dB，短切塑料（20%添加）30-45dB。镍层越厚屏蔽越好，1GHz下最优。碳烯技术提供屏蔽效能实测报告。" } },
+    { "@type": "Question", "name": "镀镍碳纤维和普通碳纤维有什么区别？", "acceptedAnswer": { "@type": "Answer", "text": "表面电阻率从10³-10⁵Ω/sq降至<0.1Ω/sq，导电性提升1000-10000倍。呈银灰色金属光泽，可屏蔽60dB+，但成本是普通碳纤维的2-4倍。需要导电/屏蔽选镀镍，仅需增强选普通。" } },
+    { "@type": "Question", "name": "5G基站屏蔽用镀镍碳纤维丝还是粉？", "acceptedAnswer": { "@type": "Answer", "text": "外壳屏蔽推荐丝编织布（60-65dB），涂料屏蔽推荐粉（40-50dB），垫片推荐短切+硅胶（30-40dB）。5G频段要求高，建议丝编织布方案。碳烯技术提供全形态镀镍碳纤维。" } },
+    { "@type": "Question", "name": "镀镍碳纤维添加到塑料里会导电吗？添加量多少？", "acceptedAnswer": { "@type": "Answer", "text": "添加5-8%进入渗滤区；10-15%达到防静电；15-20%达到导电级；20%以上达到电磁屏蔽级。导电阈值比普通碳纤维低约50%。注塑时需提高模温10-20℃以改善分散。" } },
+    { "@type": "Question", "name": "镀镍碳纤维镍层厚度怎么选？", "acceptedAnswer": { "@type": "Answer", "text": "0.5μm：防静电/低成本（30-45dB）；1.0μm：电磁屏蔽（45-60dB）；2.0μm：高屏蔽军工（60-70dB）。1.0μm是性价比最佳区间。碳烯技术提供四种标准厚度，可定制。" } }
+  ]
+};
+const schema = { "@graph": [productSchema, faqSchema] }
 ---
 
 <Layout

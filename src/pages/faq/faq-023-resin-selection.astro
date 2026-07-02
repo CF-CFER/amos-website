@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "碳纤维布适合用什么树脂？",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "碳纤维布适配树脂选择：环氧树脂（最常用）：与碳纤维浸润性最好，层间剪切强度最高（大于等于40MPa），适合航空航天、汽车结构件、体育器材、建筑加固。推荐中温固化环氧（120-150℃），玻璃化转变温度Tg大于等于120℃。乙烯基酯树脂：耐化学腐蚀性和耐水性优于环氧，适合船舶、化工设备、污水处理设施、海洋工程。层间剪切强度约35-45MPa。不饱和聚酯树脂：成本最低（约为环氧的50-60%），适合一般工业、装饰件、低承力结构，但强度和耐温性较低，层间剪切强度约25-35MPa。酚醛树脂：耐高温（大于等于250℃），阻燃性好，适合防火、高温环境、刹车片。聚氨酯树脂：韧性好、抗冲击，适合体育器材、需...",
+      "datePublished": "2026-07-02"
+    }
+  }]
+};
+
+const title = "碳纤维布适合用什么树脂？环氧/乙烯基酯/聚酯/酚醛选型指南 | 碳烯技术";
+const description = "结构件用环氧树脂（强度最高），船舶用乙烯基酯（耐腐蚀），装饰件用不饱和聚酯（成本低）。";
+---
+
+<Layout title={title} description={description} canonical="/faq/faq-023-resin-selection" schema={schema}>
+  <Header />
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 80px 24px 60px; text-align: center;">
+    <h1 style="font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; max-width: 900px; margin: 0 auto;">碳纤维布适合用什么树脂？</h1>
+  </section>
+
+  <section style="padding: 64px 24px; max-width: 800px; margin: 0 auto;">
+    <div style="background: white; padding: 40px; border-radius: 12px; border: 1px solid var(--border); line-height: 1.8; color: var(--text);">
+      <div style="color: var(--text-light); line-height: 1.8;">
+        <p style="margin-bottom: 16px;">碳纤维布适配树脂选择：环氧树脂（最常用）：与碳纤维浸润性最好，层间剪切强度最高（大于等于40MPa），适合航空航天、汽车结构件、体育器材、建筑加固。推荐中温固化环氧（120-150℃），玻璃化转变温度Tg大于等于120℃。乙烯基酯树脂：耐化学腐蚀性和耐水性优于环氧，适合船舶、化工设备、污水处理设施、海洋工程。层间剪切强度约35-45MPa。不饱和聚酯树脂：成本最低（约为环氧的50-60%），适合一般工业、装饰件、低承力结构，但强度和耐温性较低，层间剪切强度约25-35MPa。酚醛树脂：耐高温（大于等于250℃），阻燃性好，适合防火、高温环境、刹车片。聚氨酯树脂：韧性好、抗冲击，适合体育器材、需要抗冲击的场合。手糊/真空导入推荐环氧或乙烯基酯，RTM推荐环氧，拉挤推荐环氧或乙烯基酯，热压罐推荐航空级环氧。树脂与碳纤维上浆剂需匹配：环氧上浆碳纤维配环氧树脂效果最佳，尼龙上浆碳纤维配环氧需额外处理。碳烯技术提供树脂适配咨询服务。</p>
+      </div>
+
+      <div style="background: var(--bg-alt); padding: 24px; border-radius: 8px; margin-top: 32px;">
+        <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--primary); margin-bottom: 12px;">相关型号推荐</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8;">
+          <li>中温固化环氧树脂（120-150℃）</li>
+          <li>乙烯基酯树脂（耐腐蚀）</li>
+          <li>酚醛树脂（耐高温大于等于250℃）</li>
+          <li>聚氨酯树脂（高韧性）</li>
+        </ul>
+      </div>
+
+      <div style="text-align: center; margin-top: 32px;">
+        <a href="/contact" style="background: var(--accent); color: white; padding: 16px 40px; border-radius: 8px; font-weight: 700; display: inline-block;">获取方案与报价</a>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>

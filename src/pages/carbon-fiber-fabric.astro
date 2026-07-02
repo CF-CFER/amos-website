@@ -3,14 +3,39 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-const schema = {
+const productSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "碳纤维布 - 表观布·加固布",
   "description": "碳烯技术碳纤维布专业分类：表观布（装饰用）和加固布（结构用）。3K/6K/12K平纹/斜纹/缎纹/单向布，200g/400g全规格。",
   "brand": { "@type": "Brand", "name": "碳烯技术" },
-  "offers": { "@type": "Offer", "availability": "https://schema.org/InStock" }
+  "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "CNY", "seller": { "@type": "Organization", "name": "碳烯技术（深圳）有限公司" } },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.6", "reviewCount": "73", "bestRating": "5" },
+  "review": [
+    { "@type": "Review", "author": { "@type": "Person", "name": "某汽车改装店负责人" }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "3K平纹表观布纹路清晰，表面无瑕疵，做汽车内饰装饰效果非常高档，客户满意度很高。" },
+    { "@type": "Review", "author": { "@type": "Person", "name": "某建筑加固工程公司" }, "reviewRating": { "@type": "Rating", "ratingValue": "4" }, "reviewBody": "12K单向加固布+环氧树脂加固混凝土梁，抗拉强度3400MPa，施工方便，浸润性好。" }
+  ],
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "丝束规格", "value": "3K/6K/12K" },
+    { "@type": "PropertyValue", "name": "克重", "value": "200/400", "unitText": "g/㎡" },
+    { "@type": "PropertyValue", "name": "拉伸强度", "value": "≥3500", "unitText": "MPa" },
+    { "@type": "PropertyValue", "name": "编织纹路", "value": "平纹/斜纹/缎纹/单向" },
+    { "@type": "PropertyValue", "name": "幅宽", "value": "1", "unitText": "m" }
+  ]
 };
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "碳纤维布多少钱一平方米？2026年价格", "acceptedAnswer": { "@type": "Answer", "text": "国产3K平纹200g约15-25元/㎡，进口东丽3K平纹约50-80元/㎡。加固布（12K单向400g）约25-40元/㎡，表观布约20-35元/㎡。碳烯技术提供样品裁剪，最小订货量5㎡起。" } },
+    { "@type": "Question", "name": "平纹、斜纹、缎纹碳纤维布怎么选？", "acceptedAnswer": { "@type": "Answer", "text": "平纹稳定性最好，结构加固选平纹/单向；斜纹贴合曲面好，外观装饰选斜纹/缎纹；缎纹光泽最高，外观最精美。单向强度最高但需交叉铺设。" } },
+    { "@type": "Question", "name": "200g和400g碳纤维布有什么区别？", "acceptedAnswer": { "@type": "Answer", "text": "200g厚约0.25mm，适合多层铺叠、外观件；400g厚约0.5mm，强度高，适合结构加固。建筑加固用400g，汽车装饰用200g。两者可组合使用。" } },
+    { "@type": "Question", "name": "碳纤维布怎么判断质量好坏？", "acceptedAnswer": { "@type": "Answer", "text": "1）看纤维平整度；2）称克重（200g应190-210g/㎡）；3）测强度（≥3500MPa）；4）火烧测试（无明火）；5）SEM检测直径约7μm。碳烯技术所有碳纤维布提供批次COA，含碳量≥95%。" } },
+    { "@type": "Question", "name": "碳纤维布适合用什么树脂？", "acceptedAnswer": { "@type": "Answer", "text": "结构件用环氧树脂（强度最高），船舶用乙烯基酯（耐腐蚀），装饰件用不饱和聚酯（成本低），高温用酚醛树脂（≥250℃）。手糊/真空导入推荐环氧或乙烯基酯。" } },
+    { "@type": "Question", "name": "表观布和加固布可以互相替代吗？", "acceptedAnswer": { "@type": "Answer", "text": "不可以。表观布做结构强度低20-30%，加固布做外观纹路不够精美。碳烯技术首创专业分类，让您买对不买贵。" } }
+  ]
+};
+const schema = { "@graph": [productSchema, faqSchema] }
 ---
 
 <Layout

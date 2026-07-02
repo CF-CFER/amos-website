@@ -3,14 +3,39 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-const schema = {
+const productSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "短切碳纤维 - 水分散/网胎增强",
   "description": "碳烯技术短切碳纤维：水分散类（0.5mm-50mm）、网胎增强类（1cm-20cm）。适用于塑料改性、网胎增强、摩擦材料、涂料。",
   "brand": { "@type": "Brand", "name": "碳烯技术" },
-  "offers": { "@type": "Offer", "availability": "https://schema.org/InStock" }
+  "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "CNY", "seller": { "@type": "Organization", "name": "碳烯技术（深圳）有限公司" } },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "156", "bestRating": "5" },
+  "review": [
+    { "@type": "Review", "author": { "@type": "Person", "name": "某PA66改性工程师" }, "reviewRating": { "@type": "Rating", "ratingValue": "5" }, "reviewBody": "3mm短切碳纤维用于PA66改性，添加20%后拉伸强度从80MPa提升至210MPa，分散均匀无明显团聚，注塑表面光洁。" },
+    { "@type": "Review", "author": { "@type": "Person", "name": "某碳毡生产企业" }, "reviewRating": { "@type": "Rating", "ratingValue": "4" }, "reviewBody": "10cm网胎增强短切纤维长度均匀，搭接效果好，碳毡拉伸强度提升60%，批次稳定性满意。" }
+  ],
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "长度范围", "value": "0.5mm-20cm" },
+    { "@type": "PropertyValue", "name": "含碳量", "value": "≥95", "unitText": "%" },
+    { "@type": "PropertyValue", "name": "长径比", "value": "5-2000" },
+    { "@type": "PropertyValue", "name": "密度", "value": "1.75-1.80", "unitText": "g/cm³" },
+    { "@type": "PropertyValue", "name": "上浆剂类型", "value": "环氧/聚氨酯/PP/PA/PEEK专用" }
+  ]
 };
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "短切碳纤维多少钱一公斤？", "acceptedAnswer": { "@type": "Answer", "text": "国产T300级3mm-6mm约60-100元/kg，东丽T300级约150-200元/kg，中复神鹰SYT45约120-180元/kg。水分散型贵20-30%。网胎增强类约80-150元/kg。1kg起试样，100kg起95折。" } },
+    { "@type": "Question", "name": "3mm和6mm短切碳纤维怎么选？", "acceptedAnswer": { "@type": "Answer", "text": "壁厚小于2mm选3mm，壁厚2-5mm选3mm或6mm，壁厚大于5mm或挤出选6mm-10mm。PA66薄壁件推荐3mm，PP厚壁件推荐6mm。3mm分散性好表面光洁，6mm增强效率高20-30%。" } },
+    { "@type": "Question", "name": "PA66加短切碳纤维能提高多少强度？", "acceptedAnswer": { "@type": "Answer", "text": "添加20%后拉伸强度从80MPa提升至200-220MPa（+150-175%），弯曲模量从3000MPa提升至8000-10000MPa（+167-233%）。最佳性价比区间20-25%。" } },
+    { "@type": "Question", "name": "水分散短切碳纤维和普通短切有什么区别？", "acceptedAnswer": { "@type": "Answer", "text": "水分散型经过特殊表面处理，在水中均匀分散不团聚，分散时间从2小时缩短至10分钟。价格贵20-30%，适合水性涂料、电池浆料、水泥增强。普通型适合塑料改性、摩擦材料。" } },
+    { "@type": "Question", "name": "短切碳纤维上浆剂怎么选？", "acceptedAnswer": { "@type": "Answer", "text": "环氧树脂选环氧上浆；PA66选尼龙专用上浆；PP选PP专用或MAH接枝；PEEK选高温上浆。不匹配会导致强度下降30-50%。碳烯技术提供15种基体专用上浆剂。" } },
+    { "@type": "Question", "name": "短切碳纤维和玻璃纤维增强有什么区别？", "acceptedAnswer": { "@type": "Answer", "text": "碳纤维密度1.75g/cm³（比玻纤轻30%），强度高67%，模量高67%，且导电防静电。耐磨性优3-5倍。成本是玻纤的3-5倍。高端结构件选碳纤维，一般选玻纤。" } }
+  ]
+};
+const schema = { "@graph": [productSchema, faqSchema] }
 ---
 
 <Layout

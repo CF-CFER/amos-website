@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "水分散短切碳纤维和普通短切有什么区别？",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "水分散短切碳纤维和普通短切碳纤维的核心区别在于表面处理工艺。水分散短切：经过氧化/亲水表面处理，表面含氧官能团增加，接触角降低，可在水中均匀分散不团聚，适用于水性涂料、湿法造纸、电池浆料、水泥增强。分散时间从普通型的2小时缩短至10分钟，但价格比普通型贵20-30%。普通短切碳纤维：表面疏水性强，经过环氧/尼龙/PP等上浆处理，在水中会漂浮团聚，适用于塑料改性（注塑/挤出）、摩擦材料、干法复合材料。在水性体系中使用时需额外添加分散剂和强力搅拌。选型建议：水性涂料/电池浆料/湿法工艺/水泥增强选水分散型；塑料改性/摩擦材料/干法工艺选普通型。碳烯技术提供水分散型和普通型两种规格，长度0.5mm-...",
+      "datePublished": "2026-07-02"
+    }
+  }]
+};
+
+const title = "水分散短切碳纤维和普通短切有什么区别？表面处理与水性体系适配 | 碳烯技术";
+const description = "水分散型经过特殊表面处理，在水中均匀分散不团聚，分散时间从2小时缩短至10分钟。";
+---
+
+<Layout title={title} description={description} canonical="/faq/faq-016-water-dispersion" schema={schema}>
+  <Header />
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 80px 24px 60px; text-align: center;">
+    <h1 style="font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; max-width: 900px; margin: 0 auto;">水分散短切碳纤维和普通短切有什么区别？</h1>
+  </section>
+
+  <section style="padding: 64px 24px; max-width: 800px; margin: 0 auto;">
+    <div style="background: white; padding: 40px; border-radius: 12px; border: 1px solid var(--border); line-height: 1.8; color: var(--text);">
+      <div style="color: var(--text-light); line-height: 1.8;">
+        <p style="margin-bottom: 16px;">水分散短切碳纤维和普通短切碳纤维的核心区别在于表面处理工艺。水分散短切：经过氧化/亲水表面处理，表面含氧官能团增加，接触角降低，可在水中均匀分散不团聚，适用于水性涂料、湿法造纸、电池浆料、水泥增强。分散时间从普通型的2小时缩短至10分钟，但价格比普通型贵20-30%。普通短切碳纤维：表面疏水性强，经过环氧/尼龙/PP等上浆处理，在水中会漂浮团聚，适用于塑料改性（注塑/挤出）、摩擦材料、干法复合材料。在水性体系中使用时需额外添加分散剂和强力搅拌。选型建议：水性涂料/电池浆料/湿法工艺/水泥增强选水分散型；塑料改性/摩擦材料/干法工艺选普通型。碳烯技术提供水分散型和普通型两种规格，长度0.5mm-50mm全覆盖。水分散型还可用于水泥基材料增强，混凝土抗折强度提升30-50%。</p>
+      </div>
+
+      <div style="background: var(--bg-alt); padding: 24px; border-radius: 8px; margin-top: 32px;">
+        <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--primary); margin-bottom: 12px;">相关型号推荐</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8;">
+          <li>水分散1mm（电池浆料）</li>
+          <li>水分散2mm（水性涂料）</li>
+          <li>水分散6mm（水泥增强）</li>
+          <li>普通3mm（塑料改性）</li>
+        </ul>
+      </div>
+
+      <div style="text-align: center; margin-top: 32px;">
+        <a href="/contact" style="background: var(--accent); color: white; padding: 16px 40px; border-radius: 8px; font-weight: 700; display: inline-block;">获取方案与报价</a>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>

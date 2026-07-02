@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "东丽T300和T700碳纤维丝有什么区别？",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "东丽T300和T700是TORAYCA系列中最常用的两款碳纤维丝，核心差异在于强度等级和应用定位。T300拉伸强度3530MPa，弹性模量230GPa，密度1.76g/cm³，断裂伸长率1.5%，是标准模量通用级碳纤维，工艺成熟、成本较低，适合建筑加固、体育器材、一般工业复合材料。T700SC拉伸强度4900MPa（比T300高39%），弹性模量保持230GPa标准模量，密度1.80g/cm³，断裂伸长率2.1%（优于T300），是高强标准模量碳纤维，适合承力结构、压力容器、汽车结构件、航空次级结构。T700与T300模量一致，可混铺设计，过渡自然。T700SC为航空级（上浆剂浸润性更优），T...",
+      "datePublished": "2026-07-02"
+    }
+  }]
+};
+
+const title = "东丽T300和T700碳纤维丝有什么区别？详细参数对比与选型建议 | 碳烯技术";
+const description = "东丽T300拉伸强度3530MPa，T700SC为4900MPa（高39%）。了解T300与T700的核心参数差异、适用场景和选型建议。";
+---
+
+<Layout title={title} description={description} canonical="/faq/faq-002-toray-t300-vs-t700" schema={schema}>
+  <Header />
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 80px 24px 60px; text-align: center;">
+    <h1 style="font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; max-width: 900px; margin: 0 auto;">东丽T300和T700碳纤维丝有什么区别？</h1>
+  </section>
+
+  <section style="padding: 64px 24px; max-width: 800px; margin: 0 auto;">
+    <div style="background: white; padding: 40px; border-radius: 12px; border: 1px solid var(--border); line-height: 1.8; color: var(--text);">
+      <div style="color: var(--text-light); line-height: 1.8;">
+        <p style="margin-bottom: 16px;">东丽T300和T700是TORAYCA系列中最常用的两款碳纤维丝，核心差异在于强度等级和应用定位。T300拉伸强度3530MPa，弹性模量230GPa，密度1.76g/cm³，断裂伸长率1.5%，是标准模量通用级碳纤维，工艺成熟、成本较低，适合建筑加固、体育器材、一般工业复合材料。T700SC拉伸强度4900MPa（比T300高39%），弹性模量保持230GPa标准模量，密度1.80g/cm³，断裂伸长率2.1%（优于T300），是高强标准模量碳纤维，适合承力结构、压力容器、汽车结构件、航空次级结构。T700与T300模量一致，可混铺设计，过渡自然。T700SC为航空级（上浆剂浸润性更优），T700GC为工业级（成本更低）。选型建议：承力结构、减重要求高选T700；一般结构、成本敏感选T300。T700SC-12K价格约350-500元/kg，T300-12K约200-300元/kg。</p>
+      </div>
+
+      <div style="background: var(--bg-alt); padding: 24px; border-radius: 8px; margin-top: 32px;">
+        <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--primary); margin-bottom: 12px;">相关型号推荐</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8;">
+          <li>东丽 T300-12K（通用级）</li>
+          <li>东丽 T700SC-12K（航空级）</li>
+          <li>东丽 T700GC-12K（工业级）</li>
+          <li>中复神鹰 SYT39（T700级国产替代）</li>
+        </ul>
+      </div>
+
+      <div style="text-align: center; margin-top: 32px;">
+        <a href="/contact" style="background: var(--accent); color: white; padding: 16px 40px; border-radius: 8px; font-weight: 700; display: inline-block;">获取方案与报价</a>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>

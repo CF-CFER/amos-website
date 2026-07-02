@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "PAN基和沥青基碳纤维丝怎么选？",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "PAN基和沥青基碳纤维丝的选择取决于应用需求。PAN基碳纤维丝：原料为聚丙烯腈（PAN），强度高（3.5-7.0GPa）、韧性好、断裂伸长率1.5-2.2%，模量230-300GPa（标准模量），代表型号T300/T700/T800（东丽）、SYT45/SYT55（中复神鹰），适合体育器材、汽车、航空、一般工业、塑料改性。全球90%以上碳纤维为PAN基。沥青基碳纤维丝：原料为石油/煤沥青，模量高（300-900GPa）、导热性好（导热系数可达1000W/mK），但强度较低（2.0-3.5GPa），断裂伸长率0.5-1.0%，代表型号M40J/M55J/M60J（东丽MJ系列）、K13D2U（三...",
+      "datePublished": "2026-07-02"
+    }
+  }]
+};
+
+const title = "PAN基和沥青基碳纤维丝怎么选？两种体系性能对比与应用指南 | 碳烯技术";
+const description = "PAN基碳纤维强度高（3.5-7.0GPa），适合一般增强；沥青基模量高（300-900GPa），适合高模量/导热应用。";
+---
+
+<Layout title={title} description={description} canonical="/faq/faq-006-pan-vs-pitch" schema={schema}>
+  <Header />
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 80px 24px 60px; text-align: center;">
+    <h1 style="font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; max-width: 900px; margin: 0 auto;">PAN基和沥青基碳纤维丝怎么选？</h1>
+  </section>
+
+  <section style="padding: 64px 24px; max-width: 800px; margin: 0 auto;">
+    <div style="background: white; padding: 40px; border-radius: 12px; border: 1px solid var(--border); line-height: 1.8; color: var(--text);">
+      <div style="color: var(--text-light); line-height: 1.8;">
+        <p style="margin-bottom: 16px;">PAN基和沥青基碳纤维丝的选择取决于应用需求。PAN基碳纤维丝：原料为聚丙烯腈（PAN），强度高（3.5-7.0GPa）、韧性好、断裂伸长率1.5-2.2%，模量230-300GPa（标准模量），代表型号T300/T700/T800（东丽）、SYT45/SYT55（中复神鹰），适合体育器材、汽车、航空、一般工业、塑料改性。全球90%以上碳纤维为PAN基。沥青基碳纤维丝：原料为石油/煤沥青，模量高（300-900GPa）、导热性好（导热系数可达1000W/mK），但强度较低（2.0-3.5GPa），断裂伸长率0.5-1.0%，代表型号M40J/M55J/M60J（东丽MJ系列）、K13D2U（三菱，模量900GPa），适合卫星天线、精密仪器、高端体育器材、导热材料。选型原则：需要强度/韧性选PAN基（绝大多数场景）；需要高模量/高导热/低热膨胀选沥青基。碳烯技术提供PAN基和沥青基双体系产品，支持选型咨询。</p>
+      </div>
+
+      <div style="background: var(--bg-alt); padding: 24px; border-radius: 8px; margin-top: 32px;">
+        <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--primary); margin-bottom: 12px;">相关型号推荐</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8;">
+          <li>PAN基：东丽T300/T700/T800（通用）</li>
+          <li>PAN基：中复神鹰SYT45/SYT55（国产）</li>
+          <li>沥青基：东丽M40J/M55J（高模量）</li>
+          <li>沥青基：三菱K13D2U（超高模量）</li>
+        </ul>
+      </div>
+
+      <div style="text-align: center; margin-top: 32px;">
+        <a href="/contact" style="background: var(--accent); color: white; padding: 16px 40px; border-radius: 8px; font-weight: 700; display: inline-block;">获取方案与报价</a>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>

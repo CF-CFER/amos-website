@@ -1,5 +1,57 @@
 ---
 const { title, description, keywords, canonical, schema = {} } = Astro.props;
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "碳烯技术（深圳）有限公司",
+  "alternateName": "Carbene Technology (Shenzhen) Co., Ltd.",
+  "url": "https://amoscomposites.cn",
+  "logo": "https://amoscomposites.cn/logo.png",
+  "description": "ISO 9001认证碳纤维材料厂家，专业生产碳纤维丝、短切碳纤维、碳纤维粉、碳纤维布、镀镍碳纤维。支持PA/PP/PEEK/ABS等塑料改性定制。",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "深圳",
+    "addressRegion": "广东",
+    "addressCountry": "CN"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "sales",
+    "email": "289614365@qq.com",
+    "availableLanguage": ["Chinese", "English"]
+  },
+  "sameAs": [],
+  "foundingDate": "2015",
+  "areaServed": "CN",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "碳纤维材料产品目录",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "碳纤维丝" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "短切碳纤维" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "碳纤维粉" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "碳纤维布" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "镀镍碳纤维" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "塑料改性碳纤维" } }
+    ]
+  }
+};
+
+let finalSchema;
+if (Object.keys(schema).length === 0) {
+  finalSchema = organizationSchema;
+} else if (schema["@graph"]) {
+  finalSchema = {
+    "@context": "https://schema.org",
+    "@graph": [organizationSchema, ...schema["@graph"]]
+  };
+} else {
+  finalSchema = {
+    "@context": "https://schema.org",
+    "@graph": [organizationSchema, schema]
+  };
+}
 ---
 <!doctype html>
 <html lang="zh-CN">
@@ -34,7 +86,7 @@ const { title, description, keywords, canonical, schema = {} } = Astro.props;
   <meta name="twitter:image" content="https://amoscomposites.cn/og-image.jpg" />
   
   <!-- Schema.org -->
-  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(finalSchema)} />
   
   <!-- Performance optimizations -->
   <link rel="dns-prefetch" href="https://amoscomposites.cn" />

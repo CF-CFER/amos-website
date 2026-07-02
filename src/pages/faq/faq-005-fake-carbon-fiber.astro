@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "如何判断碳纤维丝的真假？",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "辨别真假碳纤维丝的5种方法：1）看包装和标签：正品有原厂标签、批号、溯源码，东丽/中复神鹰等品牌有防伪标识。2）查COA质检报告：要求提供随货COA，核对拉伸强度、模量、密度等关键数据，与官方TDS对比。3）测密度：真碳纤维密度1.75-1.80g/cm³，玻纤染色冒充品密度2.5g/cm³以上（差40%）。4）火烧测试：真碳纤维无明火、不熔滴、残留黑色灰烬，玻纤冒充品会熔化成玻璃球并拉丝。5）SEM显微镜检测：真碳纤维直径约7μm，表面光滑有石墨层结构；玻纤直径10-20μm，表面粗糙无石墨层。额外技巧：真碳纤维导电（电阻率低），玻纤绝缘；真碳纤维有金属光泽，染色玻纤颜色暗淡。建议通过正规渠...",
+      "datePublished": "2026-07-02"
+    }
+  }]
+};
+
+const title = "如何判断碳纤维丝的真假？5种辨别方法详解 | 碳烯技术";
+const description = "辨别真假碳纤维丝的5种方法：看包装、查COA、测密度、火烧测试、SEM检测。避免买到玻纤染色假冒品。";
+---
+
+<Layout title={title} description={description} canonical="/faq/faq-005-fake-carbon-fiber" schema={schema}>
+  <Header />
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 80px 24px 60px; text-align: center;">
+    <h1 style="font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; max-width: 900px; margin: 0 auto;">如何判断碳纤维丝的真假？</h1>
+  </section>
+
+  <section style="padding: 64px 24px; max-width: 800px; margin: 0 auto;">
+    <div style="background: white; padding: 40px; border-radius: 12px; border: 1px solid var(--border); line-height: 1.8; color: var(--text);">
+      <div style="color: var(--text-light); line-height: 1.8;">
+        <p style="margin-bottom: 16px;">辨别真假碳纤维丝的5种方法：1）看包装和标签：正品有原厂标签、批号、溯源码，东丽/中复神鹰等品牌有防伪标识。2）查COA质检报告：要求提供随货COA，核对拉伸强度、模量、密度等关键数据，与官方TDS对比。3）测密度：真碳纤维密度1.75-1.80g/cm³，玻纤染色冒充品密度2.5g/cm³以上（差40%）。4）火烧测试：真碳纤维无明火、不熔滴、残留黑色灰烬，玻纤冒充品会熔化成玻璃球并拉丝。5）SEM显微镜检测：真碳纤维直径约7μm，表面光滑有石墨层结构；玻纤直径10-20μm，表面粗糙无石墨层。额外技巧：真碳纤维导电（电阻率低），玻纤绝缘；真碳纤维有金属光泽，染色玻纤颜色暗淡。建议通过正规渠道采购，碳烯技术提供所有批次COA和原厂TDS，支持第三方检测。</p>
+      </div>
+
+      <div style="background: var(--bg-alt); padding: 24px; border-radius: 8px; margin-top: 32px;">
+        <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--primary); margin-bottom: 12px;">相关型号推荐</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8;">
+          <li>东丽全系列（原厂溯源）</li>
+          <li>中复神鹰SYT系列（国产龙头）</li>
+          <li>光威GW系列（A股上市）</li>
+          <li>东邦Tenax系列（日本帝人）</li>
+        </ul>
+      </div>
+
+      <div style="text-align: center; margin-top: 32px;">
+        <a href="/contact" style="background: var(--accent); color: white; padding: 16px 40px; border-radius: 8px; font-weight: 700; display: inline-block;">获取方案与报价</a>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>

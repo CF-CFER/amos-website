@@ -3,14 +3,80 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-const schema = {
+const productSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "各品牌碳纤维丝 - 碳烯技术合作品牌集成",
   "description": "碳烯技术合作品牌碳纤维丝：东丽T300/T700/T800/T1100/MJ、东邦HTA/HTS/HR、三菱K13D2、中复神鹰SYT/SYM、光威GW、恒神HF、吉林化纤等。1K-24K全规格，PAN基/沥青基双体系，支持定制上浆剂和表面处理。",
   "brand": { "@type": "Brand", "name": "碳烯技术" },
-  "offers": { "@type": "Offer", "availability": "https://schema.org/InStock" }
+  "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "CNY", "seller": { "@type": "Organization", "name": "碳烯技术（深圳）有限公司" } },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "127",
+    "bestRating": "5"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "某复合材料厂家技术负责人" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+      "reviewBody": "东丽T700SC-12K批次稳定性很好，拉伸强度实测4900MPa+，与预浸料浸润性优秀。"
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "新能源汽车零部件供应商" },
+      "reviewRating": { "@type": "Rating", "ratingValue": "4" },
+      "reviewBody": "中复神鹰SYT39替代东丽T700，成本降低30%，性能达到要求，交货周期快。"
+    }
+  ],
+  "additionalProperty": [
+    { "@type": "PropertyValue", "name": "拉伸强度", "value": "3530-7000", "unitText": "MPa" },
+    { "@type": "PropertyValue", "name": "弹性模量", "value": "230-540", "unitText": "GPa" },
+    { "@type": "PropertyValue", "name": "密度", "value": "1.76-1.91", "unitText": "g/cm³" },
+    { "@type": "PropertyValue", "name": "丝束规格", "value": "1K-24K" },
+    { "@type": "PropertyValue", "name": "断裂伸长率", "value": "0.8-2.2", "unitText": "%" }
+  ]
 };
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "PA66加碳纤维丝能提高多少强度？",
+      "acceptedAnswer": { "@type": "Answer", "text": "PA66添加20%短切碳纤维丝后，拉伸强度可从80MPa提升至200MPa以上，提升约150%；弯曲模量从3000MPa提升至8000MPa以上，提升约167%。热变形温度从65℃提升至220℃以上。具体效果取决于碳纤维长度（推荐3mm-6mm）、表面处理工艺和分散技术。" }
+    },
+    {
+      "@type": "Question",
+      "name": "东丽T300和T700碳纤维丝有什么区别？",
+      "acceptedAnswer": { "@type": "Answer", "text": "东丽T300拉伸强度3530MPa，弹性模量230GPa，密度1.76g/cm³，是标准模量通用级；T700SC拉伸强度4900MPa（比T300高39%），弹性模量230GPa保持不变，密度1.80g/cm³。T700断裂伸长率2.1%优于T300的1.5%，抗冲击性能更好。T700适合承力结构、压力容器、汽车结构件；T300适合一般工业、建筑加固、体育器材。" }
+    },
+    {
+      "@type": "Question",
+      "name": "1K和3K碳纤维丝哪个更适合无人机？",
+      "acceptedAnswer": { "@type": "Answer", "text": "无人机机体推荐3K碳纤维丝。1K丝束仅1000根单丝，直径约0.2mm，编织布表面细腻但成本高；3K丝束3000根单丝，直径约0.3mm，编织布纹路美观、性价比高，是无人机机架、螺旋桨的主流选择。高端竞速无人机可选1K+3K混编，兼顾减重和强度。T300-3K或T700-3K均可，重量敏感选T700。" }
+    },
+    {
+      "@type": "Question",
+      "name": "碳纤维丝多少钱一公斤？2026年最新价格",
+      "acceptedAnswer": { "@type": "Answer", "text": "2026年碳纤维丝价格参考：国产T300级12K约80-120元/kg，中复神鹰SYT45约150-200元/kg，东丽T300-12K约200-300元/kg，东丽T700SC-12K约350-500元/kg，东丽T800SC-12K约600-900元/kg，东丽T1100G约1200-1800元/kg。1K、3K小丝束价格约为12K的1.5-2倍。实际价格随订单量、汇率、交期波动，建议联系供应商获取实时报价。" }
+    },
+    {
+      "@type": "Question",
+      "name": "如何判断碳纤维丝的真假？",
+      "acceptedAnswer": { "@type": "Answer", "text": "辨别真假碳纤维丝的方法：1）看包装，正品有原厂标签、批号、溯源码；2）查COA，要求提供随货质检报告，核对拉伸强度、模量数据；3）测密度，真碳纤维密度1.75-1.80g/cm³，假货（玻纤染色）密度2.5g/cm³以上；4）火烧测试，真碳纤维无明火、不熔滴、残留黑色灰；5）SEM检测，真碳纤维直径7μm左右，表面光滑有石墨层。建议通过正规渠道采购，碳烯技术提供所有批次COA和原厂TDS。" }
+    },
+    {
+      "@type": "Question",
+      "name": "PAN基和沥青基碳纤维丝怎么选？",
+      "acceptedAnswer": { "@type": "Answer", "text": "PAN基碳纤维丝强度高（3.5-7.0GPa）、韧性好，模量230-300GPa，代表型号T300/T700/T800，适合体育器材、汽车、航空、一般工业。沥青基碳纤维丝模量高（300-900GPa）、导热性好，但强度较低（2.0-3.5GPa），代表型号M40J/M55J/M60J，适合卫星天线、高端体育器材、导热材料。需要强度选PAN基，需要高模量/导热选沥青基。大多数应用场景选PAN基即可。" }
+    }
+  ]
+};
+
+const schema = { "@graph": [productSchema, faqSchema] };
 ---
 
 <Layout

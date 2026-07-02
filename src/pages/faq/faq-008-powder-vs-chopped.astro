@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "碳纤维粉和碳纤维短切有什么区别？",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "碳纤维粉和碳纤维短切是两种不同形态的碳纤维产品，适用场景差异显著。碳纤维粉：研磨后的粉末状，长度50-500μm（对应30-500目），长径比5-60，分散性极佳，适合导电涂料、塑料改性、粉末冶金、摩擦材料、电池导电剂。在塑料改性中：碳纤维粉添加25%后PP拉伸强度提升70-90%，弯曲模量提升100-130%，但增强效率低于短切。碳纤维短切：切断后的纤维段，长度0.5mm-50mm（甚至20cm），长径比20-2000，增强效果显著，适合塑料改性、网胎增强、摩擦材料、水泥增强。在塑料改性中：短切纤维添加20%后PA66拉伸强度提升150-175%，弯曲模量提升167-233%。导电应用中：粉...",
+      "datePublished": "2026-07-02"
+    }
+  }]
+};
+
+const title = "碳纤维粉和碳纤维短切有什么区别？形态对比与选型建议 | 碳烯技术";
+const description = "碳纤维粉是研磨粉末（50-500μm），适合涂料/塑料；短切是纤维段（0.5-50mm），增强效果更显著。";
+---
+
+<Layout title={title} description={description} canonical="/faq/faq-008-powder-vs-chopped" schema={schema}>
+  <Header />
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 80px 24px 60px; text-align: center;">
+    <h1 style="font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; max-width: 900px; margin: 0 auto;">碳纤维粉和碳纤维短切有什么区别？</h1>
+  </section>
+
+  <section style="padding: 64px 24px; max-width: 800px; margin: 0 auto;">
+    <div style="background: white; padding: 40px; border-radius: 12px; border: 1px solid var(--border); line-height: 1.8; color: var(--text);">
+      <div style="color: var(--text-light); line-height: 1.8;">
+        <p style="margin-bottom: 16px;">碳纤维粉和碳纤维短切是两种不同形态的碳纤维产品，适用场景差异显著。碳纤维粉：研磨后的粉末状，长度50-500μm（对应30-500目），长径比5-60，分散性极佳，适合导电涂料、塑料改性、粉末冶金、摩擦材料、电池导电剂。在塑料改性中：碳纤维粉添加25%后PP拉伸强度提升70-90%，弯曲模量提升100-130%，但增强效率低于短切。碳纤维短切：切断后的纤维段，长度0.5mm-50mm（甚至20cm），长径比20-2000，增强效果显著，适合塑料改性、网胎增强、摩擦材料、水泥增强。在塑料改性中：短切纤维添加20%后PA66拉伸强度提升150-175%，弯曲模量提升167-233%。导电应用中：粉体比表面积大，导电阈值更低（5-8%），短切需15-20%。选型建议：需要高强度结构件选短切；需要表面光洁/导电涂料选粉末；可两者混用（短切+粉末）兼顾强度和外观。</p>
+      </div>
+
+      <div style="background: var(--bg-alt); padding: 24px; border-radius: 8px; margin-top: 32px;">
+        <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--primary); margin-bottom: 12px;">相关型号推荐</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8;">
+          <li>100-200目碳纤维粉（塑料改性/涂料）</li>
+          <li>3mm短切碳纤维（结构增强）</li>
+          <li>6mm短切碳纤维（挤出/厚壁件）</li>
+          <li>1mm水分散短切（水性体系）</li>
+        </ul>
+      </div>
+
+      <div style="text-align: center; margin-top: 32px;">
+        <a href="/contact" style="background: var(--accent); color: white; padding: 16px 40px; border-radius: 8px; font-weight: 700; display: inline-block;">获取方案与报价</a>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>

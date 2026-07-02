@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "碳纤维改性塑料注塑工艺要注意什么？",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "碳纤维改性塑料注塑关键参数：1）温度：比纯塑料高10-20℃，如PA66+CF建议280-300℃（纯PA66为260-280℃），PP+CF建议220-240℃（纯PP为200-220℃）。2）模具温度：提高10-15℃，减少表面浮纤。PA66+CF模温建议100-120℃，PP+CF模温建议60-80℃。3）注射速度：中等速度，过快导致纤维取向不均、熔接线明显，过慢导致预固化、表面缺陷。4）保压压力：提高20-30%，补偿纤维阻碍流动造成的体积收缩。5）螺杆转速：降低至50-80rpm，减少纤维折断（高转速会切断纤维，降低增强效果）。6）背压：提高至5-10MPa，改善碳纤维分散性。7）浇...",
+      "datePublished": "2026-07-02"
+    }
+  }]
+};
+
+const title = "碳纤维改性塑料注塑工艺要注意什么？温度/速度/压力参数详解 | 碳烯技术";
+const description = "温度高10-20℃，模温高10-15℃，中等注射速度，保压提高20-30%，螺杆转速降至50-80rpm。";
+---
+
+<Layout title={title} description={description} canonical="/faq/faq-030-injection-molding" schema={schema}>
+  <Header />
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 80px 24px 60px; text-align: center;">
+    <h1 style="font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; max-width: 900px; margin: 0 auto;">碳纤维改性塑料注塑工艺要注意什么？</h1>
+  </section>
+
+  <section style="padding: 64px 24px; max-width: 800px; margin: 0 auto;">
+    <div style="background: white; padding: 40px; border-radius: 12px; border: 1px solid var(--border); line-height: 1.8; color: var(--text);">
+      <div style="color: var(--text-light); line-height: 1.8;">
+        <p style="margin-bottom: 16px;">碳纤维改性塑料注塑关键参数：1）温度：比纯塑料高10-20℃，如PA66+CF建议280-300℃（纯PA66为260-280℃），PP+CF建议220-240℃（纯PP为200-220℃）。2）模具温度：提高10-15℃，减少表面浮纤。PA66+CF模温建议100-120℃，PP+CF模温建议60-80℃。3）注射速度：中等速度，过快导致纤维取向不均、熔接线明显，过慢导致预固化、表面缺陷。4）保压压力：提高20-30%，补偿纤维阻碍流动造成的体积收缩。5）螺杆转速：降低至50-80rpm，减少纤维折断（高转速会切断纤维，降低增强效果）。6）背压：提高至5-10MPa，改善碳纤维分散性。7）浇口设计：加大浇口尺寸（直径大于等于3mm），防止纤维堵塞；避免针点浇口。常见问题与解决：浮纤（提高模温、增加背压）、熔接线（提高温度/速度、增加保压）、纤维折断（降低转速）、光泽不均（提高模温、优化浇口）。碳烯技术提供注塑工艺参数包，覆盖PP/PA/ABS/PC/PEEK等15种塑料体系。</p>
+      </div>
+
+      <div style="background: var(--bg-alt); padding: 24px; border-radius: 8px; margin-top: 32px;">
+        <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--primary); margin-bottom: 12px;">相关型号推荐</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8;">
+          <li>PA66专用工艺包（280-300℃）</li>
+          <li>PP专用工艺包（220-240℃）</li>
+          <li>ABS专用工艺包（240-260℃）</li>
+          <li>PEEK专用工艺包（380-400℃）</li>
+        </ul>
+      </div>
+
+      <div style="text-align: center; margin-top: 32px;">
+        <a href="/contact" style="background: var(--accent); color: white; padding: 16px 40px; border-radius: 8px; font-weight: 700; display: inline-block;">获取方案与报价</a>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>

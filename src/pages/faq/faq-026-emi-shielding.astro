@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "镀镍碳纤维的电磁屏蔽效能能达到多少dB？",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "镀镍碳纤维的电磁屏蔽效能取决于形态和镍层厚度：镀镍碳纤维丝编织布（镍层1μm）屏蔽效能50-65dB（@1GHz），满足军用GJB151B标准（大于等于60dB）；镀镍碳纤维粉涂料（添加15%）屏蔽效能40-50dB；镀镍短切塑料改性（添加20%）屏蔽效能30-45dB。镍层厚度0.5μm约45-55dB，1.0μm约55-65dB，2.0μm约60-70dB。频率越高屏蔽效能越低，1GHz下最优。屏蔽效能还与编织密度、涂料厚度、塑料添加比例有关。丝编织布（3K平纹/斜纹）屏蔽效能最高，因为形成了连续导电网格。碳烯技术提供屏蔽效能实测报告，支持GJB151B、MIL-STD-285等标准测试。...",
+      "datePublished": "2026-07-02"
+    }
+  }]
+};
+
+const title = "镀镍碳纤维的电磁屏蔽效能能达到多少dB？镍层厚度与形态对比 | 碳烯技术";
+const description = "丝编织布（镍层1μm）50-65dB，涂料（15%添加）40-50dB，短切塑料（20%添加）30-45dB。";
+---
+
+<Layout title={title} description={description} canonical="/faq/faq-026-emi-shielding" schema={schema}>
+  <Header />
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 80px 24px 60px; text-align: center;">
+    <h1 style="font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; max-width: 900px; margin: 0 auto;">镀镍碳纤维的电磁屏蔽效能能达到多少dB？</h1>
+  </section>
+
+  <section style="padding: 64px 24px; max-width: 800px; margin: 0 auto;">
+    <div style="background: white; padding: 40px; border-radius: 12px; border: 1px solid var(--border); line-height: 1.8; color: var(--text);">
+      <div style="color: var(--text-light); line-height: 1.8;">
+        <p style="margin-bottom: 16px;">镀镍碳纤维的电磁屏蔽效能取决于形态和镍层厚度：镀镍碳纤维丝编织布（镍层1μm）屏蔽效能50-65dB（@1GHz），满足军用GJB151B标准（大于等于60dB）；镀镍碳纤维粉涂料（添加15%）屏蔽效能40-50dB；镀镍短切塑料改性（添加20%）屏蔽效能30-45dB。镍层厚度0.5μm约45-55dB，1.0μm约55-65dB，2.0μm约60-70dB。频率越高屏蔽效能越低，1GHz下最优。屏蔽效能还与编织密度、涂料厚度、塑料添加比例有关。丝编织布（3K平纹/斜纹）屏蔽效能最高，因为形成了连续导电网格。碳烯技术提供屏蔽效能实测报告，支持GJB151B、MIL-STD-285等标准测试。选型建议：高屏蔽（大于等于60dB）选丝编织布+1.0μm镍层；中等屏蔽（40-50dB）选涂料/粉末；一般屏蔽（30-40dB）选短切塑料改性。</p>
+      </div>
+
+      <div style="background: var(--bg-alt); padding: 24px; border-radius: 8px; margin-top: 32px;">
+        <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--primary); margin-bottom: 12px;">相关型号推荐</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8;">
+          <li>镀镍1K/3K丝编织布（50-65dB）</li>
+          <li>镀镍200目粉涂料（40-50dB）</li>
+          <li>镀镍短切塑料（30-45dB）</li>
+          <li>镍层2.0μm（60-70dB）</li>
+        </ul>
+      </div>
+
+      <div style="text-align: center; margin-top: 32px;">
+        <a href="/contact" style="background: var(--accent); color: white; padding: 16px 40px; border-radius: 8px; font-weight: 700; display: inline-block;">获取方案与报价</a>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>

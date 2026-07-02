@@ -5,23 +5,31 @@ import Footer from '../components/Footer.astro';
 
 const schema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "碳烯技术（深圳）有限公司 (Carbene Technology (Shenzhen) Co., Ltd.)",
-  "url": "https://amoscomposites.cn",
-  "logo": "https://amoscomposites.cn/logo.png",
-  "description": "Leading carbon fiber materials manufacturer specializing in carbon fiber filament, chopped fiber, powder, fabric, and custom plastic modification solutions.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Shenzhen",
-    "addressCountry": "CN"
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "sales",
-    "email": "289614365@qq.com"
-  },
-  "sameAs": []
-};
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "碳烯技术有限公司 - 碳纤维材料厂家",
+      "url": "https://amoscomposites.cn",
+      "description": "ISO 9001认证碳纤维厂家，专业生产碳纤维丝、短切碳纤维、碳纤维粉、碳纤维布、镀镍碳纤维。支持PA/PP/PEEK/ABS等塑料改性定制。",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": { "@type": "EntryPoint", "urlTemplate": "https://amoscomposites.cn/products?q={search_term_string}" },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "name": "碳烯技术（深圳）有限公司",
+      "alternateName": "Carbene Technology (Shenzhen) Co., Ltd.",
+      "url": "https://amoscomposites.cn",
+      "logo": "https://amoscomposites.cn/logo.png",
+      "description": "ISO 9001认证碳纤维材料厂家，专业生产碳纤维丝、短切碳纤维、碳纤维粉、碳纤维布、镀镍碳纤维。支持PA/PP/PEEK/ABS等塑料改性定制。",
+      "address": { "@type": "PostalAddress", "addressLocality": "深圳", "addressRegion": "广东", "addressCountry": "CN" },
+      "contactPoint": { "@type": "ContactPoint", "contactType": "sales", "email": "289614365@qq.com", "availableLanguage": ["Chinese", "English"] },
+      "sameAs": [], "foundingDate": "2015", "areaServed": "CN"
+    }
+  ]
+}
 ---
 
 <Layout

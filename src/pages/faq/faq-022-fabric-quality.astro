@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "碳纤维布怎么判断质量好坏？",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "判断碳纤维布质量的5步质检法：1）看纤维平整度：优质布纤维排列整齐、张力均匀，无断丝、起毛、跳线、缺纬，表面无污渍。劣质布纤维歪斜、有结头、缺纬明显。2）称克重：200g布实际重量应在190-210g/㎡（偏差±5%），400g布应在380-420g/㎡。偏差过大说明偷工减料（减少纬纱或降低纤维张力）。3）测强度：优质3K布拉伸强度大于等于3500MPa（沿纤维方向），劣质布可能用低等级纤维或玻纤冒充。4）火烧测试：取一小块布用打火机点燃，真碳纤维布无明火、不熔滴、燃烧缓慢、残留黑色灰烬，有淡淡烧木味；玻纤冒充品会熔化成玻璃球并拉丝，有刺鼻塑料味。5）SEM检测：真碳纤维直径约7μm，表面光滑...",
+      "datePublished": "2026-07-02"
+    }
+  }]
+};
+
+const title = "碳纤维布怎么判断质量好坏？5步质检法与常见假货识别 | 碳烯技术";
+const description = "看纤维平整度、称克重、测强度、火烧测试、SEM检测。避免买到玻纤冒充品。";
+---
+
+<Layout title={title} description={description} canonical="/faq/faq-022-fabric-quality" schema={schema}>
+  <Header />
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 80px 24px 60px; text-align: center;">
+    <h1 style="font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; max-width: 900px; margin: 0 auto;">碳纤维布怎么判断质量好坏？</h1>
+  </section>
+
+  <section style="padding: 64px 24px; max-width: 800px; margin: 0 auto;">
+    <div style="background: white; padding: 40px; border-radius: 12px; border: 1px solid var(--border); line-height: 1.8; color: var(--text);">
+      <div style="color: var(--text-light); line-height: 1.8;">
+        <p style="margin-bottom: 16px;">判断碳纤维布质量的5步质检法：1）看纤维平整度：优质布纤维排列整齐、张力均匀，无断丝、起毛、跳线、缺纬，表面无污渍。劣质布纤维歪斜、有结头、缺纬明显。2）称克重：200g布实际重量应在190-210g/㎡（偏差±5%），400g布应在380-420g/㎡。偏差过大说明偷工减料（减少纬纱或降低纤维张力）。3）测强度：优质3K布拉伸强度大于等于3500MPa（沿纤维方向），劣质布可能用低等级纤维或玻纤冒充。4）火烧测试：取一小块布用打火机点燃，真碳纤维布无明火、不熔滴、燃烧缓慢、残留黑色灰烬，有淡淡烧木味；玻纤冒充品会熔化成玻璃球并拉丝，有刺鼻塑料味。5）SEM检测：真碳纤维直径约7μm，表面光滑有石墨层结构；玻纤直径10-20μm，表面粗糙无石墨层。额外技巧：真碳纤维导电（电阻率低），玻纤绝缘；真碳纤维有金属光泽，染色玻纤颜色暗淡。碳烯技术所有碳纤维布提供批次COA，含碳量大于等于95%，支持第三方检测。</p>
+      </div>
+
+      <div style="background: var(--bg-alt); padding: 24px; border-radius: 8px; margin-top: 32px;">
+        <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--primary); margin-bottom: 12px;">相关型号推荐</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8;">
+          <li>3K平纹200g（表观布，质检严格）</li>
+          <li>12K单向400g（加固布，强度优先）</li>
+          <li>东丽3K平纹（进口品质）</li>
+          <li>国产3K平纹（性价比）</li>
+        </ul>
+      </div>
+
+      <div style="text-align: center; margin-top: 32px;">
+        <a href="/contact" style="background: var(--accent); color: white; padding: 16px 40px; border-radius: 8px; font-weight: 700; display: inline-block;">获取方案与报价</a>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>

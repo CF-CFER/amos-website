@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "碳纤维粉添加到塑料里会导电吗？",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "碳纤维粉添加到塑料中会导电，但需要达到渗滤阈值。碳纤维粉在PP/PA/ABS等塑料中的导电行为：添加0-3%为绝缘体（体积电阻率大于10的14次方Ωcm）；添加5-8%进入渗滤区，电阻率急剧下降至10的4-6次方Ωcm；添加10-15%达到稳定防静电级别（10的2-4次方Ωcm）；添加15-20%达到导电级别（10的0-2次方Ωcm）；添加20%以上达到高导电/电磁屏蔽级别（10的0-1次方Ωcm，屏蔽30-45dB）。200目粉体比表面积大，导电阈值更低（约5-8%），100目粉体需8-12%。镀镍碳纤维粉导电阈值更低（3-5%），因为镍层提供了金属导电网络。不同塑料基体导电阈值不同：PP约...",
+      "datePublished": "2026-07-02"
+    }
+  }]
+};
+
+const title = "碳纤维粉添加到塑料里会导电吗？渗滤阈值与导电机制详解 | 碳烯技术";
+const description = "会导电。添加5-8%进入渗滤区，电阻率急剧下降。了解碳纤维粉在不同塑料中的导电阈值。";
+---
+
+<Layout title={title} description={description} canonical="/faq/faq-010-conductive-plastic" schema={schema}>
+  <Header />
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 80px 24px 60px; text-align: center;">
+    <h1 style="font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; max-width: 900px; margin: 0 auto;">碳纤维粉添加到塑料里会导电吗？</h1>
+  </section>
+
+  <section style="padding: 64px 24px; max-width: 800px; margin: 0 auto;">
+    <div style="background: white; padding: 40px; border-radius: 12px; border: 1px solid var(--border); line-height: 1.8; color: var(--text);">
+      <div style="color: var(--text-light); line-height: 1.8;">
+        <p style="margin-bottom: 16px;">碳纤维粉添加到塑料中会导电，但需要达到渗滤阈值。碳纤维粉在PP/PA/ABS等塑料中的导电行为：添加0-3%为绝缘体（体积电阻率大于10的14次方Ωcm）；添加5-8%进入渗滤区，电阻率急剧下降至10的4-6次方Ωcm；添加10-15%达到稳定防静电级别（10的2-4次方Ωcm）；添加15-20%达到导电级别（10的0-2次方Ωcm）；添加20%以上达到高导电/电磁屏蔽级别（10的0-1次方Ωcm，屏蔽30-45dB）。200目粉体比表面积大，导电阈值更低（约5-8%），100目粉体需8-12%。镀镍碳纤维粉导电阈值更低（3-5%），因为镍层提供了金属导电网络。不同塑料基体导电阈值不同：PP约8-12%，PA6约6-10%，ABS约5-8%，PC约7-11%。加工工艺也影响导电性：高剪切分散（双螺杆挤出）比低剪切（单螺杆）更容易形成导电网络。碳烯技术提供导电塑料改性全套方案，从粉体选型到注塑工艺。</p>
+      </div>
+
+      <div style="background: var(--bg-alt); padding: 24px; border-radius: 8px; margin-top: 32px;">
+        <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--primary); margin-bottom: 12px;">相关型号推荐</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8;">
+          <li>200目导电粉（阈值5-8%）</li>
+          <li>300目精细导电粉（阈值3-5%）</li>
+          <li>镀镍碳纤维粉（阈值2-4%）</li>
+          <li>100目增强粉（需15-20%才导电）</li>
+        </ul>
+      </div>
+
+      <div style="text-align: center; margin-top: 32px;">
+        <a href="/contact" style="background: var(--accent); color: white; padding: 16px 40px; border-radius: 8px; font-weight: 700; display: inline-block;">获取方案与报价</a>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>

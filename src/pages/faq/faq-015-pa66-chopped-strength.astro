@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "PA66加短切碳纤维能提高多少强度？",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "PA66添加短切碳纤维（3mm）后的典型性能提升：添加10%时，拉伸强度从80MPa提升至120-130MPa（+50-63%），弯曲模量从3000MPa提升至5000-5500MPa（+67-83%）。添加20%时，拉伸强度从80MPa提升至200-220MPa（+150-175%），弯曲模量从3000MPa提升至8000-10000MPa（+167-233%），热变形温度从65℃提升至220-250℃（+238-285%），收缩率从1.5%降至0.5%（-67%）。添加30%时，拉伸强度可达250-280MPa，弯曲模量10000-12000MPa，但加工难度显著增加（熔体粘度大，需提高注...",
+      "datePublished": "2026-07-02"
+    }
+  }]
+};
+
+const title = "PA66加短切碳纤维能提高多少强度？实测数据与改性方案 | 碳烯技术";
+const description = "PA66添加20%短切碳纤维后，拉伸强度从80MPa提升至200-220MPa（+150-175%），弯曲模量提升167-233%。";
+---
+
+<Layout title={title} description={description} canonical="/faq/faq-015-pa66-chopped-strength" schema={schema}>
+  <Header />
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 80px 24px 60px; text-align: center;">
+    <h1 style="font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; max-width: 900px; margin: 0 auto;">PA66加短切碳纤维能提高多少强度？</h1>
+  </section>
+
+  <section style="padding: 64px 24px; max-width: 800px; margin: 0 auto;">
+    <div style="background: white; padding: 40px; border-radius: 12px; border: 1px solid var(--border); line-height: 1.8; color: var(--text);">
+      <div style="color: var(--text-light); line-height: 1.8;">
+        <p style="margin-bottom: 16px;">PA66添加短切碳纤维（3mm）后的典型性能提升：添加10%时，拉伸强度从80MPa提升至120-130MPa（+50-63%），弯曲模量从3000MPa提升至5000-5500MPa（+67-83%）。添加20%时，拉伸强度从80MPa提升至200-220MPa（+150-175%），弯曲模量从3000MPa提升至8000-10000MPa（+167-233%），热变形温度从65℃提升至220-250℃（+238-285%），收缩率从1.5%降至0.5%（-67%）。添加30%时，拉伸强度可达250-280MPa，弯曲模量10000-12000MPa，但加工难度显著增加（熔体粘度大，需提高注塑温度至300℃以上）。冲击强度：添加20%时保持率约70-80%（需添加5-10%增韧剂如POE-g-MAH），纯添加碳纤维冲击强度会下降30-40%。最佳性价比区间为20-25%。碳烯技术提供PA66改性全套方案：专用上浆剂、增韧剂、注塑工艺参数、模具设计建议。</p>
+      </div>
+
+      <div style="background: var(--bg-alt); padding: 24px; border-radius: 8px; margin-top: 32px;">
+        <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--primary); margin-bottom: 12px;">相关型号推荐</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8;">
+          <li>PA66专用3mm短切（尼龙上浆）</li>
+          <li>PA66专用6mm短切（挤出级）</li>
+          <li>增韧剂POE-g-MAH（冲击保持）</li>
+          <li>中复神鹰SYT45（性价比）</li>
+        </ul>
+      </div>
+
+      <div style="text-align: center; margin-top: 32px;">
+        <a href="/contact" style="background: var(--accent); color: white; padding: 16px 40px; border-radius: 8px; font-weight: 700; display: inline-block;">获取方案与报价</a>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>

@@ -1,0 +1,25 @@
+{
+  "articles": [
+    {
+      "title": "碳纤维布复合材料加固技术",
+      "category": "carbon-fiber-fabric",
+      "date": "2026-06-15 14:16:44",
+      "slug": "2026-06-15-carbon-fiber-fabric-7963"
+    },
+    {
+      "title": "碳纤维复合材料新能源汽车解决方案",
+      "category": "carbon-fiber-composites",
+      "date": "2026-06-15 14:16:48",
+      "slug": "2026-06-15-carbon-fiber-composites-4729"
+    },
+    {
+      "title": "碳纤维丝在航空航天领域的最新应用",
+      "category": "carbon-fiber-filament",
+      "date": "2026-06-15 14:16:52",
+      "slug": "2026-06-15-carbon-fiber-filament-5738"
+    }
+  ],
+  "daily_count": {
+    "2026-06-15": 3
+  }
+}

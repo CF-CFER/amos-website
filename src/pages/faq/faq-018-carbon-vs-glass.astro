@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "短切碳纤维和玻璃纤维增强有什么区别？",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "短切碳纤维增强与玻璃纤维增强的核心差异：密度：碳纤维1.75g/cm³ vs 玻纤2.5g/cm³，碳纤维制品轻30%。强度：PA66+20%碳纤维拉伸强度200-220MPa，PA66+30%玻纤约120MPa，碳纤维高67-83%。模量：PA66+20%碳纤维弯曲模量8000-10000MPa，PA66+30%玻纤约6000MPa，碳纤维高33-67%。导电性：碳纤维使塑料导电（防静电/EMI），玻纤绝缘。耐磨性：碳纤维耐磨性优于玻纤3-5倍，摩擦系数更低。耐疲劳性：碳纤维疲劳寿命比玻纤长2-3倍。成本：碳纤维是玻纤的3-5倍（PA66+20%CF约40-60元/kg，PA66+30%GF...",
+      "datePublished": "2026-07-02"
+    }
+  }]
+};
+
+const title = "短切碳纤维和玻璃纤维增强有什么区别？性能对比与成本分析 | 碳烯技术";
+const description = "碳纤维密度1.75g/cm³（比玻纤轻30%），强度高67%，模量高67%，且导电防静电。成本是玻纤的3-5倍。";
+---
+
+<Layout title={title} description={description} canonical="/faq/faq-018-carbon-vs-glass" schema={schema}>
+  <Header />
+  <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; padding: 80px 24px 60px; text-align: center;">
+    <h1 style="font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; max-width: 900px; margin: 0 auto;">短切碳纤维和玻璃纤维增强有什么区别？</h1>
+  </section>
+
+  <section style="padding: 64px 24px; max-width: 800px; margin: 0 auto;">
+    <div style="background: white; padding: 40px; border-radius: 12px; border: 1px solid var(--border); line-height: 1.8; color: var(--text);">
+      <div style="color: var(--text-light); line-height: 1.8;">
+        <p style="margin-bottom: 16px;">短切碳纤维增强与玻璃纤维增强的核心差异：密度：碳纤维1.75g/cm³ vs 玻纤2.5g/cm³，碳纤维制品轻30%。强度：PA66+20%碳纤维拉伸强度200-220MPa，PA66+30%玻纤约120MPa，碳纤维高67-83%。模量：PA66+20%碳纤维弯曲模量8000-10000MPa，PA66+30%玻纤约6000MPa，碳纤维高33-67%。导电性：碳纤维使塑料导电（防静电/EMI），玻纤绝缘。耐磨性：碳纤维耐磨性优于玻纤3-5倍，摩擦系数更低。耐疲劳性：碳纤维疲劳寿命比玻纤长2-3倍。成本：碳纤维是玻纤的3-5倍（PA66+20%CF约40-60元/kg，PA66+30%GF约15-20元/kg）。选型建议：高端汽车、航空航天、医疗器械、防静电场合、耐磨件选碳纤维；一般家电、建筑、低承力结构选玻纤。碳烯技术提供碳纤维和玻纤对比测试服务，帮助客户做出最优选择。</p>
+      </div>
+
+      <div style="background: var(--bg-alt); padding: 24px; border-radius: 8px; margin-top: 32px;">
+        <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--primary); margin-bottom: 12px;">相关型号推荐</h3>
+        <ul style="color: var(--text-light); font-size: 0.9rem; line-height: 1.8;">
+          <li>3mm短切碳纤维（高端增强）</li>
+          <li>6mm短切碳纤维（挤出/厚壁）</li>
+          <li>碳纤维粉（外观+导电）</li>
+          <li>镀镍短切（EMI屏蔽）</li>
+        </ul>
+      </div>
+
+      <div style="text-align: center; margin-top: 32px;">
+        <a href="/contact" style="background: var(--accent); color: white; padding: 16px 40px; border-radius: 8px; font-weight: 700; display: inline-block;">获取方案与报价</a>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>
