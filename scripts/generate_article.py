@@ -669,7 +669,7 @@ def generate_generic_article(topic):
 
 def get_unused_topic():
     """获取未使用的选题"""
-    blog_dir = Path("src/content/blog")
+    blog_dir = Path("src/content/articles")
     existing_slugs = set()
     
     if blog_dir.exists():
@@ -715,17 +715,18 @@ def main():
     frontmatter = f"""---
 slug: {topic['slug']}
 title: {topic['title']}
-date: {date_str}
+pubDate: {date_str}
 author: 碳烯技术
 description: "{topic['description']}"
 keywords: "{topic['keywords']}"
+category: "碳纤维技术"
 tags: {json.dumps(topic['tags'], ensure_ascii=False)}
 ---
 
 """
     
     # 保存文章
-    blog_dir = Path("src/content/blog")
+    blog_dir = Path("src/content/articles")
     blog_dir.mkdir(parents=True, exist_ok=True)
     
     filename = f"{date_str}-{topic['slug']}.md"
